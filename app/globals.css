@@ -28,12 +28,12 @@
   }
 
   ::selection {
-    @apply bg-indigo-100 text-indigo-900 dark:bg-indigo-900 dark:text-indigo-100;
+    @apply bg-cyan-100 text-cyan-900 dark:bg-cyan-900 dark:text-cyan-100;
   }
 
   /* Ensure focus is always visible for keyboard users */
   :focus-visible {
-    @apply outline-none ring-2 ring-indigo-500 ring-offset-2;
+    @apply outline-none ring-2 ring-cyan-500 ring-offset-2;
   }
 
   .dark :focus-visible {

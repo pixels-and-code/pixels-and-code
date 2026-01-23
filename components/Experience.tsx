@@ -13,11 +13,11 @@ const roles = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 md:py-32 bg-slate-50 dark:bg-slate-900">
+    <section id="experience" className="py-24 md:py-32 bg-white dark:bg-slate-950">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-16 lg:grid-cols-2">
           <div>
-            <p className="text-sm font-medium tracking-wide text-indigo-600 dark:text-indigo-400">
+            <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
               Experience
             </p>
             <h2 className="mt-3 font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
@@ -31,7 +31,7 @@ export function Experience() {
             <div className="mt-12 grid grid-cols-3 gap-8">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-serif text-3xl bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent dark:from-indigo-400 dark:to-purple-400 md:text-4xl">
+                  <p className="font-serif text-3xl bg-gradient-to-b from-cyan-500 to-cyan-700 bg-clip-text text-transparent md:text-4xl">
                     {stat.value}
                   </p>
                   <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
@@ -43,14 +43,14 @@ export function Experience() {
           </div>
 
           <div className="lg:pt-12">
-            <h3 className="text-sm font-medium tracking-wide text-indigo-600 dark:text-indigo-400">
+            <h3 className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
               Notable roles
             </h3>
             <ul className="mt-6">
               {roles.map((item) => (
                 <li
                   key={item.company}
-                  className="flex items-center justify-between border-b border-slate-200 py-4 dark:border-slate-700"
+                  className="flex items-center justify-between border-b border-slate-200 py-4 dark:border-slate-800"
                 >
                   <span className="font-medium text-slate-900 dark:text-white">
                     {item.company}

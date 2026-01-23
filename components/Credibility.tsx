@@ -13,7 +13,7 @@ export function Credibility() {
           {items.map((item, index) => (
             <div key={item.label} className="flex items-center gap-8">
               <div className="text-center">
-                <p className="text-xs font-medium tracking-wide text-slate-500 dark:text-slate-400 uppercase">
+                <p className="text-xs font-medium tracking-wide text-cyan-700 dark:text-cyan-400 uppercase">
                   {item.label}
                 </p>
                 <p className="mt-1 text-sm text-slate-700 dark:text-slate-300">
@@ -21,7 +21,7 @@ export function Credibility() {
                 </p>
               </div>
               {index < items.length - 1 && (
-                <div className="hidden md:block w-px h-8 bg-slate-200 dark:bg-slate-700" />
+                <div className="hidden md:block w-px h-8 bg-slate-300 dark:bg-slate-700" />
               )}
             </div>
           ))}

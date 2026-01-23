@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { Logo } from "./Logo";
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -18,9 +19,10 @@ export function Header() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#"
-          className="font-serif text-lg text-slate-900 dark:text-white rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
+          className="rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
         >
-          Pixels & Code
+          <Logo className="h-6 w-auto" />
+          <span className="sr-only">Pixels & Code</span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -28,7 +30,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
+              className="text-sm text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
             >
               {link.label}
             </a>
@@ -40,7 +42,7 @@ export function Header() {
           <ThemeToggle />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 text-slate-600 dark:text-slate-300 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+            className="p-2.5 text-slate-600 dark:text-slate-300 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -70,7 +72,7 @@ export function Header() {
                 <a
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-sm text-slate-600 dark:text-slate-300 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                  className="block py-2 text-sm text-slate-600 dark:text-slate-300 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
                 >
                   {link.label}
                 </a>
