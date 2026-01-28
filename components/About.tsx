@@ -24,21 +24,21 @@ export function About() {
           <ScrollFadeIn delay={0.15}>
             <div className="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
               <p>
-                I've been building for the web for over 15 years, working with
+                I&apos;ve been building for the web for over 15 years, working with
                 React since 2014 and React Native since 2017. I specialise in
                 design systems, performance optimisation, UX design, and helping
                 teams structure their frontend architecture for scale.
               </p>
               <p>
-                I'm a pragmatist at heart. I care about quality, but I also
+                I&apos;m a pragmatist at heart. I care about quality, but I also
                 understand when to balance craft with business needs. I enjoy
                 mentoring developers and designers on UX and UI, and I like
-                solving hard problems: whether that's rescuing a struggling
+                solving hard problems: whether that&apos;s rescuing a struggling
                 codebase, building a design system from scratch, or leading a
                 team through a complex refactor.
               </p>
               <p>
-                I'm based in Folkestone on the Kent coast with my wife, two
+                I&apos;m based in Folkestone on the Kent coast with my wife, two
                 girls and our little maltipoo, Luna. Outside of work, I run a
                 D&D campaign, watch far too much actual play, and paint and
                 sketch.
