@@ -26,15 +26,15 @@ export function Header() {
           <span className="sr-only">Pixels & Code</span>
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-2 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="relative text-sm text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950 group"
+              className="relative px-3 py-2 text-sm text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950 group"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full dark:bg-cyan-400" />
+              <span className="absolute bottom-1 left-3 right-3 h-px w-0 bg-cyan-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)] dark:bg-cyan-400" />
             </a>
           ))}
           <ThemeToggle />
@@ -74,7 +74,7 @@ export function Header() {
                 <a
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-sm text-slate-600 dark:text-slate-300 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+                  className="block py-3 text-base text-slate-600 dark:text-slate-300 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
                 >
                   {link.label}
                 </a>

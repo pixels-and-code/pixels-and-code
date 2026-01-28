@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     "UI architecture",
   ],
   authors: [{ name: "Dan Cork" }],
+  metadataBase: new URL("https://pixels-and-code.co.uk"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Pixels and Code | Frontend Engineering & Design Systems Consultant",
     description:
@@ -35,12 +39,21 @@ export const metadata: Metadata = {
     siteName: "Pixels and Code",
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Pixels and Code - Frontend Engineering & Design Systems Consultant",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pixels and Code | Frontend Engineering & Design Systems Consultant",
     description:
       "Specialising in React, React Native, and scalable UI architecture for startups and scale-ups.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -55,6 +68,47 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${GeistSans.variable} ${fraunces.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Pixels and Code",
+              description:
+                "Frontend Engineering & Design Systems Consultant specialising in React, React Native, and scalable UI architecture.",
+              url: "https://pixels-and-code.co.uk",
+              founder: {
+                "@type": "Person",
+                name: "Dan Cork",
+                jobTitle: "Frontend Engineering & Design Systems Consultant",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Folkestone",
+                  addressCountry: "GB",
+                },
+                knowsAbout: [
+                  "React",
+                  "React Native",
+                  "TypeScript",
+                  "Design Systems",
+                  "Frontend Architecture",
+                  "Web Components",
+                ],
+              },
+              areaServed: {
+                "@type": "GeoCircle",
+                geoMidpoint: {
+                  "@type": "GeoCoordinates",
+                  addressCountry: "GB",
+                },
+                description: "Remote worldwide, hybrid in UK",
+              },
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-screen font-sans antialiased">
         <ThemeProvider>
           <a
