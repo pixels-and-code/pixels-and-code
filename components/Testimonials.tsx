@@ -16,7 +16,8 @@ const testimonials = [
   },
   {
     paragraphs: [
-      "Dan took a high level mission statement (in our case, 'make our complex FE performant') and quickly built, led and executed on an end-to-end plan to make it happen quickly, working across multiple teams and services. He felt like a true owner from day one, demonstrating startup-level urgency and a genuine care for the product and impact being delivered. I cannot recommend him highly enough as an extremely capable, personable and flexible Frontend leader / architect / developer.",
+      "Dan took a high level mission statement (in our case, 'make our complex FE performant') and quickly built, led and executed on an end-to-end plan to make it happen quickly, working across multiple teams and services. He felt like a true owner from day one, demonstrating startup-level urgency and a genuine care for the product and impact being delivered.",
+      "I cannot recommend him highly enough as an extremely capable, personable and flexible Frontend leader / architect / developer.",
     ],
     author: "Edward Taylor",
     role: "CTO at Birdie",
