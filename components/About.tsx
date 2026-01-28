@@ -40,8 +40,7 @@ export function About() {
               <p>
                 I&apos;m based in Folkestone on the Kent coast with my wife, two
                 girls and our little maltipoo, Luna. Outside of work, I run a
-                D&D campaign, watch far too much actual play, and paint and
-                sketch.
+                D&D campaign, watch far too much actual play, and sketch.
               </p>
             </div>
           </ScrollFadeIn>
