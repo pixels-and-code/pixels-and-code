@@ -24,7 +24,7 @@ const services = [
   {
     title: "Technical Leadership",
     description:
-      "Team mentoring, architecture decisions, and engineering best practices.",
+      "Team mentoring, architecture decisions, and modern workflows including AI-assisted development.",
     accent: "bg-gradient-to-b from-rose-400 to-rose-600",
     bg: "bg-rose-50 dark:bg-rose-950/30",
     border: "border-rose-200/50 dark:border-rose-800/30",
