@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { useRef } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 
 // Animated toggle component
 function AnimatedToggle({ delay = 0 }: { delay?: number }) {
@@ -513,19 +512,11 @@ const uiElements = [
 
 function FloatingElement({
   element,
-  scrollYProgress,
   shouldReduceMotion,
 }: {
   element: (typeof uiElements)[0];
-  scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"];
   shouldReduceMotion: boolean | null;
 }) {
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, element.parallaxSpeed * 400]
-  );
-
   const content = element.animated && !shouldReduceMotion ? element.animated : element.svg;
 
   if (shouldReduceMotion) {
@@ -549,10 +540,7 @@ function FloatingElement({
       className={`absolute text-slate-300/70 dark:text-slate-700/70 pointer-events-none ${
         element.hideOnMobile ? "hidden md:block" : ""
       }`}
-      style={{
-        ...element.position,
-        y,
-      }}
+      style={element.position}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{
         opacity: 1,
@@ -588,15 +576,9 @@ function FloatingElement({
 
 export function FloatingUIElements() {
   const shouldReduceMotion = useReducedMotion();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
 
   return (
     <div
-      ref={containerRef}
       className="absolute inset-0 overflow-hidden pointer-events-none"
       aria-hidden="true"
     >
@@ -604,7 +586,6 @@ export function FloatingUIElements() {
         <FloatingElement
           key={element.id}
           element={element}
-          scrollYProgress={scrollYProgress}
           shouldReduceMotion={shouldReduceMotion}
         />
       ))}
