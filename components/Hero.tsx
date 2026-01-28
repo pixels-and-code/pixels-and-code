@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { TypeWriter } from "./TypeWriter";
+import { FloatingUIElements } from "./FloatingUIElements";
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -39,8 +40,9 @@ export function Hero() {
       };
 
   return (
-    <section className="min-h-screen flex items-center bg-white dark:bg-slate-950">
-      <MotionWrapper className="mx-auto max-w-6xl px-6 py-32 w-full" {...motionProps}>
+    <section className="relative min-h-screen flex items-center bg-white dark:bg-slate-950 overflow-hidden">
+      <FloatingUIElements />
+      <MotionWrapper className="relative z-10 mx-auto max-w-6xl px-6 py-32 w-full" {...motionProps}>
         {shouldReduceMotion ? (
           <>
             <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">

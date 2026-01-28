@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./Logo";
 
@@ -14,9 +14,25 @@ const navLinks = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 bg-white/80 backdrop-blur-md dark:bg-slate-950/80">
+    <header
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/90 backdrop-blur-md dark:bg-slate-950/90"
+          : ""
+      }`}
+    >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#"

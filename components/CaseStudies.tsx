@@ -8,7 +8,7 @@ const caseStudies = [
     title: "Performance Optimisation",
     description:
       "Built Playwright performance testing suite and refactored frontend monorepo architecture. Resolved bottlenecks in core user journeys.",
-    tags: ["React", "Playwright", "Performance"],
+    tags: ["React", "Performance", "Playwright", "Monorepo", "Testing"],
     accent: "bg-gradient-to-b from-cyan-500 to-cyan-700",
   },
   {
@@ -16,7 +16,7 @@ const caseStudies = [
     title: "Design System from Scratch",
     description:
       "Architected monorepo with Nx, built accessible web components with React wrappers. Adopted by 3 teams across 4 products within 6 months.",
-    tags: ["Design Systems", "Web Components", "Nx"],
+    tags: ["Design Systems", "React", "Web Components", "Accessibility", "Nx"],
     accent: "bg-gradient-to-b from-violet-400 to-violet-600",
   },
   {
@@ -24,7 +24,7 @@ const caseStudies = [
     title: "Greenfield Healthcare App",
     description:
       "Designed frontend architecture for eating disorder treatment platform. Built TypeScript SDK and design system foundations.",
-    tags: ["React", "TypeScript", "Healthcare"],
+    tags: ["React", "TypeScript", "Architecture", "Design Systems", "SDK"],
     accent: "bg-gradient-to-b from-rose-400 to-rose-600",
   },
 ];

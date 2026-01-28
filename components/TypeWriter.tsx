@@ -3,11 +3,7 @@
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const phrases = [
-  "& Design Systems",
-  "& React Applications",
-  "& Scalable UI",
-];
+const phrases = ["& Design Systems", "& React Applications", "& Scalable UI"];
 
 export function TypeWriter() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +12,7 @@ export function TypeWriter() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % phrases.length);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -39,7 +35,7 @@ export function TypeWriter() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{
-            duration: 0.4,
+            duration: 0.6,
             ease: [0.22, 1, 0.36, 1] as const,
           }}
         >
