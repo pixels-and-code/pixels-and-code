@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ScrollFadeIn, StaggerContainer, StaggerItem } from "./ScrollFadeIn";
 
 const testimonials = [
@@ -8,8 +9,9 @@ const testimonials = [
       "We hired Dan to work on an early product that was still in the discovery phase with customers. This can be a difficult stage of development because use-cases are still emerging and patterns are not well established. Dan proved to be very adaptable: from prototyping broad feature proof of concepts for user feedback, to fine detailed work on component accessibility and interactivity, to internal tooling and developer experience.",
       "We found him to be diligent with a quality finish to his work. He was able to contribute and articulate technical recommendations and was pragmatic about trading off engineering practices against business needs. Although not part of his role with us I got the impression that he would be a good mentor to junior engineers. I would certainly recommend him for a team investing in their UI/UX practices.",
     ],
-    author: "Chris McEwan",
+    author: "Christopher McEwan",
     role: "CPTO at Foundational",
+    avatar: "/avatar-chris.jpeg",
     accent: "bg-gradient-to-b from-cyan-500 to-cyan-700",
   },
   {
@@ -18,6 +20,7 @@ const testimonials = [
     ],
     author: "Edward Taylor",
     role: "CTO at Birdie",
+    avatar: "/avatar-ed.jpeg",
     accent: "bg-gradient-to-b from-violet-400 to-violet-600",
   },
 ];
@@ -52,13 +55,22 @@ export function Testimonials() {
                     </p>
                   ))}
                 </blockquote>
-                <footer className="mt-8">
-                  <p className="font-medium text-lg text-slate-900 dark:text-white">
-                    {testimonial.author}
-                  </p>
-                  <p className="mt-1 text-slate-600 dark:text-slate-400">
-                    {testimonial.role}
-                  </p>
+                <footer className="mt-8 flex items-center gap-4">
+                  <Image
+                    src={testimonial.avatar}
+                    alt={testimonial.author}
+                    width={56}
+                    height={56}
+                    className="rounded-full grayscale"
+                  />
+                  <div>
+                    <p className="font-medium text-lg text-slate-900 dark:text-white">
+                      {testimonial.author}
+                    </p>
+                    <p className="mt-1 text-slate-600 dark:text-slate-400">
+                      {testimonial.role}
+                    </p>
+                  </div>
                 </footer>
               </article>
             </StaggerItem>
