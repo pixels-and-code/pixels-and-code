@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-8">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div className="flex items-center gap-4">
-            <Logo className="h-5 w-auto" />
+            <Logo size="text-xl" />
             <span className="text-sm text-slate-500 dark:text-slate-400">
               {currentYear}
             </span>

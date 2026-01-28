@@ -7,6 +7,7 @@ import { Logo } from "./Logo";
 const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#work", label: "Work" },
+  { href: "#testimonials", label: "Testimonials" },
   { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
@@ -21,7 +22,7 @@ export function Header() {
           href="#"
           className="rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
         >
-          <Logo className="h-6 w-auto" />
+          <Logo />
           <span className="sr-only">Pixels & Code</span>
         </a>
 
