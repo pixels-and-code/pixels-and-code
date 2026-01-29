@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Code } from "bright";
-import type { MDXComponents } from "mdx/types";
+import type { ComponentPropsWithoutRef } from "react";
 
 // Configure bright theme
 Code.theme = "github-dark";
+
+type MDXComponents = {
+  [key: string]: React.ComponentType<ComponentPropsWithoutRef<"div">>;
+};
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children }) => (
