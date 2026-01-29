@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { getAllCaseStudies } from "@/lib/content";
 import { ScrollFadeIn, StaggerContainer, StaggerItem } from "@/components/ScrollFadeIn";
 import { ContactCTA } from "@/components/ContactCTA";
@@ -145,41 +144,36 @@ export default function WorkPage() {
           <StaggerContainer className="mt-20 space-y-6" staggerDelay={0.15}>
             {caseStudies.map((study) => (
               <StaggerItem key={study.slug}>
-                <Link href={`/work/${study.slug}`} className="block group">
-                  <article className="relative bg-white p-10 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.01] dark:bg-slate-800 md:p-12">
-                    <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
-                      <div>
-                        <div
-                          className={`h-1 w-12 ${study.frontmatter.accent} mb-6`}
-                        />
-                        <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">
-                          {study.frontmatter.company}
-                        </h2>
-                        <p className="mt-2 text-base text-slate-600 dark:text-slate-400">
-                          {study.frontmatter.title}
-                        </p>
-                      </div>
-                      <div className="max-w-2xl">
-                        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                          {study.frontmatter.excerpt}
-                        </p>
-                        <div className="mt-6 flex flex-wrap gap-2">
-                          {study.frontmatter.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="border border-slate-300 px-3 py-1 text-xs text-slate-500 dark:border-slate-600 dark:text-slate-400"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        <p className="mt-6 text-sm text-slate-500 dark:text-slate-400">
-                          {study.readingTime}
-                        </p>
+                <article className="relative bg-white p-10 shadow-sm dark:bg-slate-800 md:p-12">
+                  <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
+                    <div>
+                      <div
+                        className={`h-1 w-12 ${study.frontmatter.accent} mb-6`}
+                      />
+                      <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
+                        {study.frontmatter.company}
+                      </h2>
+                      <p className="mt-2 text-base text-slate-600 dark:text-slate-400">
+                        {study.frontmatter.title}
+                      </p>
+                    </div>
+                    <div className="max-w-2xl">
+                      <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                        {study.frontmatter.excerpt}
+                      </p>
+                      <div className="mt-6 flex flex-wrap gap-2">
+                        {study.frontmatter.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="border border-slate-300 px-3 py-1 text-xs text-slate-500 dark:border-slate-600 dark:text-slate-400"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  </article>
-                </Link>
+                  </div>
+                </article>
               </StaggerItem>
             ))}
           </StaggerContainer>
