@@ -34,7 +34,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-32 md:py-40 bg-slate-50 dark:bg-slate-900">
+    <section id="services" className="py-32 md:py-40">
       <div className="mx-auto max-w-6xl px-6">
         <ScrollFadeIn>
           <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
@@ -43,6 +43,9 @@ export function Services() {
           <h2 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
             How I can help
           </h2>
+          <p className="mt-4 text-slate-500 dark:text-slate-400">
+            Trusted by teams at Birdie, Unit4, Orri, Foundational, and more.
+          </p>
         </ScrollFadeIn>
 
         <StaggerContainer className="mt-20 grid gap-8 md:grid-cols-3" staggerDelay={0.15}>

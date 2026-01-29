@@ -1,20 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./Logo";
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#work", label: "Work" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/work", label: "Work" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,33 +27,48 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isActive = (href: string) => {
+    if (href.startsWith("/#")) return false;
+    return pathname === href || pathname.startsWith(href + "/");
+  };
+
   return (
     <header
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md dark:bg-slate-950/90"
+          ? "bg-slate-50/90 backdrop-blur-md dark:bg-slate-900/90"
           : ""
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a
-          href="#"
-          className="rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
+        <Link
+          href="/"
+          className="rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
         >
           <Logo />
           <span className="sr-only">Pixels & Code</span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-2 md:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className="relative px-3 py-2 text-sm text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950 group"
+              className={`relative px-3 py-2 text-sm transition-colors rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 group ${
+                isActive(link.href)
+                  ? "text-cyan-700 dark:text-cyan-400"
+                  : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+              }`}
             >
               {link.label}
-              <span className="absolute bottom-1 left-3 right-3 h-px w-0 bg-cyan-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)] dark:bg-cyan-400" />
-            </a>
+              <span
+                className={`absolute bottom-1 left-3 right-3 h-px transition-all duration-300 ${
+                  isActive(link.href)
+                    ? "w-[calc(100%-1.5rem)] bg-cyan-600 dark:bg-cyan-400"
+                    : "w-0 bg-cyan-600 group-hover:w-[calc(100%-1.5rem)] dark:bg-cyan-400"
+                }`}
+              />
+            </Link>
           ))}
           <ThemeToggle />
         </div>
@@ -82,18 +99,22 @@ export function Header() {
         <nav
           id="mobile-menu"
           aria-label="Mobile navigation"
-          className="bg-white/95 backdrop-blur-md px-6 py-4 dark:bg-slate-950/95 md:hidden"
+          className="bg-slate-50/95 backdrop-blur-md px-6 py-4 dark:bg-slate-900/95 md:hidden"
         >
           <ul className="flex flex-col gap-4" role="list">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-3 text-base text-slate-600 dark:text-slate-300 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+                  className={`block py-3 text-base rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 ${
+                    isActive(link.href)
+                      ? "text-cyan-700 dark:text-cyan-400"
+                      : "text-slate-600 dark:text-slate-300"
+                  }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

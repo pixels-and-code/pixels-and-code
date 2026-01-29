@@ -23,8 +23,8 @@
   }
 
   body {
-    @apply bg-white text-slate-900 antialiased;
-    @apply dark:bg-slate-950 dark:text-slate-100;
+    @apply bg-slate-50 text-slate-900 antialiased;
+    @apply dark:bg-slate-900 dark:text-slate-100;
   }
 
   ::selection {
@@ -37,6 +37,6 @@
   }
 
   .dark :focus-visible {
-    @apply ring-offset-slate-950;
+    @apply ring-offset-slate-900;
   }
 }

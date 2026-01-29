@@ -12,7 +12,7 @@ const testimonials = [
     author: "Christopher McEwan",
     role: "CPTO at Foundational",
     avatar: "/avatar-chris.jpeg",
-    accent: "bg-gradient-to-b from-cyan-500 to-cyan-700",
+    accent: "from-cyan-500 to-cyan-700",
   },
   {
     paragraphs: [
@@ -22,7 +22,7 @@ const testimonials = [
     author: "Edward Taylor",
     role: "CTO at Birdie",
     avatar: "/avatar-ed.jpeg",
-    accent: "bg-gradient-to-b from-violet-400 to-violet-600",
+    accent: "from-violet-400 to-violet-600",
   },
 ];
 
@@ -30,7 +30,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-32 md:py-40 bg-white dark:bg-slate-950"
+      className="py-32 md:py-40"
     >
       <div className="mx-auto max-w-6xl px-6">
         <ScrollFadeIn>
@@ -42,37 +42,56 @@ export function Testimonials() {
           </h2>
         </ScrollFadeIn>
 
-        <StaggerContainer className="mt-20 space-y-6" staggerDelay={0.15}>
+        <StaggerContainer className="mt-20 space-y-8" staggerDelay={0.15}>
           {testimonials.map((testimonial) => (
             <StaggerItem key={testimonial.author}>
-              <article className="group relative bg-slate-50 p-10 transition-all duration-300 hover:shadow-lg hover:scale-[1.01] dark:bg-slate-900 md:p-12">
-                <div className={`h-1 w-12 ${testimonial.accent} mb-8`} />
-                <blockquote className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
-                  {testimonial.paragraphs.map((paragraph, index) => (
-                    <p key={index}>
-                      {index === 0 && "\u201C"}
-                      {paragraph}
-                      {index === testimonial.paragraphs.length - 1 && "\u201D"}
-                    </p>
-                  ))}
-                </blockquote>
-                <footer className="mt-8 flex items-center gap-4">
-                  <Image
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                    width={56}
-                    height={56}
-                    className="rounded-full grayscale"
-                  />
-                  <div>
-                    <p className="font-medium text-lg text-slate-900 dark:text-white">
-                      {testimonial.author}
-                    </p>
-                    <p className="mt-1 text-slate-600 dark:text-slate-400">
-                      {testimonial.role}
-                    </p>
+              <article className="group relative">
+                {/* Gradient accent bar */}
+                <div
+                  className={`h-1 w-full bg-gradient-to-r ${testimonial.accent} opacity-80`}
+                />
+
+                <div className="bg-white dark:bg-slate-800 p-8 md:p-10 lg:p-12 shadow-sm">
+                  <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
+                    {/* Quote content */}
+                    <blockquote className="flex-1 text-lg text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
+                      {testimonial.paragraphs.map((paragraph, index) => (
+                        <p key={index}>
+                          {index === 0 && (
+                            <span className="font-serif text-3xl text-slate-400 dark:text-slate-600 leading-none mr-1">
+                              &ldquo;
+                            </span>
+                          )}
+                          {paragraph}
+                          {index === testimonial.paragraphs.length - 1 && (
+                            <span className="font-serif text-3xl text-slate-400 dark:text-slate-600 leading-none ml-1">
+                              &rdquo;
+                            </span>
+                          )}
+                        </p>
+                      ))}
+                    </blockquote>
+
+                    {/* Author sidebar */}
+                    <footer className="flex items-center gap-4 lg:flex-col lg:items-center lg:justify-start lg:w-40 lg:shrink-0 lg:text-center lg:border-l lg:border-slate-200 lg:dark:border-slate-800 lg:pl-12">
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.author}
+                        width={80}
+                        height={80}
+                        className="rounded-full grayscale w-16 h-16 lg:w-20 lg:h-20"
+                      />
+                      <div>
+                        <p className="font-medium text-lg text-slate-900 dark:text-white">
+                          {testimonial.author}
+                        </p>
+                        <p className="mt-1 text-slate-600 dark:text-slate-400 text-sm">
+                          {testimonial.role}
+                        </p>
+                      </div>
+                    </footer>
                   </div>
-                </footer>
+                </div>
               </article>
             </StaggerItem>
           ))}
