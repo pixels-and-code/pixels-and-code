@@ -1,16 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Code } from "bright";
-import type { ComponentPropsWithoutRef } from "react";
 
 // Configure bright theme
 Code.theme = "github-dark";
 
-type MDXComponents = {
-  [key: string]: React.ComponentType<ComponentPropsWithoutRef<"div">>;
-};
-
-export const mdxComponents: MDXComponents = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const mdxComponents: Record<string, React.ComponentType<any>> = {
   h1: ({ children }) => (
     <h1 className="mt-12 mb-6 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl first:mt-0">
       {children}
