@@ -1,0 +1,134 @@
+---
+title: "Building a Portfolio Site with Claude Code"
+date: "2026-01-29"
+excerpt: "How I built and refined my entire portfolio site through conversation with Claude Code, from initial prompt to deployment and beyond."
+tags: ["Claude Code", "AI", "Next.js", "Workflow"]
+published: true
+---
+
+I built this portfolio site in a few hours using Claude Code. Not by copying and pasting generated snippets, but through genuine conversation where Claude acted as developer, designer, and consultant.
+
+Here is how it actually went.
+
+## The initial prompt
+
+I started with a single detailed prompt describing the entire site:
+
+```markdown
+Build a portfolio website for Pixels and Code, a frontend engineering
+and design systems consultancy.
+
+Tech Stack: Next.js 15 with App Router, TypeScript, Tailwind CSS
+
+Site Structure:
+- Hero section with clean typography
+- Services section with three offerings
+- Featured work with case study cards
+- Testimonials
+- Contact section
+```
+
+I included specifics about the case studies I wanted to feature, the testimonials, and the overall structure. Claude Code scaffolded the entire project: routing, components, layout, dark mode, metadata.
+
+The key was being specific about outcomes whilst leaving room for implementation decisions. I described what the hero should communicate, not what CSS to write.
+
+## Design through conversation
+
+The first version worked but the design felt dated. Rather than rewriting prompts from scratch, I refined through conversation:
+
+> I love that, now apply the same aesthetic as the hero to the rest of the site.
+
+Then:
+
+> The design feels dated, like something from 5-8 years ago. Shift towards a cleaner aesthetic. Only rounded buttons, everything else square. Cleaner pastel colours.
+
+And:
+
+> Update the typography. Headings: Fraunces serif. Body: Geist Sans.
+
+Each prompt built on the last. Claude Code remembered context and made targeted changes rather than starting over.
+
+## Knowing when to revert
+
+Midway through, I decided to try migrating from Tailwind to Open Props for the CSS. Claude Code created task lists, refactored components one by one, updated the globals.
+
+It became a mess. Styles conflicted, dark mode broke, the alternating section backgrounds stopped working.
+
+My prompt:
+
+> Fuck it, it's a mess. Ditch all changes, stay with Tailwind.
+
+Claude Code reverted everything cleanly. The whole detour cost maybe twenty minutes. Being able to experiment and quickly abandon failed approaches is part of the workflow.
+
+## Role-based prompting
+
+The technique that improved everything was asking Claude to adopt specific roles. Instead of "fix the spacing", I wrote:
+
+> Analyse the whole site as a potential client and UX designer. There is some repetition between the home and other pages. Consider it as a whole site. Go step-by-step, show your working.
+
+This shifted the output from code fixes to holistic analysis. Claude identified that the homepage had too much content duplicated from subpages, recommended restructuring the navigation, and suggested removing sections that weakened the overall narrative.
+
+I started calling this the "designer agent" approach:
+
+> Act as a principal UI designer. Review the current design and suggest improvements to spacing, typography, and visual hierarchy. Reference UX/UI principles in your recommendations.
+
+Claude would then cite Gestalt principles, explain why baseline alignment matters for typography, and propose specific fixes grounded in theory rather than guesswork.
+
+For example, when the date and company name in my work history section did not align properly, the designer agent explained the issue using typography theory:
+
+> The date (text-sm, 14px) and company name (text-2xl, 24px) have different line heights so they do not share a baseline. According to Gestalt principles of alignment, elements that share a common alignment are perceived as related. Use `items-baseline` in flexbox to create true typographic baseline alignment.
+
+## Using Claude to write better prompts
+
+When I was not getting the results I wanted, I asked Claude to help me prompt better:
+
+> I am trying to improve the testimonials section but my prompts keep resulting in changes that do not feel right. What should I be asking instead?
+
+Claude explained that it needed more context: the brand voice, specific problems I was seeing, examples of designs I admired. The meta-conversation improved every subsequent interaction.
+
+This is worth emphasising: you can use Claude to generate prompts for Claude Code. Describe the outcome you want, ask Claude to write the prompt, then feed that prompt back into Claude Code.
+
+## The iteration loop
+
+The work history section on my portfolio went through several iterations in a single session:
+
+1. First version: two-column grid with dates on the left, content on the right. "The left column feels empty with just dates."
+
+2. Second version: card-based layout matching the case studies. "That whole page is now cards though."
+
+3. Third version: timeline with left border and cyan dot markers. "Sort of better but not great."
+
+4. Fourth version: clean grid with horizontal dividers, tags moved to left column. "The date alignment still feels off."
+
+5. Fifth version: flexbox with `items-baseline` for proper typographic alignment.
+
+Each iteration was a single conversational exchange. I could reference "the date alignment" without re-explaining the entire component.
+
+## Adding structure later
+
+The site started as a simple single-page site. After the initial build and design refinement, I added:
+
+- Multi-page routing (about, work, blog, contact)
+- MDX support for blog posts and case studies
+- Reading time calculations
+- Draft post handling
+
+Each addition was a conversation:
+
+> Add MDX support for blog posts. I want frontmatter for title, date, excerpt, and tags. Posts with published: false should only show in development.
+
+Claude Code implemented it correctly, including the edge cases.
+
+## What I learned
+
+**Start with outcomes, not implementation.** Describe what the hero should communicate, not what Tailwind classes to use.
+
+**Adopt roles.** "Act as a principal designer" produces fundamentally different output than "fix the design". Ask for UX/UI theory to be referenced.
+
+**Iterate conversationally.** The power is in the back-and-forth. Reference previous context. Build on what exists.
+
+**Experiment freely.** Failed approaches can be reverted quickly. The Open Props migration cost me twenty minutes, not days.
+
+**Ask for better prompts.** When results are not what you want, ask Claude what context it needs. Use Claude to generate prompts for Claude Code.
+
+The site you are reading this on was built in hours, not days. But more importantly, it continues to evolve through the same conversational process. Every refinement, every new feature, every design tweak is another exchange in an ongoing collaboration.
