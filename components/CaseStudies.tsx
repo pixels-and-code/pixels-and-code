@@ -31,7 +31,7 @@ const caseStudies = [
 
 export function CaseStudies() {
   return (
-    <section id="work" className="py-32 md:py-40 bg-white dark:bg-slate-950">
+    <section id="work" className="py-32 md:py-40 bg-slate-50 dark:bg-slate-900">
       <div className="mx-auto max-w-6xl px-6">
         <ScrollFadeIn>
           <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
@@ -46,7 +46,7 @@ export function CaseStudies() {
           {caseStudies.map((study) => (
             <StaggerItem key={study.company}>
               <article
-                className="group relative bg-slate-50 p-10 transition-all duration-300 hover:bg-slate-100 hover:shadow-lg hover:scale-[1.01] dark:bg-slate-900 dark:hover:bg-slate-800 md:p-12"
+                className="group relative bg-white p-10 transition-all duration-300 hover:shadow-lg hover:scale-[1.01] dark:bg-slate-950 md:p-12"
               >
                 <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
                   <div>

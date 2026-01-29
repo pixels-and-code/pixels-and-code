@@ -30,7 +30,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-32 md:py-40 bg-slate-50 dark:bg-slate-900"
+      className="py-32 md:py-40 bg-white dark:bg-slate-950"
     >
       <div className="mx-auto max-w-6xl px-6">
         <ScrollFadeIn>
@@ -45,7 +45,7 @@ export function Testimonials() {
         <StaggerContainer className="mt-20 space-y-6" staggerDelay={0.15}>
           {testimonials.map((testimonial) => (
             <StaggerItem key={testimonial.author}>
-              <article className="group relative bg-white p-10 transition-all duration-300 hover:shadow-lg hover:scale-[1.01] dark:bg-slate-800 md:p-12">
+              <article className="group relative bg-slate-50 p-10 transition-all duration-300 hover:shadow-lg hover:scale-[1.01] dark:bg-slate-900 md:p-12">
                 <div className={`h-1 w-12 ${testimonial.accent} mb-8`} />
                 <blockquote className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
                   {testimonial.paragraphs.map((paragraph, index) => (
