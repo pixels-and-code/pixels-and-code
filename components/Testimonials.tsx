@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ScrollFadeIn, StaggerContainer, StaggerItem } from "./ScrollFadeIn";
 
 const testimonials = [
@@ -10,7 +11,9 @@ const testimonials = [
       "We found him to be diligent with a quality finish to his work. He was able to contribute and articulate technical recommendations and was pragmatic about trading off engineering practices against business needs. Although not part of his role with us I got the impression that he would be a good mentor to junior engineers. I would certainly recommend him for a team investing in their UI/UX practices.",
     ],
     author: "Christopher McEwan",
-    role: "CPTO at Foundational",
+    title: "CPTO",
+    company: "Foundational",
+    companyHref: "/work#foundational",
     avatar: "/avatar-chris.jpeg",
     accent: "from-cyan-500 to-cyan-700",
   },
@@ -20,7 +23,9 @@ const testimonials = [
       "I cannot recommend him highly enough as an extremely capable, personable and flexible Frontend leader / architect / developer.",
     ],
     author: "Edward Taylor",
-    role: "CTO at Birdie",
+    title: "CTO",
+    company: "Birdie",
+    companyHref: "/work#birdie-2025",
     avatar: "/avatar-ed.jpeg",
     accent: "from-violet-400 to-violet-600",
   },
@@ -86,7 +91,13 @@ export function Testimonials() {
                           {testimonial.author}
                         </p>
                         <p className="mt-1 text-slate-600 dark:text-slate-400 text-sm">
-                          {testimonial.role}
+                          {testimonial.title} at{" "}
+                          <Link
+                            href={testimonial.companyHref}
+                            className="text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400 underline underline-offset-2 transition-colors"
+                          >
+                            {testimonial.company}
+                          </Link>
                         </p>
                       </div>
                     </footer>
