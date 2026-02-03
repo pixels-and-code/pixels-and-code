@@ -15,20 +15,10 @@ const navLinks = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const mobileMenuRef = useRef<HTMLElement>(null);
   const firstMenuItemRef = useRef<HTMLAnchorElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Focus management: move focus to first menu item when menu opens
   useEffect(() => {
@@ -81,11 +71,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-slate-50/90 backdrop-blur-md dark:bg-slate-900/90"
-          : ""
-      }`}
+      data-header
+      className="fixed left-0 right-0 top-0 z-50"
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
