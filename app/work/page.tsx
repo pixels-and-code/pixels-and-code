@@ -144,15 +144,17 @@ export default function WorkPage() {
           <StaggerContainer className="mt-20 space-y-6" staggerDelay={0.15}>
             {caseStudies.map((study) => (
               <StaggerItem key={study.slug}>
-                <article className="relative bg-white p-10 shadow-sm dark:bg-slate-800 md:p-12">
-                  <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
-                    <div>
-                      <div
-                        className={`h-1 w-12 ${study.frontmatter.accent} mb-6`}
-                      />
-                      <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
-                        {study.frontmatter.company}
-                      </h2>
+                <article className="relative">
+                  {/* Gradient accent bar */}
+                  <div
+                    className={`h-1 w-full bg-gradient-to-r ${study.frontmatter.accent} opacity-80`}
+                  />
+                  <div className="bg-white p-10 shadow-sm dark:bg-slate-800 md:p-12">
+                    <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
+                      <div>
+                        <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
+                          {study.frontmatter.company}
+                        </h2>
                       <p className="mt-2 text-base text-slate-600 dark:text-slate-400">
                         {study.frontmatter.title}
                       </p>
@@ -172,6 +174,7 @@ export default function WorkPage() {
                         ))}
                       </div>
                     </div>
+                  </div>
                   </div>
                 </article>
               </StaggerItem>
