@@ -11,6 +11,8 @@ const fraunces = Fraunces({
   display: "swap",
   variable: "--font-fraunces",
   weight: ["400", "700"],
+  adjustFontFallback: true, // Generates size-adjust to reduce CLS
+  fallback: ["Georgia", "serif"], // Matches Tailwind config
 });
 
 export const metadata: Metadata = {
