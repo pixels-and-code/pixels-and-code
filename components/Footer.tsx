@@ -9,8 +9,12 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
-            <Link href="/">
+            <Link
+              href="/"
+              className="rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+            >
               <Logo size="text-xl" />
+              <span className="sr-only">Pixels & Code home</span>
             </Link>
             <span className="text-sm text-slate-500 dark:text-slate-400">
               {currentYear}
