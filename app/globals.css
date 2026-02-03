@@ -155,3 +155,135 @@
   opacity: 1;
   transform: translateX(0) scale(1);
 }
+
+/* ==========================================================================
+   Button System
+   - .btn: base styles (use with a variant)
+   - .btn-primary: solid cyan with shimmer
+   - .btn-outline: bordered, transparent background
+   - .btn-ghost: text only, subtle hover
+   ========================================================================== */
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full text-sm font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900;
+}
+
+/* Primary - glass with shimmer */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(6 182 212 / 0.3);
+  background: linear-gradient(
+    to bottom,
+    rgb(6 182 212 / 0.95),
+    rgb(8 145 178 / 1)
+  );
+  color: white;
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 2px 8px rgb(6 182 212 / 0.15),
+    inset 0 1px 0 rgb(255 255 255 / 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: rgb(6 182 212 / 0.6);
+  box-shadow:
+    0 8px 24px rgb(6 182 212 / 0.3),
+    0 4px 12px rgb(6 182 212 / 0.2),
+    inset 0 1px 0 rgb(255 255 255 / 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow:
+    0 2px 8px rgb(6 182 212 / 0.2),
+    inset 0 1px 0 rgb(255 255 255 / 0.15);
+}
+
+/* Primary shimmer sweep */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgb(255 255 255 / 0.2) 45%,
+    rgb(255 255 255 / 0.3) 50%,
+    rgb(255 255 255 / 0.2) 55%,
+    transparent 80%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease-out;
+}
+
+.btn-primary:hover::before {
+  transform: translateX(100%);
+}
+
+/* Primary dark mode */
+.dark .btn-primary {
+  background: linear-gradient(
+    to bottom,
+    rgb(6 182 212 / 0.85),
+    rgb(8 145 178 / 0.9)
+  );
+  box-shadow:
+    0 2px 12px rgb(6 182 212 / 0.2),
+    inset 0 1px 0 rgb(255 255 255 / 0.15);
+}
+
+.dark .btn-primary:hover {
+  box-shadow:
+    0 8px 32px rgb(6 182 212 / 0.4),
+    0 4px 16px rgb(6 182 212 / 0.25),
+    inset 0 1px 0 rgb(255 255 255 / 0.2);
+}
+
+/* Outline - bordered, transparent, subtle lift */
+.btn-outline {
+  @apply border border-slate-300 bg-transparent text-slate-700;
+  @apply dark:border-slate-600 dark:text-slate-300;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+  transition: all 0.3s ease-out;
+}
+
+.btn-outline:hover {
+  @apply border-cyan-500 text-cyan-700 bg-cyan-50/50;
+  @apply dark:border-cyan-400 dark:text-cyan-400 dark:bg-cyan-950/30;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+
+.dark .btn-outline:hover {
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.25);
+}
+
+.btn-outline:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+}
+
+/* Ghost - text only */
+.btn-ghost {
+  @apply bg-transparent text-slate-600 dark:text-slate-400;
+  @apply hover:text-cyan-700 dark:hover:text-cyan-400;
+}
+
+.btn-ghost:active {
+  @apply scale-[0.98];
+}
+
+/* Size variants */
+.btn-sm {
+  @apply px-4 py-2 text-xs;
+}
+
+.btn-md {
+  @apply px-6 py-3 text-sm;
+}
+
+.btn-lg {
+  @apply px-8 py-4 text-sm;
+}

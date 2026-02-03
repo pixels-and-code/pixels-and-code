@@ -84,7 +84,7 @@ export function ThemeToggle() {
     return <div className="h-11 w-11 p-2.5" aria-hidden="true" />;
   }
 
-  const targetMode = theme === "light" ? "Dark" : "Light";
+  const currentMode = theme === "light" ? "Light" : "Dark";
 
   return (
     <>
@@ -95,10 +95,10 @@ export function ThemeToggle() {
       >
         <span className="flex items-center gap-2">
           <span className="shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] md:group-hover:scale-110">
-            {theme === "light" ? <MoonIcon /> : <SunIcon />}
+            {theme === "light" ? <SunIcon /> : <MoonIcon />}
           </span>
           <span className="hidden md:block theme-toggle-text text-sm font-medium whitespace-nowrap overflow-hidden w-0 group-hover:w-auto">
-            {targetMode}
+            {currentMode}
           </span>
         </span>
       </button>

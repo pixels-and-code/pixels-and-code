@@ -48,10 +48,7 @@ export default async function BlogPostPage({ params }: Props) {
     <article className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen">
       <div className="mx-auto max-w-3xl px-6">
         <ScrollFadeIn>
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-400 transition-colors mb-8"
-          >
+          <Link href="/blog" className="btn btn-ghost gap-2 mb-8">
             <svg
               className="w-4 h-4"
               fill="none"

@@ -30,7 +30,7 @@ export default function ContactPage() {
             <div className="mt-12 flex flex-wrap gap-4">
               <a
                 href="mailto:dan@pixels-and-code.co.uk"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-cyan-600 to-cyan-700 px-8 py-4 text-sm font-medium text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+                className="btn btn-primary btn-lg gap-2"
               >
                 <svg
                   aria-hidden="true"
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 href="https://linkedin.com/in/dancork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 px-8 py-4 text-sm font-medium text-slate-700 transition-all duration-300 hover:bg-slate-50 hover:shadow-lg hover:scale-[1.02] dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+                className="btn btn-outline btn-lg gap-2"
               >
                 <svg
                   aria-hidden="true"
@@ -68,7 +68,7 @@ export default function ContactPage() {
               <a
                 href="/cv.pdf"
                 download
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 px-8 py-4 text-sm font-medium text-slate-700 transition-all duration-300 hover:bg-slate-50 hover:shadow-lg hover:scale-[1.02] dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+                className="btn btn-outline btn-lg gap-2"
               >
                 <svg
                   aria-hidden="true"

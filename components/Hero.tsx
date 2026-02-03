@@ -73,21 +73,15 @@ export function Hero() {
               and scalable component libraries.
             </p>
 
-            <div className="mt-12 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-cyan-600 to-cyan-700 px-8 py-4 text-sm font-medium text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
-              >
-                Get in touch
-              </Link>
-              <Link
-                href="/work"
-                className="group inline-flex items-center gap-2 px-6 py-4 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
-              >
+            <div className="mt-12 flex flex-wrap items-center gap-6">
+              <Link href="/work" className="btn btn-primary btn-lg">
                 View work
+              </Link>
+              <Link href="/contact" className="btn btn-ghost group gap-2">
+                Get in touch
                 <svg
                   aria-hidden="true"
-                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -123,21 +117,15 @@ export function Hero() {
               and scalable component libraries.
             </motion.p>
 
-            <motion.div variants={itemVariants} className="mt-12 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-cyan-600 to-cyan-700 px-8 py-4 text-sm font-medium text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
-              >
-                Get in touch
-              </Link>
-              <Link
-                href="/work"
-                className="group inline-flex items-center gap-2 px-6 py-4 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
-              >
+            <motion.div variants={itemVariants} className="mt-12 flex flex-wrap items-center gap-6">
+              <Link href="/work" className="btn btn-primary btn-lg">
                 View work
+              </Link>
+              <Link href="/contact" className="btn btn-ghost group gap-2">
+                Get in touch
                 <svg
                   aria-hidden="true"
-                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
