@@ -59,24 +59,19 @@ export function Testimonials() {
                 <div className="bg-white dark:bg-slate-800 p-8 md:p-10 lg:p-12 shadow-sm">
                   <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
                     {/* Quote content */}
-                    <blockquote className="relative flex-1 text-lg text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
-                      {/* Opening quote - positioned absolutely to avoid affecting line height */}
+                    <blockquote className="flex-1 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                      {/* Opening quote as block element above text */}
                       <span
-                        className="absolute -left-1 -top-4 font-serif text-5xl text-slate-300 dark:text-slate-700 select-none"
+                        className="block font-serif text-4xl text-slate-300 dark:text-slate-600 select-none mb-2"
                         aria-hidden="true"
                       >
                         &ldquo;
                       </span>
-                      {testimonial.paragraphs.map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                      ))}
-                      {/* Closing quote - positioned at end of last paragraph */}
-                      <span
-                        className="absolute -bottom-6 right-0 font-serif text-5xl text-slate-300 dark:text-slate-700 select-none"
-                        aria-hidden="true"
-                      >
-                        &rdquo;
-                      </span>
+                      <div className="space-y-4">
+                        {testimonial.paragraphs.map((paragraph, index) => (
+                          <p key={index}>{paragraph}</p>
+                        ))}
+                      </div>
                     </blockquote>
 
                     {/* Author sidebar */}
