@@ -31,6 +31,18 @@ export function Hero() {
     },
   };
 
+  // LCP-optimised variant: h1 visible immediately, only animate transform
+  const lcpVariants = {
+    hidden: { y: 20 },
+    visible: {
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1] as const,
+      },
+    },
+  };
+
   const MotionWrapper = shouldReduceMotion ? "div" : motion.div;
   const motionProps = shouldReduceMotion
     ? {}
@@ -95,7 +107,7 @@ export function Hero() {
             </motion.p>
 
             <motion.h1
-              variants={itemVariants}
+              variants={lcpVariants}
               className="mt-6 font-serif text-slate-900 dark:text-white leading-[1.05] text-[clamp(2.5rem,8vw,5rem)]"
             >
               Frontend Engineering

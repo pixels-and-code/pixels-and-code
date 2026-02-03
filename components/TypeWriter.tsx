@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 
 const phrases = ["& Design Systems", "& React Applications", "& Scalable UI"];
 
+// Find the longest phrase to reserve space and prevent CLS
+const longestPhrase = phrases.reduce((a, b) => (a.length > b.length ? a : b));
+
 export function TypeWriter() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const shouldReduceMotion = useReducedMotion();
@@ -27,10 +30,14 @@ export function TypeWriter() {
 
   return (
     <span className="relative inline-block">
+      {/* Invisible text to reserve space for longest phrase, preventing CLS */}
+      <span className="invisible" aria-hidden="true">
+        {longestPhrase}
+      </span>
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
-          className="bg-gradient-to-b from-cyan-500 to-cyan-700 bg-clip-text text-transparent inline-block pb-2"
+          className="absolute left-0 top-0 bg-gradient-to-b from-cyan-500 to-cyan-700 bg-clip-text text-transparent inline-block pb-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
