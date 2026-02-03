@@ -41,26 +41,34 @@
   }
 }
 
-/* Header scroll-driven animation */
+/* Header scroll-driven animation - frosted glass effect */
 @keyframes header-scroll {
   from {
     background-color: transparent;
-    backdrop-filter: blur(0);
+    backdrop-filter: blur(0) saturate(100%);
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom-color: transparent;
   }
   to {
-    background-color: rgb(248 250 252 / 0.9);
-    backdrop-filter: blur(12px);
+    background-color: rgb(248 250 252 / 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+    border-bottom-color: rgb(226 232 240 / 0.5);
   }
 }
 
 @keyframes header-scroll-dark {
   from {
     background-color: transparent;
-    backdrop-filter: blur(0);
+    backdrop-filter: blur(0) saturate(100%);
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom-color: transparent;
   }
   to {
-    background-color: rgb(15 23 42 / 0.9);
-    backdrop-filter: blur(12px);
+    background-color: rgb(15 23 42 / 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.2);
+    border-bottom-color: rgb(51 65 85 / 0.5);
   }
 }
 
@@ -68,6 +76,7 @@
   animation: header-scroll linear both;
   animation-timeline: scroll();
   animation-range: 0px 50px;
+  border-bottom: 1px solid transparent;
 }
 
 .dark [data-header] {
