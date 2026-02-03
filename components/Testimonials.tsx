@@ -33,10 +33,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section
-      id="testimonials"
-      className="py-32 md:py-40"
-    >
+    <section id="testimonials" className="py-32 md:py-40">
       <div className="mx-auto max-w-6xl px-6">
         <ScrollFadeIn>
           <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
@@ -60,14 +57,14 @@ export function Testimonials() {
                   <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
                     {/* Quote content */}
                     <blockquote className="flex-1 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                      {/* Opening quote as block element above text */}
+                      {/* Decorative background quote */}
                       <span
-                        className="block font-serif text-4xl text-slate-300 dark:text-slate-600 select-none mb-2"
+                        className={`absolute top-4 left-4 block font-serif text-[10rem] leading-none bg-gradient-to-br ${testimonial.accent} bg-clip-text text-transparent opacity-[12%] z-0 select-none`}
                         aria-hidden="true"
                       >
                         &ldquo;
                       </span>
-                      <div className="space-y-4">
+                      <div className="relative space-y-4 z-10">
                         {testimonial.paragraphs.map((paragraph, index) => (
                           <p key={index}>{paragraph}</p>
                         ))}
@@ -88,14 +85,14 @@ export function Testimonials() {
                           {testimonial.author}
                         </p>
                         <p className="mt-1 text-slate-600 dark:text-slate-400 text-sm">
-                          {testimonial.title} at{" "}
-                          <Link
-                            href={testimonial.companyHref}
-                            className="text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400 underline underline-offset-2 transition-colors"
-                          >
-                            {testimonial.company}
-                          </Link>
+                          {testimonial.title}
                         </p>
+                        <Link
+                          href={testimonial.companyHref}
+                          className="mt-1 block text-sm text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400 underline underline-offset-2 transition-colors"
+                        >
+                          {testimonial.company}
+                        </Link>
                       </div>
                     </footer>
                   </div>
