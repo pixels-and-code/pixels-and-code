@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Pixels and Code | Frontend Engineering & Design Systems Consultant",
     description:
       "Specialising in React, React Native, and scalable UI architecture for startups and scale-ups.",
