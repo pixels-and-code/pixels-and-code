@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { getAllPosts, getPostBySlug, compileMDXContent } from "@/lib/content";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
+import { Button, Container, AccentBar, Badge } from "@/components/ui";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -46,9 +46,9 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <article className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen">
-      <div className="mx-auto max-w-3xl px-6">
+      <Container size="sm">
         <ScrollFadeIn>
-          <Link href="/blog" className="btn btn-ghost gap-2 mb-8">
+          <Button as="link" href="/blog" variant="ghost" className="gap-2 mb-8">
             <svg
               className="w-4 h-4"
               fill="none"
@@ -63,9 +63,9 @@ export default async function BlogPostPage({ params }: Props) {
               />
             </svg>
             Back to blog
-          </Link>
+          </Button>
 
-          <div className="h-1 w-12 bg-gradient-to-b from-cyan-500 to-cyan-700 mb-6" />
+          <AccentBar className="mb-6" />
 
           <h1 className="font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
             {post.frontmatter.title}
@@ -86,12 +86,9 @@ export default async function BlogPostPage({ params }: Props) {
           {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
             <div className="mt-6 flex flex-wrap gap-2">
               {post.frontmatter.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="border border-slate-200 px-3 py-1 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400"
-                >
+                <Badge key={tag} variant="outline" size="sm">
                   {tag}
-                </span>
+                </Badge>
               ))}
             </div>
           )}
@@ -100,7 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
         <ScrollFadeIn delay={0.15}>
           <div className="mt-12">{content}</div>
         </ScrollFadeIn>
-      </div>
+      </Container>
     </article>
   );
 }

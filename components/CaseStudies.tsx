@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollFadeIn, StaggerContainer, StaggerItem } from "./ScrollFadeIn";
+import { Label, Section, Container, AccentBar, Badge } from "@/components/ui";
 
 const caseStudies = [
   {
@@ -31,12 +32,10 @@ const caseStudies = [
 
 export function CaseStudies() {
   return (
-    <section id="work" className="py-32 md:py-40 bg-slate-50 dark:bg-slate-900">
-      <div className="mx-auto max-w-6xl px-6">
+    <Section id="work" className="py-32 md:py-40 bg-slate-50 dark:bg-slate-900">
+      <Container>
         <ScrollFadeIn>
-          <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-            Work
-          </p>
+          <Label>Work</Label>
           <h2 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
             Selected projects
           </h2>
@@ -50,7 +49,7 @@ export function CaseStudies() {
               >
                 <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
                   <div>
-                    <div className={`h-1 w-12 ${study.accent} mb-6`} />
+                    <AccentBar gradient={study.accent} className="mb-6" />
                     <h3 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
                       {study.company}
                     </h3>
@@ -64,12 +63,9 @@ export function CaseStudies() {
                     </p>
                     <div className="mt-8 flex flex-wrap gap-3">
                       {study.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="bg-slate-200 px-4 py-1.5 text-sm font-medium text-slate-700 dark:bg-slate-700 dark:text-slate-200"
-                        >
+                        <Badge key={tag} variant="solid">
                           {tag}
-                        </span>
+                        </Badge>
                       ))}
                     </div>
                   </div>
@@ -78,7 +74,7 @@ export function CaseStudies() {
             </StaggerItem>
           ))}
         </StaggerContainer>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

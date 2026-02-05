@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { TypeWriter } from "./TypeWriter";
 import { FloatingUIElements } from "./FloatingUIElements";
+import { Button, Label } from "@/components/ui";
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -58,9 +58,7 @@ export function Hero() {
       <MotionWrapper className="relative z-10 mx-auto max-w-6xl px-6 py-32 w-full" {...motionProps}>
         {shouldReduceMotion ? (
           <>
-            <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-              Dan Cork · Folkestone, UK
-            </p>
+            <Label>Dan Cork · Folkestone, UK</Label>
 
             <h1 className="mt-6 font-serif text-slate-900 dark:text-white leading-[1.05] text-[clamp(2.5rem,8vw,5rem)]">
               Frontend Engineering
@@ -73,10 +71,10 @@ export function Hero() {
             </p>
 
             <div className="mt-12 flex flex-wrap items-center gap-6">
-              <Link href="/work" className="btn btn-primary btn-lg">
+              <Button as="link" href="/work" variant="primary" size="lg">
                 View work
-              </Link>
-              <Link href="/contact" className="btn btn-ghost group gap-2">
+              </Button>
+              <Button as="link" href="/contact" variant="ghost" className="group gap-2">
                 Get in touch
                 <svg
                   aria-hidden="true"
@@ -87,17 +85,14 @@ export function Hero() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+              </Button>
             </div>
           </>
         ) : (
           <>
-            <motion.p
-              variants={itemVariants}
-              className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400"
-            >
-              Dan Cork · Folkestone, UK
-            </motion.p>
+            <motion.div variants={itemVariants}>
+              <Label>Dan Cork · Folkestone, UK</Label>
+            </motion.div>
 
             <motion.h1
               variants={lcpVariants}
@@ -116,10 +111,10 @@ export function Hero() {
             </motion.p>
 
             <motion.div variants={itemVariants} className="mt-12 flex flex-wrap items-center gap-6">
-              <Link href="/work" className="btn btn-primary btn-lg">
+              <Button as="link" href="/work" variant="primary" size="lg">
                 View work
-              </Link>
-              <Link href="/contact" className="btn btn-ghost group gap-2">
+              </Button>
+              <Button as="link" href="/contact" variant="ghost" className="group gap-2">
                 Get in touch
                 <svg
                   aria-hidden="true"
@@ -130,7 +125,7 @@ export function Hero() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+              </Button>
             </motion.div>
           </>
         )}

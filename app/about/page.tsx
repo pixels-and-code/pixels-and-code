@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { Experience } from "@/components/Experience";
 import { ContactCTA } from "@/components/ContactCTA";
+import { Label, Section, Container } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "About | Pixels and Code",
@@ -15,14 +16,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32">
-        <div className="mx-auto max-w-6xl px-6">
+      <Section className="pt-32 pb-20 md:pt-40 md:pb-32">
+        <Container>
           <div className="grid gap-12 lg:grid-cols-[1fr,2fr] lg:gap-20 items-start">
             <ScrollFadeIn>
               <div>
-                <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-                  About
-                </p>
+                <Label>About</Label>
                 <h1 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
                   A bit about me
                 </h1>
@@ -53,8 +52,8 @@ export default function AboutPage() {
               </div>
             </ScrollFadeIn>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       <Experience />
       <ContactCTA />

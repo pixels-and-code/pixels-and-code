@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ScrollFadeIn, StaggerContainer, StaggerItem } from "./ScrollFadeIn";
+import { Label, Section, Container } from "@/components/ui";
 
 const stats = [
   { value: "15+", label: "Years experience" },
@@ -17,14 +18,12 @@ const roles = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-32 md:py-40">
-      <div className="mx-auto max-w-6xl px-6">
+    <Section id="experience">
+      <Container>
         <div className="grid gap-20 lg:grid-cols-2 lg:gap-16">
           <ScrollFadeIn>
             <div>
-              <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-                Experience
-              </p>
+              <Label>Experience</Label>
               <h2 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
                 Track record
               </h2>
@@ -53,9 +52,7 @@ export function Experience() {
 
           <ScrollFadeIn delay={0.2}>
             <div className="lg:pt-16">
-              <h3 className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-                Notable roles
-              </h3>
+              <Label as="span">Notable roles</Label>
               <StaggerContainer className="mt-8" staggerDelay={0.1}>
                 {roles.map((item) => (
                   <StaggerItem key={item.id}>
@@ -76,7 +73,7 @@ export function Experience() {
             </div>
           </ScrollFadeIn>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

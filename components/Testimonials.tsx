@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollFadeIn, StaggerContainer, StaggerItem } from "./ScrollFadeIn";
+import { Label, Section, Container, AccentBar } from "@/components/ui";
 
 const testimonials = [
   {
@@ -33,12 +34,10 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-32 md:py-40">
-      <div className="mx-auto max-w-6xl px-6">
+    <Section id="testimonials">
+      <Container>
         <ScrollFadeIn>
-          <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-            Testimonials
-          </p>
+          <Label>Testimonials</Label>
           <h2 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
             What others say
           </h2>
@@ -49,8 +48,10 @@ export function Testimonials() {
             <StaggerItem key={testimonial.author}>
               <article className="group relative">
                 {/* Gradient accent bar */}
-                <div
-                  className={`h-1 w-full bg-gradient-to-r ${testimonial.accent} opacity-80`}
+                <AccentBar
+                  width="full"
+                  gradient={`bg-gradient-to-r ${testimonial.accent}`}
+                  className="opacity-80"
                 />
 
                 <div className="bg-white dark:bg-slate-800 p-8 md:p-10 lg:p-12 shadow-sm">
@@ -101,7 +102,7 @@ export function Testimonials() {
             </StaggerItem>
           ))}
         </StaggerContainer>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollFadeIn, StaggerContainer, StaggerItem } from "./ScrollFadeIn";
+import { Label, Section, Container, AccentBar } from "@/components/ui";
 
 const services = [
   {
@@ -34,12 +35,10 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-32 md:py-40">
-      <div className="mx-auto max-w-6xl px-6">
+    <Section id="services">
+      <Container>
         <ScrollFadeIn>
-          <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-            Services
-          </p>
+          <Label>Services</Label>
           <h2 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
             How I can help
           </h2>
@@ -54,7 +53,7 @@ export function Services() {
               <div
                 className={`group relative h-full p-10 md:p-12 transition-all duration-300 border ${service.bg} ${service.border} hover:scale-[1.02] hover:shadow-xl ${service.glow}`}
               >
-                <div className={`h-1 w-12 ${service.accent} mb-8`} />
+                <AccentBar gradient={service.accent} className="mb-8" />
                 <h3 className="font-serif text-2xl text-slate-900 dark:text-white md:text-3xl">
                   {service.title}
                 </h3>
@@ -65,7 +64,7 @@ export function Services() {
             </StaggerItem>
           ))}
         </StaggerContainer>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

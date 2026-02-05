@@ -1,20 +1,19 @@
 "use client";
 
 import { ScrollFadeIn } from "./ScrollFadeIn";
+import { Label, Section, Container } from "@/components/ui";
 
 export function About() {
   return (
-    <section
+    <Section
       id="about"
       className="py-32 md:py-40 bg-white dark:bg-slate-950"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <Container>
         <div className="grid gap-12 lg:grid-cols-[1fr,2fr] lg:gap-20 items-start">
           <ScrollFadeIn>
             <div>
-              <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-                About
-              </p>
+              <Label>About</Label>
               <h2 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl">
                 A bit about me
               </h2>
@@ -45,7 +44,7 @@ export function About() {
             </div>
           </ScrollFadeIn>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

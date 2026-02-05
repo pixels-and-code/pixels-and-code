@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
+import { Button, Label, Section, Container } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Contact | Pixels and Code",
@@ -12,13 +13,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen">
-      <div className="mx-auto max-w-6xl px-6">
+    <Section className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen">
+      <Container>
         <ScrollFadeIn>
           <div className="max-w-3xl">
-            <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-              Contact
-            </p>
+            <Label>Contact</Label>
             <h1 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
               Let&apos;s work together
             </h1>
@@ -28,9 +27,12 @@ export default function ContactPage() {
             </p>
 
             <div className="mt-12 flex flex-wrap gap-4">
-              <a
+              <Button
+                as="a"
                 href="mailto:dan@pixels-and-code.co.uk"
-                className="btn btn-primary btn-lg gap-2"
+                variant="primary"
+                size="lg"
+                className="gap-2"
               >
                 <svg
                   aria-hidden="true"
@@ -47,12 +49,15 @@ export default function ContactPage() {
                   />
                 </svg>
                 dan@pixels-and-code.co.uk
-              </a>
-              <a
+              </Button>
+              <Button
+                as="a"
                 href="https://linkedin.com/in/dancork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline btn-lg gap-2"
+                variant="outline"
+                size="lg"
+                className="gap-2"
               >
                 <svg
                   aria-hidden="true"
@@ -64,11 +69,14 @@ export default function ContactPage() {
                 </svg>
                 LinkedIn
                 <span className="sr-only"> (opens in new window)</span>
-              </a>
-              <a
+              </Button>
+              <Button
+                as="a"
                 href="/cv.pdf"
                 download
-                className="btn btn-outline btn-lg gap-2"
+                variant="outline"
+                size="lg"
+                className="gap-2"
               >
                 <svg
                   aria-hidden="true"
@@ -85,7 +93,7 @@ export default function ContactPage() {
                   />
                 </svg>
                 Download CV
-              </a>
+              </Button>
             </div>
 
             <p className="mt-16 text-slate-600 dark:text-slate-400">
@@ -94,7 +102,7 @@ export default function ContactPage() {
             </p>
           </div>
         </ScrollFadeIn>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

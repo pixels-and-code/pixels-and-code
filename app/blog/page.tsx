@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/content";
 import { ScrollFadeIn, StaggerContainer, StaggerItem } from "@/components/ScrollFadeIn";
 import { ContactCTA } from "@/components/ContactCTA";
+import { Label, Section, Container, AccentBar, Badge } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Blog | Pixels and Code",
@@ -18,12 +19,10 @@ export default function BlogPage() {
 
   return (
     <>
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-[60vh]">
-        <div className="mx-auto max-w-6xl px-6">
+      <Section className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-[60vh]">
+        <Container>
           <ScrollFadeIn>
-            <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-              Blog
-            </p>
+            <Label>Blog</Label>
             <h1 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
               Writing
             </h1>
@@ -45,7 +44,7 @@ export default function BlogPage() {
                 <StaggerItem key={post.slug}>
                   <Link href={`/blog/${post.slug}`} className="block group">
                     <article className="relative bg-white p-10 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.01] dark:bg-slate-800 md:p-12">
-                      <div className="h-1 w-12 bg-gradient-to-b from-cyan-500 to-cyan-700 mb-6" />
+                      <AccentBar className="mb-6" />
                       <h2 className="font-serif text-2xl text-slate-900 dark:text-white md:text-3xl group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">
                         {post.frontmatter.title}
                       </h2>
@@ -69,12 +68,9 @@ export default function BlogPage() {
                       {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
                         <div className="mt-4 flex flex-wrap gap-2">
                           {post.frontmatter.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="border border-slate-300 px-3 py-1 text-xs text-slate-500 dark:border-slate-600 dark:text-slate-400"
-                            >
+                            <Badge key={tag} variant="outline" size="sm">
                               {tag}
-                            </span>
+                            </Badge>
                           ))}
                         </div>
                       )}
@@ -84,8 +80,8 @@ export default function BlogPage() {
               ))}
             </StaggerContainer>
           )}
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       <ContactCTA />
     </>

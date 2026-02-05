@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getAllCaseStudies } from "@/lib/content";
 import { ScrollFadeIn, StaggerContainer, StaggerItem } from "@/components/ScrollFadeIn";
 import { ContactCTA } from "@/components/ContactCTA";
+import { Label, Section, Container, AccentBar, Badge } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Work | Pixels and Code",
@@ -126,12 +127,10 @@ export default function WorkPage() {
   return (
     <>
       {/* Case Studies */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32">
-        <div className="mx-auto max-w-6xl px-6">
+      <Section className="pt-32 pb-20 md:pt-40 md:pb-32">
+        <Container>
           <ScrollFadeIn>
-            <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-              Work
-            </p>
+            <Label>Work</Label>
             <h1 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
               Selected projects
             </h1>
@@ -145,9 +144,10 @@ export default function WorkPage() {
             {caseStudies.map((study) => (
               <StaggerItem key={study.slug}>
                 <article className="relative">
-                  {/* Gradient accent bar */}
-                  <div
-                    className={`h-1 w-full bg-gradient-to-r ${study.frontmatter.accent} opacity-80`}
+                  <AccentBar
+                    width="full"
+                    gradient={`bg-gradient-to-r ${study.frontmatter.accent}`}
+                    className="opacity-80"
                   />
                   <div className="bg-white p-10 shadow-sm dark:bg-slate-800 md:p-12">
                     <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
@@ -165,12 +165,9 @@ export default function WorkPage() {
                       </p>
                       <div className="mt-6 flex flex-wrap gap-2">
                         {study.frontmatter.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="border border-slate-300 px-3 py-1 text-xs text-slate-500 dark:border-slate-600 dark:text-slate-400"
-                          >
+                          <Badge key={tag} variant="outline" size="sm">
                             {tag}
-                          </span>
+                          </Badge>
                         ))}
                       </div>
                     </div>
@@ -180,16 +177,14 @@ export default function WorkPage() {
               </StaggerItem>
             ))}
           </StaggerContainer>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Work History */}
-      <section className="py-32 md:py-40">
-        <div className="mx-auto max-w-6xl px-6">
+      <Section className="py-32 md:py-40">
+        <Container>
           <ScrollFadeIn>
-            <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-              Experience
-            </p>
+            <Label>Experience</Label>
             <h2 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
               Work history
             </h2>
@@ -214,12 +209,9 @@ export default function WorkPage() {
                   <div className="grid md:grid-cols-[180px,1fr] md:gap-12">
                     <div className="hidden md:flex flex-col items-end gap-1.5 mt-3">
                       {job.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="border border-slate-200 px-2 py-0.5 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400"
-                        >
+                        <Badge key={tag} variant="outline" size="sm">
                           {tag}
-                        </span>
+                        </Badge>
                       ))}
                     </div>
 
@@ -243,12 +235,9 @@ export default function WorkPage() {
 
                       <div className="mt-5 flex flex-wrap gap-2 md:hidden">
                         {job.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="border border-slate-200 px-2.5 py-0.5 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400"
-                          >
+                          <Badge key={tag} variant="outline" size="sm">
                             {tag}
-                          </span>
+                          </Badge>
                         ))}
                       </div>
                     </div>
@@ -257,8 +246,8 @@ export default function WorkPage() {
               </StaggerItem>
             ))}
           </StaggerContainer>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       <ContactCTA />
     </>

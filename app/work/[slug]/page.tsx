@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { getAllCaseStudies, getCaseStudyBySlug, compileMDXContent } from "@/lib/content";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
+import { Button, Label, Container, AccentBar, Badge } from "@/components/ui";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -46,9 +46,9 @@ export default async function CaseStudyPage({ params }: Props) {
 
   return (
     <article className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen">
-      <div className="mx-auto max-w-3xl px-6">
+      <Container size="sm">
         <ScrollFadeIn>
-          <Link href="/work" className="btn btn-ghost gap-2 mb-8">
+          <Button as="link" href="/work" variant="ghost" className="gap-2 mb-8">
             <svg
               className="w-4 h-4"
               fill="none"
@@ -63,13 +63,11 @@ export default async function CaseStudyPage({ params }: Props) {
               />
             </svg>
             Back to work
-          </Link>
+          </Button>
 
-          <div className={`h-1 w-12 ${caseStudy.frontmatter.accent} mb-6`} />
+          <AccentBar gradient={caseStudy.frontmatter.accent} className="mb-6" />
 
-          <p className="text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400">
-            {caseStudy.frontmatter.company}
-          </p>
+          <Label>{caseStudy.frontmatter.company}</Label>
           <h1 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
             {caseStudy.frontmatter.title}
           </h1>
@@ -87,12 +85,9 @@ export default async function CaseStudyPage({ params }: Props) {
 
           <div className="mt-6 flex flex-wrap gap-2">
             {caseStudy.frontmatter.tags.map((tag) => (
-              <span
-                key={tag}
-                className="border border-slate-200 px-3 py-1 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400"
-              >
+              <Badge key={tag} variant="outline" size="sm">
                 {tag}
-              </span>
+              </Badge>
             ))}
           </div>
         </ScrollFadeIn>
@@ -100,7 +95,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <ScrollFadeIn delay={0.15}>
           <div className="mt-12">{content}</div>
         </ScrollFadeIn>
-      </div>
+      </Container>
     </article>
   );
 }
