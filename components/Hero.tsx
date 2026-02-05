@@ -69,8 +69,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-8 max-w-xl text-lg text-slate-600 dark:text-slate-300 leading-relaxed md:text-xl">
-              Helping startups and scale-ups build production React applications
-              and scalable component libraries.
+              Leading architecture for production applications and design systems at scale.
             </p>
 
             <div className="mt-12 flex flex-wrap items-center gap-6">
@@ -113,8 +112,7 @@ export function Hero() {
               variants={itemVariants}
               className="mt-8 max-w-xl text-lg text-slate-600 dark:text-slate-300 leading-relaxed md:text-xl"
             >
-              Helping startups and scale-ups build production React applications
-              and scalable component libraries.
+              Leading architecture for production applications and design systems at scale.
             </motion.p>
 
             <motion.div variants={itemVariants} className="mt-12 flex flex-wrap items-center gap-6">

@@ -3,7 +3,12 @@
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const phrases = ["& Design Systems", "& React Applications", "& Scalable UI"];
+const phrases = [
+  "& Design Systems",
+  "& Architecture",
+  "& Technical Leadership",
+  "& AI Workflows",
+];
 
 // Find the longest phrase to reserve space and prevent CLS
 const longestPhrase = phrases.reduce((a, b) => (a.length > b.length ? a : b));
