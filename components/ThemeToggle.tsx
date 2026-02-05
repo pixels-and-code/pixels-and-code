@@ -12,6 +12,7 @@ function SunIcon({ className }: { className?: string }) {
       height="20"
       viewBox="0 0 24 24"
       fill="none"
+      style={{ overflow: "visible" }}
     >
       {/* Center circle */}
       <circle
@@ -45,19 +46,61 @@ function MoonIcon({ className }: { className?: string }) {
       height="20"
       viewBox="0 0 24 24"
       fill="none"
+      style={{ overflow: "visible" }}
     >
-      {/* Crescent moon */}
+      {/* Crescent moon - rendered first so other elements appear on top */}
       <path
         className="theme-toggle-moon text-slate-600 dark:text-slate-300"
         d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9 9 0 1 0 20.354 15.354z"
         fill="currentColor"
       />
-      {/* Star */}
-      <path
-        className="theme-toggle-star text-slate-500 dark:text-slate-400"
-        d="M18 6l.5 1.5L20 8l-1.5.5L18 10l-.5-1.5L16 8l1.5-.5L18 6z"
-        fill="currentColor"
+      {/* Dot stars in the sky area (inside crescent curve) */}
+      <circle
+        className="theme-toggle-star theme-toggle-star-1"
+        cx="18"
+        cy="9"
+        r="0.9"
+        fill="#fef3c7"
       />
+      <circle
+        className="theme-toggle-star theme-toggle-star-2"
+        cx="14"
+        cy="6"
+        r="0.6"
+        fill="#fef3c7"
+      />
+      <circle
+        className="theme-toggle-star theme-toggle-star-3"
+        cx="19"
+        cy="4"
+        r="0.4"
+        fill="#fef3c7"
+      />
+      {/* Cloud - rendered last, fades in on hover */}
+      <g className="theme-toggle-cloud">
+        <ellipse
+          className="text-slate-400 dark:text-slate-500"
+          cx="6"
+          cy="20"
+          rx="4"
+          ry="1.5"
+          fill="currentColor"
+        />
+        <circle
+          className="text-slate-400 dark:text-slate-500"
+          cx="4.5"
+          cy="18.5"
+          r="2"
+          fill="currentColor"
+        />
+        <circle
+          className="text-slate-400 dark:text-slate-500"
+          cx="8"
+          cy="18"
+          r="2.5"
+          fill="currentColor"
+        />
+      </g>
     </svg>
   );
 }
@@ -94,7 +137,7 @@ export function ThemeToggle() {
         aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       >
         <span className="flex items-center gap-2">
-          <span className="shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] md:group-hover:scale-110">
+          <span className="shrink-0">
             {theme === "light" ? <SunIcon /> : <MoonIcon />}
           </span>
           <span className="hidden md:block theme-toggle-text text-sm font-medium whitespace-nowrap overflow-hidden w-0 group-hover:w-auto">
