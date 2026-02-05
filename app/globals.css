@@ -123,6 +123,15 @@
   }
 }
 
+@keyframes sun-rays-hover-spin {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(180deg);
+  }
+}
+
 @keyframes moon-rock {
   0%, 100% {
     transform: rotate(0deg);
@@ -181,7 +190,7 @@
 }
 
 .group:hover .theme-toggle-sun-rays {
-  animation: sun-rays-burst-fast 4s ease-in-out infinite;
+  animation: sun-rays-hover-spin 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, sun-rays-burst-fast 4s ease-in-out 0.6s infinite;
 }
 
 .theme-toggle-moon {
