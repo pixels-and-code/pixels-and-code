@@ -73,7 +73,7 @@ export function Testimonials() {
                     </blockquote>
 
                     {/* Author sidebar */}
-                    <footer className="flex items-center gap-4 lg:flex-col lg:items-center lg:justify-start lg:w-40 lg:shrink-0 lg:text-center lg:border-l lg:border-slate-200 lg:dark:border-slate-800 lg:pl-12">
+                    <footer className="flex items-center gap-4 lg:flex-col lg:items-center lg:justify-start lg:w-48 lg:shrink-0 lg:text-center lg:border-l lg:border-slate-200 lg:dark:border-slate-800 lg:pl-12">
                       <Image
                         src={testimonial.avatar}
                         alt={testimonial.author}
@@ -82,7 +82,7 @@ export function Testimonials() {
                         className="rounded-full grayscale w-16 h-16 lg:w-20 lg:h-20"
                       />
                       <div>
-                        <p className="font-medium text-lg text-slate-900 dark:text-white">
+                        <p className="font-medium text-lg text-slate-900 dark:text-white whitespace-nowrap">
                           {testimonial.author}
                         </p>
                         <p className="mt-1 text-slate-600 dark:text-slate-400 text-sm">
