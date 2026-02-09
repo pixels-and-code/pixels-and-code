@@ -30,6 +30,18 @@ const testimonials = [
     avatar: "/avatar-ed.jpeg",
     accent: "from-violet-400 to-violet-600",
   },
+  {
+    paragraphs: [
+      "I had the opportunity to work with Dan at Unit4, where he played an important role in building and scaling our design system across teams. He combined hands-on technical direction with strong cross-functional coordination, helping us move from a fragmented setup to a more efficient, reusable system adopted across products.",
+      "What I particularly value is his ability to connect strategy to delivery, setting direction, prioritising work and guiding teams across disciplines toward consistent, scalable outcomes. Dan is a reliable leader who brings structure, accountability and momentum to complex design-system initiatives.",
+    ],
+    author: "Sara Portell",
+    title: "VP of UX & Interim CPO",
+    company: "Unit4",
+    companyHref: "/work/unit4",
+    avatar: "/avatar-sara.jpeg",
+    accent: "from-violet-400 to-violet-600",
+  },
 ];
 
 export function Testimonials() {
