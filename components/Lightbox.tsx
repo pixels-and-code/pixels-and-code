@@ -48,7 +48,7 @@ export function LightboxImage({ src, alt, caption, crop }: LightboxImageProps) {
         <button
           ref={triggerRef}
           onClick={() => setIsOpen(true)}
-          className="group block w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/50 cursor-zoom-in transition-all hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
+          className="group block w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/50 cursor-zoom-in transition-shadow duration-300 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
           aria-label={`View ${alt} full size`}
         >
           {crop ? (
@@ -58,7 +58,7 @@ export function LightboxImage({ src, alt, caption, crop }: LightboxImageProps) {
                 alt={alt}
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                className="object-cover object-top transition-opacity duration-300 group-hover:opacity-90"
               />
             </div>
           ) : (
@@ -67,7 +67,7 @@ export function LightboxImage({ src, alt, caption, crop }: LightboxImageProps) {
               alt={alt}
               width={800}
               height={500}
-              className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
+              className="w-full h-auto transition-opacity duration-300 group-hover:opacity-90"
             />
           )}
         </button>
