@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllCaseStudies, getCaseStudyBySlug, compileMDXContent } from "@/lib/content";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
-import { Button, Label, Container, AccentBar, Badge } from "@/components/ui";
+import { Container, AccentBar, Badge } from "@/components/ui";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -50,27 +50,12 @@ export default async function CaseStudyPage({ params }: Props) {
     <article className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen">
       <Container size="sm">
         <ScrollFadeIn>
-          <Button as="link" href="/work" variant="ghost" className="gap-2 mb-8">
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-              />
-            </svg>
-            Back to work
-          </Button>
-
           <AccentBar gradient={`bg-gradient-to-r ${caseStudy.frontmatter.accent}`} className="mb-6" />
 
-          <Label>{caseStudy.frontmatter.company}</Label>
-          <h1 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+            {caseStudy.frontmatter.company}
+          </p>
+          <h1 className="font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
             {caseStudy.frontmatter.title}
           </h1>
 
