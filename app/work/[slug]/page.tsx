@@ -10,9 +10,11 @@ type Props = {
 
 export async function generateStaticParams() {
   const caseStudies = getAllCaseStudies();
-  return caseStudies.map((study) => ({
-    slug: study.slug,
-  }));
+  return caseStudies
+    .filter((study) => study.frontmatter.linked)
+    .map((study) => ({
+      slug: study.slug,
+    }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -65,7 +67,7 @@ export default async function CaseStudyPage({ params }: Props) {
             Back to work
           </Button>
 
-          <AccentBar gradient={caseStudy.frontmatter.accent} className="mb-6" />
+          <AccentBar gradient={`bg-gradient-to-r ${caseStudy.frontmatter.accent}`} className="mb-6" />
 
           <Label>{caseStudy.frontmatter.company}</Label>
           <h1 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">

@@ -76,7 +76,7 @@ You are a copywriter and content strategist for the Pixels and Code portfolio we
 - Action-oriented verbs
 - Clear benefit or next step
 - "Get in touch" not "Click here"
-- "View case study" not "Learn more"
+- "Read case study" not "Learn more"
 
 **Case Studies**
 

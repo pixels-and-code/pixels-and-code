@@ -1,28 +1,187 @@
 ---
-title: "Design System from Scratch"
+title: "Building Ripple: Unit4's Design System"
 company: "Unit4"
-date: "2023-06-01"
-excerpt: "Architected monorepo with Nx, built accessible web components with React wrappers. Adopted by 3 teams across 4 products within 6 months."
-tags: ["Design Systems", "React", "Web Components", "Accessibility", "Nx"]
+date: "2023-12-01"
+excerpt: "Led a team of five to build a design system serving 3 teams across 4 products, with a layered monorepo architecture spanning tokens, CSS, web components, and React."
+tags: ["Design Systems", "Leadership", "React", "Web Components", "Accessibility", "Stencil", "Style Dictionary"]
 accent: "from-violet-400 to-violet-600"
 published: true
+linked: true
+---
+
+## Overview
+
+I was hired to build Unit4's design system from scratch. Over 14 months, the team grew from two to five, the technical architecture expanded to serve multiple frameworks, and adoption spread across three teams and four products. The system was on track for a v1 release when organisational restructuring moved roles to different locations.
+
 ---
 
 ## The Challenge
 
-Unit4 needed a unified design system that could work across multiple products built with different frameworks.
+**Mixed design maturity.** Figma experience across the UX team varied widely, from designers who lived in the tool to those who barely used it. Any system needed to be simple enough for the least experienced designer to pick up without hand-holding, which meant stripping away unnecessary complexity at every level.
 
-## The Solution
+**Limited frontend expertise.** Frontend skills were similarly uneven across engineering teams. Many developers were unfamiliar with TypeScript, modern React patterns, and component-based architecture, so the system had to meet them where they were rather than demanding they level up before they could contribute.
 
-I architected a design system built on web components with React wrapper components, distributed via an Nx monorepo.
+**Failed previous attempt.** An earlier design system effort had struggled to gain traction, leaving the organisation sceptical about whether a second attempt would fare any better. That scepticism shaped everything: the strategy had to demonstrate value early and build trust incrementally.
 
-### Technical Decisions
+**Diverse tech stack.** The product suite included legacy applications alongside newer products built with different frameworks. Any solution had to work across this fragmented landscape without forcing wholesale rewrites.
 
-- **Web Components** for framework agnosticism
-- **React wrappers** for developer experience
-- **Nx** for monorepo tooling and caching
-- **Storybook** for documentation and visual testing
+---
 
-## Adoption
+## Strategic Approach
 
-Within 6 months, 3 teams across 4 products had adopted the design system, improving consistency and reducing development time.
+Working with the VP of UX and UX Director, I rewrote the design system strategy around four principles that addressed the specific challenges above.
+
+### 1. Simplicity First
+
+Complexity would kill adoption, so every design decision prioritised ease of use over feature completeness. This applied equally to Figma and code: if a component was difficult to configure or understand, it needed simplifying before it shipped.
+
+### 2. Accessibility and Content as Foundations
+
+Close collaboration with the Director of Content Design ensured that accessibility and content guidelines were embedded into the system from day one, rather than bolted on later. Components guided users toward accessible implementations by default, reducing the burden on individual teams to interpret WCAG guidelines themselves.
+
+### 3. Multi-tier Architecture
+
+The technical architecture needed to serve legacy products, acquisitions with their own tech stacks, and new products being built in React. The answer was a four-tier monorepo that allowed teams to consume the system at whatever level suited their stack:
+
+```text
+Tokens (Style Dictionary)
+    ↓
+CSS (framework-agnostic styles)
+    ↓
+Web Components (Stencil)
+    ↓
+React Wrappers (zero-friction DX)
+```
+
+Tokens defined in JSON produced CSS custom properties, Less, Sass, TypeScript, and JSON outputs. The CSS layer gave legacy teams a low-friction adoption path without requiring framework changes. Web components built with Stencil worked in any framework context, while React wrappers gave React teams the idiomatic developer experience they expected.
+
+### 4. Migration Strategy
+
+Given the failed previous attempt, a clear path from old patterns to new was essential. That meant thorough documentation, champions embedded across teams, and the patience to let adoption grow organically rather than forcing it.
+
+---
+
+## Execution Timeline
+
+### First 3 Months: Foundation
+
+The initial focus was on proving the approach could work before scaling it. That meant shipping core tokens and the first components (Avatar, Button) in both Figma and code, establishing the monorepo with Storybook documentation, and investing heavily in the existing team. I coached the designer 1-to-1 on accessibility and brought the engineer up to speed on TypeScript and React patterns. These early months were about building credibility through small, high-quality deliverables.
+
+### 6 Months: Beta Launch
+
+The team grew to four with the addition of a junior designer and a mid-level engineer. We branded the system "Ripple" and launched it in beta. I gave a company-wide talk on systems thinking during Design Thinking Week to build awareness and buy-in.
+
+By this point, the Figma library had expanded to cover a complete token system (colour scales, typography, spacing, sizing, borders, shadows, opacity, and focus states) alongside form, interactive, and layout components.
+
+<ImageGrid>
+  <LightboxImage src="/work/unit4/figma-tokens.avif" alt="Figma token library showing organised categories for colour, spacing, typography, sizing, borders, shadows, opacity, and focus states" caption="Token categories in Figma" />
+  <LightboxImage src="/work/unit4/figma-components.avif" alt="Figma component library overview showing the full set of design system components organised by category" caption="Component library in Figma" />
+</ImageGrid>
+
+Every token and component had a matching Storybook page, giving developers a branded, self-serve reference with live interactive examples. The goal was to make Storybook the single source of truth so that developers never needed to ask the design system team how something worked.
+
+<LightboxImage src="/work/unit4/storybook-landing.avif" alt="Ripple design system Storybook landing page showing branded documentation with navigation sidebar and welcome content" caption="Ripple Storybook documentation" />
+
+### 9 Months: Scaling
+
+A principal frontend engineer with deep institutional knowledge and a product manager joined, bringing the team to five. After discussions with tech leads across the organisation, I made the call to pivot toward native React components. Legacy applications would continue consuming tokens and CSS, but all new development was consolidating on React, which meant the web component wrapper layer was adding complexity without enough benefit. Native React components gave teams better developer experience and a simpler mental model.
+
+Three teams across four products adopted Ripple during this period, with regular feedback loops informing the roadmap and growing Storybook usage validating the documentation-first approach.
+
+### 14 Months: Transition
+
+The company restructured, moving roles to lower-cost locations. Several UK-based team members were made redundant, including my role as design system lead. At the point of handover, v1 was planned for the following quarter, 23+ components were documented in Figma and Storybook, and I had fully documented the roadmap to give the continuing team a clear path forward.
+
+---
+
+## Technical Implementation
+
+### Token Architecture
+
+The token system used three tiers to balance flexibility with consistency. Base tokens defined raw values, semantic tokens layered meaning on top, and component tokens scoped decisions to individual components. This separation meant that a global change, such as updating the primary colour, would cascade correctly through the system while component-specific overrides stayed safely isolated.
+
+```text
+color-teal-500: #0D9488          ← base
+color-primary: var(--color-teal-500)  ← semantic
+button-background: var(--color-primary)  ← component
+```
+
+### Colour System
+
+Colours followed a systematic 4-level scale for each semantic category, giving designers predictable options at every level of visual emphasis:
+
+```text
+Loud      High emphasis, icons      #990606
+Default   Primary use               #B70606
+Soft      Backgrounds, borders      #F8B7B4
+Softest   Subtle backgrounds        #FDE8E6
+```
+
+This pattern repeated across Primary, Negative, Notice, and Positive colour groups. The consistency meant designers could move between categories without needing to learn new mental models, and the limited number of options per category prevented the palette from sprawling out of control.
+
+<ImageGrid>
+  <LightboxImage src="/work/unit4/figma-color.avif" alt="Colour token definitions in Figma showing the systematic 4-level scale across Primary, Negative, Notice, and Positive categories" caption="Figma" crop />
+  <LightboxImage src="/work/unit4/storybook-color.avif" alt="Colour token documentation in Storybook showing the same 4-level scale implemented in code with live colour swatches" caption="Storybook" crop />
+</ImageGrid>
+
+### Component Documentation
+
+Every Storybook component page was designed to be comprehensive enough that developers could self-serve without reaching out to the design system team. Each page included a description, usage guidelines, live interactive examples with source code, a full properties table with TypeScript types, accessibility notes, and a direct link back to the corresponding Figma component. This documentation-first approach meant onboarding was faster and the support burden on the core team stayed manageable as adoption grew.
+
+### Design to Code Parity
+
+Maintaining fidelity between Figma and code was a deliberate priority throughout. Designers and engineers within the team would pair during the ideation phase of each component, working through variants, states, and edge cases together before splitting into parallel design and implementation tracks. Every component was designed in Figma first, reviewed for accessibility and usability, then implemented in code with matching styling and behaviour. The comparisons below show the level of parity this process achieved.
+
+<ImageGrid>
+  <LightboxImage src="/work/unit4/figma-button.avif" alt="Button component variants in Figma showing primary, secondary, and ghost styles across sizes and states" caption="Figma" crop />
+  <LightboxImage src="/work/unit4/storybook-button.avif" alt="Button component in Storybook showing the same variants implemented in code with live interactive examples" caption="Storybook" crop />
+</ImageGrid>
+
+<ImageGrid>
+  <LightboxImage src="/work/unit4/figma-flyout-menu.avif" alt="Flyout menu component in Figma showing menu structure, item variants, and interaction states" caption="Figma" crop />
+  <LightboxImage src="/work/unit4/storybook-flyout-menu.avif" alt="Flyout menu component in Storybook showing live interactive example with usage guidelines and properties table" caption="Storybook" crop />
+</ImageGrid>
+
+<ImageGrid>
+  <LightboxImage src="/work/unit4/figma-combobox.avif" alt="Combobox component in Figma showing dropdown search functionality with filtering and selection states" caption="Figma" crop />
+  <LightboxImage src="/work/unit4/storybook-combobox.avif" alt="Combobox component in Storybook showing dropdown search functionality with filtering, selection states, and accessibility features" caption="Storybook" crop />
+</ImageGrid>
+
+This tight parity kept designers and developers working from identical references, reducing discrepancies during implementation and speeding up design reviews considerably.
+
+---
+
+## Team Development
+
+Growing the team's capabilities was as important as building the system itself, particularly given the mixed skill levels across the organisation.
+
+The designer who joined at the start was technically proficient but hadn't led accessibility work or thought systematically about design decisions at scale. Over six months, I coached them through WCAG guidelines, systems thinking, and eventually leadership skills, and they grew into a more senior role. As they began mentoring a junior designer and took over design system communications to the business independently, they were promoted, which was one of the most rewarding outcomes of the project.
+
+The engineer needed support on TypeScript, React patterns, testing (Testing Library), and writing clear Storybook documentation. The principal engineer who joined later brought deep knowledge of legacy systems that proved invaluable for identifying where the design system could provide most value. Bringing them up to speed on modern tooling and patterns closed the loop: we had both institutional knowledge and current technical skills.
+
+---
+
+## Outcomes
+
+- **3 teams** adopted Ripple across **4 products**, replacing inconsistent per-team UI patterns with a shared foundation
+- **23+ components** documented in Figma and Storybook, reducing repeated design and engineering effort across the organisation
+- **12 token categories** ensuring visual consistency across previously fragmented products
+- **Team grown from 2 to 5**, with one direct report promoted during the project
+- Self-serve documentation reduced the support burden on the design system team, freeing time for building rather than answering questions
+- Accessibility baked into foundations rather than retrofitted, meaning fewer remediation cycles downstream
+
+---
+
+## Reflection
+
+**Starting simple** was one of the best decisions I made early on. Shipping Avatar and Button first, rather than trying to build a comprehensive library before launching, built credibility with sceptical stakeholders and created a feedback loop that improved everything that followed.
+
+**Investing in documentation** through Storybook paid dividends as adoption grew. Teams could onboard themselves, which meant the design system team spent less time answering questions and more time building components.
+
+**The multi-tier architecture** (tokens, CSS, web components, React) provided the flexibility needed to serve a fragmented tech stack without forcing any team into an uncomfortable adoption path. It was the right call for the organisation's reality.
+
+**Pivoting to React earlier would have been better.** The web component layer added complexity that, in hindsight, wasn't justified given the company's direction. I should have started React-first from the beginning; it would have been faster and simpler.
+
+**More time embedded with product teams would have accelerated adoption.** The early stages of adoption needed more direct, hands-on support than we initially provided, and the teams that received more attention adopted more quickly and more thoroughly.
+
+When the restructuring was announced, I documented architecture decisions, roadmap rationale, known issues, and recommendations so the continuing team had everything they needed to carry the work forward.

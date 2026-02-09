@@ -23,6 +23,7 @@ export interface CaseStudyFrontmatter {
   tags: string[];
   accent: string;
   published?: boolean;
+  linked?: boolean;
 }
 
 export interface Post {

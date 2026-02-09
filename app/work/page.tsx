@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { getAllCaseStudies } from "@/lib/content";
-import { ScrollFadeIn, StaggerContainer, StaggerItem } from "@/components/ScrollFadeIn";
+import {
+  ScrollFadeIn,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ScrollFadeIn";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Label, Section, Container, AccentBar, Badge } from "@/components/ui";
 
@@ -80,6 +84,7 @@ const workHistory = [
       "Design system adopted by 3 teams across 4 products within 6 months of launch",
     ],
     tags: ["Design Systems", "Web Components", "React", "Nx"],
+    caseStudySlug: "unit4",
   },
   {
     id: "birdie-2021",
@@ -122,7 +127,11 @@ const workHistory = [
 ];
 
 export default function WorkPage() {
-  const caseStudies = getAllCaseStudies();
+  const caseStudies = getAllCaseStudies().sort((a, b) => {
+    if (a.frontmatter.linked && !b.frontmatter.linked) return -1;
+    if (!a.frontmatter.linked && b.frontmatter.linked) return 1;
+    return 0;
+  });
 
   return (
     <>
@@ -135,47 +144,62 @@ export default function WorkPage() {
               Selected projects
             </h1>
             <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
-              Case studies from my work helping startups and scale-ups build better
-              frontend architecture and design systems.
+              Case studies from my work helping startups and scale-ups build
+              better frontend architecture and design systems.
             </p>
           </ScrollFadeIn>
 
           <StaggerContainer className="mt-20 space-y-6" staggerDelay={0.15}>
-            {caseStudies.map((study) => (
+            {caseStudies.map((study) => {
+              const isLinked = study.frontmatter.linked;
+
+              return (
               <StaggerItem key={study.slug}>
-                <article className="relative">
-                  <AccentBar
-                    width="full"
-                    gradient={`bg-gradient-to-r ${study.frontmatter.accent}`}
-                    className="opacity-80"
-                  />
-                  <div className="bg-white p-10 shadow-sm dark:bg-slate-800 md:p-12">
-                    <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
-                      <div>
-                        <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
-                          {study.frontmatter.company}
-                        </h2>
-                      <p className="mt-2 text-base text-slate-600 dark:text-slate-400">
-                        {study.frontmatter.title}
-                      </p>
-                    </div>
-                    <div className="max-w-2xl">
-                      <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                        {study.frontmatter.excerpt}
-                      </p>
-                      <div className="mt-6 flex flex-wrap gap-2">
-                        {study.frontmatter.tags.map((tag) => (
-                          <Badge key={tag} variant="outline" size="sm">
-                            {tag}
-                          </Badge>
-                        ))}
+                  <article className="relative">
+                    <AccentBar
+                      width="full"
+                      gradient={`bg-gradient-to-r ${study.frontmatter.accent}`}
+                      className="opacity-80"
+                    />
+                    <div className="bg-white p-10 shadow-sm dark:bg-slate-800 md:p-12">
+                      <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
+                        <div>
+                          <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
+                            {study.frontmatter.company}
+                          </h2>
+                          <p className="mt-2 text-base text-slate-600 dark:text-slate-400">
+                            {study.frontmatter.title}
+                          </p>
+                        </div>
+                        <div className="max-w-2xl">
+                          <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                            {study.frontmatter.excerpt}
+                          </p>
+                          <div className="mt-6 flex flex-wrap gap-2">
+                            {study.frontmatter.tags.map((tag) => (
+                              <Badge key={tag} variant="outline" size="sm">
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
+                          {isLinked && (
+                            <a
+                              href={`/work/${study.slug}`}
+                              className="inline-flex items-center gap-2 mt-4 text-cyan-700 dark:text-cyan-400 font-medium text-sm hover:underline"
+                            >
+                              Read case study
+                              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                              </svg>
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  </div>
-                </article>
+                  </article>
               </StaggerItem>
-            ))}
+            );
+            })}
           </StaggerContainer>
         </Container>
       </Section>
@@ -230,6 +254,27 @@ export default function WorkPage() {
                               <li key={i}>{bullet}</li>
                             ))}
                           </ul>
+                        )}
+                        {"caseStudySlug" in job && job.caseStudySlug && (
+                          <a
+                            href={`/work/${job.caseStudySlug}`}
+                            className="inline-flex items-center gap-2 mt-4 text-cyan-700 dark:text-cyan-400 hover:underline font-medium"
+                          >
+                            Read case study
+                            <svg
+                              className="w-4 h-4"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={1.5}
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                              />
+                            </svg>
+                          </a>
                         )}
                       </div>
 

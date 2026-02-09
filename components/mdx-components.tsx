@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Code } from "bright";
+import { LightboxImage, ImageGrid } from "./Lightbox";
 
 // Configure bright theme
 Code.theme = "github-dark";
@@ -75,13 +76,15 @@ export const mdxComponents: Record<string, React.ComponentType<any>> = {
   img: ({ src, alt }) => (
     <Image
       src={src || ""}
-      alt={alt || ""}
+      alt={alt || "Image"}
       width={800}
       height={450}
       className="my-8 rounded-lg"
     />
   ),
   hr: () => <hr className="my-12 border-slate-200 dark:border-slate-800" />,
+  LightboxImage,
+  ImageGrid,
   table: ({ children }) => (
     <div className="my-8 overflow-x-auto">
       <table className="w-full border-collapse text-left">{children}</table>
