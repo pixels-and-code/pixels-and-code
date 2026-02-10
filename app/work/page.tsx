@@ -31,6 +31,7 @@ const workHistory = [
       "Established testing infrastructure (Vitest + Playwright) achieving stability for critical paths",
     ],
     tags: ["React", "TypeScript", "Vitest", "Playwright"],
+    contract: true,
   },
   {
     id: "birdie-2025",
@@ -48,6 +49,7 @@ const workHistory = [
       "Mentored multiple engineers on frontend and testing best practices",
     ],
     tags: ["React", "Performance", "Playwright", "Monorepo"],
+    contract: true,
   },
   {
     id: "orri",
@@ -111,6 +113,7 @@ const workHistory = [
       "Set up and facilitated agile processes including backlog review, planning and retrospectives",
     ],
     tags: ["React", "Python", "Architecture", "Leadership"],
+    contract: true,
   },
   {
     id: "nearform",
@@ -123,6 +126,7 @@ const workHistory = [
       "Set up and facilitated agile processes including backlog management, planning, retrospectives and demonstrations",
     ],
     tags: ["React", "Node.js", "Leadership", "Agile"],
+    contract: true,
   },
 ];
 
@@ -242,6 +246,11 @@ export default function WorkPage() {
                     <div>
                       <p className="mt-1 text-cyan-700 dark:text-cyan-400">
                         {job.role}
+                        {"contract" in job && job.contract && (
+                          <span className="ml-2 inline-block align-middle text-xs font-medium uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                            Contract
+                          </span>
+                        )}
                       </p>
 
                       <div className="mt-4 space-y-3 text-slate-600 dark:text-slate-300 leading-relaxed">
