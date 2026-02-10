@@ -120,13 +120,14 @@ const workHistory = [
     company: "NearForm",
     role: "Tech Lead",
     period: "Oct 2017 - Sep 2019",
+    summary:
+      "Initially contracted as Senior UI Engineer, then converted to permanent and promoted to Tech Lead after ten months.",
     bullets: [
       "Led team of software engineers and UX designer delivering client projects",
       "Managed client relationships, gathering and actioning feedback throughout delivery",
       "Set up and facilitated agile processes including backlog management, planning, retrospectives and demonstrations",
     ],
     tags: ["React", "Node.js", "Leadership", "Agile"],
-    contract: true,
   },
 ];
 
