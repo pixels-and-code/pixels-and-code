@@ -27,7 +27,7 @@ export function TypeWriter() {
 
   if (shouldReduceMotion) {
     return (
-      <span className="bg-gradient-to-b from-cyan-500 to-cyan-700 bg-clip-text text-transparent pb-2 inline-block">
+      <span className="bg-gradient-to-b from-teal-500 to-teal-700 bg-clip-text text-transparent pb-2 inline-block">
         {phrases[currentIndex]}
       </span>
     );
@@ -42,7 +42,7 @@ export function TypeWriter() {
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
-          className="absolute left-0 top-0 bg-gradient-to-b from-cyan-500 to-cyan-700 bg-clip-text text-transparent inline-block pb-2"
+          className="absolute left-0 top-0 bg-gradient-to-b from-teal-500 to-teal-700 bg-clip-text text-transparent inline-block pb-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}

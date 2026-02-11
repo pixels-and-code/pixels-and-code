@@ -53,7 +53,7 @@ export function Hero() {
       };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-teal-50/60 dark:bg-teal-950/20 rounded-b-3xl">
       <FloatingUIElements />
       <MotionWrapper className="relative z-10 mx-auto max-w-6xl px-6 py-32 w-full" {...motionProps}>
         {shouldReduceMotion ? (

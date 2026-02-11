@@ -15,7 +15,7 @@ const widthClasses: Record<AccentBarWidth, string> = {
 
 export function AccentBar({
   width = "md",
-  gradient = "bg-gradient-to-b from-cyan-500 to-cyan-700",
+  gradient = "bg-gradient-to-b from-teal-500 to-teal-700",
   className = "",
   ...props
 }: AccentBarProps) {

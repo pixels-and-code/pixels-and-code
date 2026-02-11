@@ -24,6 +24,7 @@ export interface CaseStudyFrontmatter {
   accent: string;
   published?: boolean;
   linked?: boolean;
+  heroImage?: string;
 }
 
 export interface Post {

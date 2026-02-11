@@ -7,7 +7,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./Logo";
 
 const navLinks = [
-  { href: "/about", label: "About" },
+  { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
@@ -77,7 +77,7 @@ export function Header() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+          className="rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
         >
           <Logo />
           <span className="sr-only">Pixels & Code</span>
@@ -89,9 +89,9 @@ export function Header() {
               key={link.href}
               href={link.href}
               aria-current={isActive(link.href) ? "page" : undefined}
-              className={`relative px-3 py-2 text-sm transition-colors rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 group ${
+              className={`relative px-4 py-2 text-base transition-colors rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 group ${
                 isActive(link.href)
-                  ? "text-cyan-700 dark:text-cyan-400"
+                  ? "text-teal-700 dark:text-teal-400"
                   : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
               }`}
             >
@@ -99,8 +99,8 @@ export function Header() {
               <span
                 className={`absolute bottom-1 left-3 right-3 h-px transition-all duration-300 ${
                   isActive(link.href)
-                    ? "w-[calc(100%-1.5rem)] bg-cyan-600 dark:bg-cyan-400"
-                    : "w-0 bg-cyan-600 group-hover:w-[calc(100%-1.5rem)] dark:bg-cyan-400"
+                    ? "w-[calc(100%-1.5rem)] bg-teal-600 dark:bg-teal-400"
+                    : "w-0 bg-teal-600 group-hover:w-[calc(100%-1.5rem)] dark:bg-teal-400"
                 }`}
               />
             </Link>
@@ -113,7 +113,7 @@ export function Header() {
           <button
             ref={menuButtonRef}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 text-slate-600 dark:text-slate-300 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+            className="p-2.5 text-slate-600 dark:text-slate-300 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -147,9 +147,9 @@ export function Header() {
                   href={link.href}
                   onClick={closeMenu}
                   aria-current={isActive(link.href) ? "page" : undefined}
-                  className={`block py-3 text-base rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 ${
+                  className={`block py-3 text-base rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 ${
                     isActive(link.href)
-                      ? "text-cyan-700 dark:text-cyan-400"
+                      ? "text-teal-700 dark:text-teal-400"
                       : "text-slate-600 dark:text-slate-300"
                   }`}
                 >

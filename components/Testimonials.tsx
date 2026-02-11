@@ -16,7 +16,7 @@ const testimonials = [
     company: "Foundational",
     companyHref: "/work#foundational",
     avatar: "/avatar-chris.jpeg",
-    accent: "from-cyan-500 to-cyan-700",
+    accent: "from-teal-500 to-teal-700",
   },
   {
     paragraphs: [
@@ -40,7 +40,7 @@ const testimonials = [
     company: "Unit4",
     companyHref: "/work/unit4",
     avatar: "/avatar-sara.jpeg",
-    accent: "from-violet-400 to-violet-600",
+    accent: "from-rose-400 to-rose-600",
   },
 ];
 
@@ -102,7 +102,7 @@ export function Testimonials() {
                         </p>
                         <Link
                           href={testimonial.companyHref}
-                          className="mt-1 block text-sm text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400 underline underline-offset-2 transition-colors"
+                          className="mt-1 block text-sm text-slate-600 hover:text-teal-600 dark:text-slate-400 dark:hover:text-teal-400 underline underline-offset-2 transition-colors"
                         >
                           {testimonial.company}
                         </Link>

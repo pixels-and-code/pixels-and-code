@@ -10,7 +10,7 @@ const caseStudies = [
     description:
       "Built Playwright performance testing suite and refactored frontend monorepo architecture. Resolved bottlenecks in core user journeys.",
     tags: ["React", "Performance", "Playwright", "Monorepo", "Testing"],
-    accent: "bg-gradient-to-b from-cyan-500 to-cyan-700",
+    accent: "bg-gradient-to-b from-teal-500 to-teal-700",
   },
   {
     company: "Unit4",

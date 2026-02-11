@@ -12,7 +12,7 @@ export function Label({
 }: LabelProps) {
   return (
     <Component
-      className={`text-sm font-medium tracking-wide text-cyan-700 dark:text-cyan-400 ${className}`.trim()}
+      className={`text-sm font-semibold tracking-widest uppercase text-teal-700 dark:text-teal-400 ${className}`.trim()}
       {...props}
     >
       {children}

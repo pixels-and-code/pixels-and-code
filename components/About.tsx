@@ -7,7 +7,7 @@ export function About() {
   return (
     <Section
       id="about"
-      className="py-32 md:py-40 bg-white dark:bg-slate-950"
+      className="py-32 md:py-40"
     >
       <Container>
         <div className="grid gap-12 lg:grid-cols-[1fr,2fr] lg:gap-20 items-start">

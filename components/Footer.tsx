@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-2">
           <Link
             href="/"
-            className="rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+            className="rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
           >
             <Logo size="text-xl" />
             <span className="sr-only">Pixels & Code home</span>

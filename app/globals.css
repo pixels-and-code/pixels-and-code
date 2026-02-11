@@ -28,12 +28,12 @@
   }
 
   ::selection {
-    @apply bg-cyan-100 text-cyan-900 dark:bg-cyan-900 dark:text-cyan-100;
+    @apply bg-teal-100 text-teal-900 dark:bg-teal-900 dark:text-teal-100;
   }
 
   /* Ensure focus is always visible for keyboard users */
   :focus-visible {
-    @apply outline-none ring-2 ring-cyan-500 ring-offset-2;
+    @apply outline-none ring-2 ring-teal-500 ring-offset-2;
   }
 
   .dark :focus-visible {
@@ -261,45 +261,45 @@
 /* ==========================================================================
    Button System
    - .btn: base styles (use with a variant)
-   - .btn-primary: solid cyan with shimmer
+   - .btn-primary: solid teal with shimmer
    - .btn-outline: bordered, transparent background
    - .btn-ghost: text only, subtle hover
    ========================================================================== */
 
 .btn {
-  @apply inline-flex items-center justify-center rounded-full text-sm font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900;
+  @apply inline-flex items-center justify-center rounded-full text-sm font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900;
 }
 
 /* Primary - glass with shimmer */
 .btn-primary {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgb(6 182 212 / 0.3);
+  border: 1px solid rgb(20 184 166 / 0.3);
   background: linear-gradient(
     to bottom,
-    rgb(6 182 212 / 0.95),
-    rgb(8 145 178 / 1)
+    rgb(20 184 166 / 0.95),
+    rgb(13 148 136 / 1)
   );
   color: white;
   backdrop-filter: blur(8px);
   box-shadow:
-    0 2px 8px rgb(6 182 212 / 0.15),
+    0 2px 8px rgb(20 184 166 / 0.15),
     inset 0 1px 0 rgb(255 255 255 / 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px) scale(1.02);
-  border-color: rgb(6 182 212 / 0.6);
+  border-color: rgb(20 184 166 / 0.6);
   box-shadow:
-    0 8px 24px rgb(6 182 212 / 0.3),
-    0 4px 12px rgb(6 182 212 / 0.2),
+    0 8px 24px rgb(20 184 166 / 0.3),
+    0 4px 12px rgb(20 184 166 / 0.2),
     inset 0 1px 0 rgb(255 255 255 / 0.25);
 }
 
 .btn-primary:active {
   transform: translateY(0) scale(0.98);
   box-shadow:
-    0 2px 8px rgb(6 182 212 / 0.2),
+    0 2px 8px rgb(20 184 166 / 0.2),
     inset 0 1px 0 rgb(255 255 255 / 0.15);
 }
 
@@ -328,18 +328,18 @@
 .dark .btn-primary {
   background: linear-gradient(
     to bottom,
-    rgb(6 182 212 / 0.85),
-    rgb(8 145 178 / 0.9)
+    rgb(20 184 166 / 0.85),
+    rgb(13 148 136 / 0.9)
   );
   box-shadow:
-    0 2px 12px rgb(6 182 212 / 0.2),
+    0 2px 12px rgb(20 184 166 / 0.2),
     inset 0 1px 0 rgb(255 255 255 / 0.15);
 }
 
 .dark .btn-primary:hover {
   box-shadow:
-    0 8px 32px rgb(6 182 212 / 0.4),
-    0 4px 16px rgb(6 182 212 / 0.25),
+    0 8px 32px rgb(20 184 166 / 0.4),
+    0 4px 16px rgb(20 184 166 / 0.25),
     inset 0 1px 0 rgb(255 255 255 / 0.2);
 }
 
@@ -352,8 +352,8 @@
 }
 
 .btn-outline:hover {
-  @apply border-cyan-500 text-cyan-700 bg-cyan-50/50;
-  @apply dark:border-cyan-400 dark:text-cyan-400 dark:bg-cyan-950/30;
+  @apply border-teal-500 text-teal-700 bg-teal-50/50;
+  @apply dark:border-teal-400 dark:text-teal-400 dark:bg-teal-950/30;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
 }
@@ -370,7 +370,7 @@
 /* Ghost - text only */
 .btn-ghost {
   @apply bg-transparent text-slate-600 dark:text-slate-400;
-  @apply hover:text-cyan-700 dark:hover:text-cyan-400;
+  @apply hover:text-teal-700 dark:hover:text-teal-400;
 }
 
 .btn-ghost:active {
@@ -388,4 +388,9 @@
 
 .btn-lg {
   @apply px-8 py-4 text-sm;
+}
+
+/* Case study content - larger section headings */
+.case-study-content h2 {
+  @apply text-4xl md:text-5xl;
 }

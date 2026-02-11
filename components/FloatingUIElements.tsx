@@ -6,12 +6,12 @@ import { motion, useReducedMotion } from "framer-motion";
 function AnimatedToggle({ delay = 0 }: { delay?: number }) {
   return (
     <svg width="52" height="28" viewBox="0 0 52 28" fill="none">
-      <rect x="1" y="1" width="50" height="26" rx="13" strokeWidth="2" stroke="currentColor" />
+      <rect x="1" y="1" width="50" height="26" rx="13" strokeWidth="3" stroke="currentColor" fill="currentColor" fillOpacity="0.25" />
       <motion.circle
         cx="14"
         cy="14"
         r="8"
-        strokeWidth="2"
+        strokeWidth="3"
         stroke="currentColor"
         animate={{ cx: [14, 38, 38, 14, 14] }}
         transition={{
@@ -30,10 +30,10 @@ function AnimatedToggle({ delay = 0 }: { delay?: number }) {
 function AnimatedCheckbox({ delay = 0 }: { delay?: number }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-      <rect x="1" y="1" width="26" height="26" rx="5" strokeWidth="2" stroke="currentColor" />
+      <rect x="1" y="1" width="26" height="26" rx="5" strokeWidth="3" stroke="currentColor" fill="currentColor" fillOpacity="0.2" />
       <motion.path
         d="M7 14L12 19L21 9"
-        strokeWidth="2"
+        strokeWidth="3"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -55,12 +55,12 @@ function AnimatedCheckbox({ delay = 0 }: { delay?: number }) {
 function AnimatedRadio({ delay = 0 }: { delay?: number }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-      <circle cx="14" cy="14" r="12" strokeWidth="2" stroke="currentColor" />
+      <circle cx="14" cy="14" r="12" strokeWidth="3" stroke="currentColor" />
       <motion.circle
         cx="14"
         cy="14"
         r="5"
-        strokeWidth="2"
+        strokeWidth="3"
         stroke="currentColor"
         animate={{ scale: [1, 0, 0, 1, 1] }}
         transition={{
@@ -79,12 +79,12 @@ function AnimatedRadio({ delay = 0 }: { delay?: number }) {
 function AnimatedSlider({ delay = 0 }: { delay?: number }) {
   return (
     <svg width="100" height="18" viewBox="0 0 100 18" fill="none">
-      <line x1="9" y1="9" x2="91" y2="9" strokeWidth="2" stroke="currentColor" strokeLinecap="round" />
+      <line x1="9" y1="9" x2="91" y2="9" strokeWidth="3" stroke="currentColor" strokeLinecap="round" />
       <motion.circle
         cx="50"
         cy="9"
         r="7"
-        strokeWidth="2"
+        strokeWidth="3"
         stroke="currentColor"
         animate={{ cx: [50, 30, 70, 50] }}
         transition={{
@@ -102,13 +102,13 @@ function AnimatedSlider({ delay = 0 }: { delay?: number }) {
 function AnimatedButton({ delay = 0 }: { delay?: number }) {
   return (
     <svg width="140" height="52" viewBox="0 0 140 52" fill="none">
-      <rect x="1" y="1" width="138" height="50" rx="25" strokeWidth="2" stroke="currentColor" />
+      <rect x="1" y="1" width="138" height="50" rx="25" strokeWidth="3" stroke="currentColor" fill="currentColor" fillOpacity="0.2" />
       <motion.line
         x1="35"
         y1="26"
         x2="105"
         y2="26"
-        strokeWidth="2"
+        strokeWidth="3"
         stroke="currentColor"
         strokeLinecap="round"
         animate={{ x2: [105, 85, 105] }}
@@ -127,14 +127,14 @@ function AnimatedButton({ delay = 0 }: { delay?: number }) {
 function AnimatedInput({ delay = 0 }: { delay?: number }) {
   return (
     <svg width="180" height="50" viewBox="0 0 180 50" fill="none">
-      <rect x="1" y="1" width="178" height="48" rx="8" strokeWidth="2" stroke="currentColor" />
-      <line x1="14" y1="25" x2="100" y2="25" strokeWidth="2" stroke="currentColor" strokeLinecap="round" />
+      <rect x="1" y="1" width="178" height="48" rx="8" strokeWidth="3" stroke="currentColor" />
+      <line x1="14" y1="25" x2="100" y2="25" strokeWidth="3" stroke="currentColor" strokeLinecap="round" />
       <motion.line
         x1="105"
         y1="15"
         x2="105"
         y2="35"
-        strokeWidth="2"
+        strokeWidth="3"
         stroke="currentColor"
         strokeLinecap="round"
         animate={{ opacity: [1, 1, 0, 0, 1] }}
@@ -154,11 +154,11 @@ function AnimatedInput({ delay = 0 }: { delay?: number }) {
 function AnimatedDropdown({ delay = 0 }: { delay?: number }) {
   return (
     <svg width="120" height="42" viewBox="0 0 120 42" fill="none">
-      <rect x="1" y="1" width="118" height="40" rx="6" strokeWidth="2" stroke="currentColor" />
-      <line x1="12" y1="21" x2="80" y2="21" strokeWidth="2" stroke="currentColor" strokeLinecap="round" />
+      <rect x="1" y="1" width="118" height="40" rx="6" strokeWidth="3" stroke="currentColor" />
+      <line x1="12" y1="21" x2="80" y2="21" strokeWidth="3" stroke="currentColor" strokeLinecap="round" />
       <motion.path
         d="M98 17L104 23L110 17"
-        strokeWidth="2"
+        strokeWidth="3"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -181,8 +181,8 @@ const uiElements = [
     animated: <AnimatedButton delay={1} />,
     svg: (
       <svg width="140" height="52" viewBox="0 0 140 52" fill="none">
-        <rect x="1" y="1" width="138" height="50" rx="25" strokeWidth="2" stroke="currentColor" />
-        <line x1="35" y1="26" x2="105" y2="26" strokeWidth="2" stroke="currentColor" strokeLinecap="round" />
+        <rect x="1" y="1" width="138" height="50" rx="25" strokeWidth="3" stroke="currentColor" fill="currentColor" fillOpacity="0.2" />
+        <line x1="35" y1="26" x2="105" y2="26" strokeWidth="3" stroke="currentColor" strokeLinecap="round" />
       </svg>
     ),
     position: { top: "10%", left: "3%" },
@@ -201,7 +201,7 @@ const uiElements = [
     animated: <AnimatedCheckbox delay={15} />,
     svg: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <rect x="1" y="1" width="22" height="22" rx="4" strokeWidth="1.5" stroke="currentColor" />
+        <rect x="1" y="1" width="22" height="22" rx="4" strokeWidth="2.5" stroke="currentColor" fill="currentColor" fillOpacity="0.2" />
       </svg>
     ),
     position: { top: "15%", left: "28%" },
@@ -220,8 +220,8 @@ const uiElements = [
     animated: <AnimatedInput delay={0} />,
     svg: (
       <svg width="180" height="50" viewBox="0 0 180 50" fill="none">
-        <rect x="1" y="1" width="178" height="48" rx="8" strokeWidth="2" stroke="currentColor" />
-        <line x1="14" y1="25" x2="100" y2="25" strokeWidth="2" stroke="currentColor" strokeLinecap="round" />
+        <rect x="1" y="1" width="178" height="48" rx="8" strokeWidth="3" stroke="currentColor" />
+        <line x1="14" y1="25" x2="100" y2="25" strokeWidth="3" stroke="currentColor" strokeLinecap="round" />
       </svg>
     ),
     position: { top: "12%", right: "5%" },
@@ -239,7 +239,7 @@ const uiElements = [
     id: "dot-top",
     svg: (
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <circle cx="7" cy="7" r="6" strokeWidth="1.5" stroke="currentColor" />
+        <circle cx="7" cy="7" r="6" strokeWidth="2.5" stroke="currentColor" />
       </svg>
     ),
     position: { top: "20%", right: "35%" },
@@ -271,11 +271,11 @@ const uiElements = [
     id: "card-right",
     svg: (
       <svg width="110" height="90" viewBox="0 0 110 90" fill="none">
-        <rect x="1" y="1" width="108" height="88" rx="8" strokeWidth="2" stroke="currentColor" />
-        <line x1="12" y1="22" x2="65" y2="22" strokeWidth="2" stroke="currentColor" strokeLinecap="round" />
-        <line x1="12" y1="42" x2="98" y2="42" strokeWidth="1.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
-        <line x1="12" y1="58" x2="80" y2="58" strokeWidth="1.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
-        <line x1="12" y1="74" x2="55" y2="74" strokeWidth="1.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
+        <rect x="1" y="1" width="108" height="88" rx="8" strokeWidth="3" stroke="currentColor" fill="currentColor" fillOpacity="0.25" />
+        <line x1="12" y1="22" x2="65" y2="22" strokeWidth="3" stroke="currentColor" strokeLinecap="round" />
+        <line x1="12" y1="42" x2="98" y2="42" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
+        <line x1="12" y1="58" x2="80" y2="58" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
+        <line x1="12" y1="74" x2="55" y2="74" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
       </svg>
     ),
     position: { top: "18%", right: "5%" },
@@ -292,7 +292,7 @@ const uiElements = [
   {
     id: "radio-mid",
     animated: <AnimatedRadio delay={20} />,
-    position: { top: "32%", left: "22%" },
+    position: { top: "16%", left: "18%" },
     rotation: 0,
     parallaxSpeed: 0.18,
     hideOnMobile: true,
@@ -333,7 +333,7 @@ const uiElements = [
   {
     id: "checkbox-mid",
     animated: <AnimatedCheckbox delay={25} />,
-    position: { top: "52%", right: "22%" },
+    position: { top: "22%", right: "30%" },
     rotation: -8,
     parallaxSpeed: 0.25,
     hideOnMobile: true,
@@ -350,11 +350,11 @@ const uiElements = [
     animated: <AnimatedButton delay={12} />,
     svg: (
       <svg width="90" height="36" viewBox="0 0 90 36" fill="none">
-        <rect x="1" y="1" width="88" height="34" rx="17" strokeWidth="2" stroke="currentColor" />
-        <line x1="22" y1="18" x2="68" y2="18" strokeWidth="2" stroke="currentColor" strokeLinecap="round" />
+        <rect x="1" y="1" width="88" height="34" rx="17" strokeWidth="3" stroke="currentColor" fill="currentColor" fillOpacity="0.2" />
+        <line x1="22" y1="18" x2="68" y2="18" strokeWidth="3" stroke="currentColor" strokeLinecap="round" />
       </svg>
     ),
-    position: { top: "58%", left: "15%" },
+    position: { top: "78%", left: "4%" },
     rotation: 8,
     parallaxSpeed: 0.28,
     hideOnMobile: true,
@@ -368,7 +368,7 @@ const uiElements = [
   {
     id: "toggle-small",
     animated: <AnimatedToggle delay={18} />,
-    position: { top: "60%", right: "15%" },
+    position: { top: "76%", right: "18%" },
     rotation: -5,
     parallaxSpeed: 0.2,
     hideOnMobile: true,
@@ -383,10 +383,10 @@ const uiElements = [
     id: "dot-mid",
     svg: (
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-        <circle cx="6" cy="6" r="5" strokeWidth="1.5" stroke="currentColor" />
+        <circle cx="6" cy="6" r="5" strokeWidth="2.5" stroke="currentColor" />
       </svg>
     ),
-    position: { top: "55%", left: "35%" },
+    position: { top: "82%", left: "30%" },
     rotation: 0,
     parallaxSpeed: 0.1,
     hideOnMobile: true,
@@ -402,9 +402,9 @@ const uiElements = [
     animated: <AnimatedDropdown delay={3} />,
     svg: (
       <svg width="120" height="42" viewBox="0 0 120 42" fill="none">
-        <rect x="1" y="1" width="118" height="40" rx="6" strokeWidth="2" stroke="currentColor" />
-        <line x1="12" y1="21" x2="80" y2="21" strokeWidth="2" stroke="currentColor" strokeLinecap="round" />
-        <path d="M98 17L104 23L110 17" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+        <rect x="1" y="1" width="118" height="40" rx="6" strokeWidth="3" stroke="currentColor" />
+        <line x1="12" y1="21" x2="80" y2="21" strokeWidth="3" stroke="currentColor" strokeLinecap="round" />
+        <path d="M98 17L104 23L110 17" strokeWidth="3" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     position: { top: "72%", left: "6%" },
@@ -422,8 +422,8 @@ const uiElements = [
     id: "input-small",
     svg: (
       <svg width="85" height="32" viewBox="0 0 85 32" fill="none">
-        <rect x="1" y="1" width="83" height="30" rx="5" strokeWidth="1.5" stroke="currentColor" />
-        <line x1="10" y1="16" x2="50" y2="16" strokeWidth="1.5" stroke="currentColor" strokeLinecap="round" />
+        <rect x="1" y="1" width="83" height="30" rx="5" strokeWidth="2.5" stroke="currentColor" />
+        <line x1="10" y1="16" x2="50" y2="16" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" />
       </svg>
     ),
     position: { top: "68%", left: "32%" },
@@ -455,11 +455,11 @@ const uiElements = [
     id: "card-large",
     svg: (
       <svg width="130" height="100" viewBox="0 0 130 100" fill="none">
-        <rect x="1" y="1" width="128" height="98" rx="10" strokeWidth="2" stroke="currentColor" />
-        <line x1="14" y1="24" x2="75" y2="24" strokeWidth="2" stroke="currentColor" strokeLinecap="round" />
-        <line x1="14" y1="46" x2="116" y2="46" strokeWidth="1.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
-        <line x1="14" y1="64" x2="100" y2="64" strokeWidth="1.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
-        <line x1="14" y1="82" x2="65" y2="82" strokeWidth="1.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
+        <rect x="1" y="1" width="128" height="98" rx="10" strokeWidth="3" stroke="currentColor" fill="currentColor" fillOpacity="0.25" />
+        <line x1="14" y1="24" x2="75" y2="24" strokeWidth="3" stroke="currentColor" strokeLinecap="round" />
+        <line x1="14" y1="46" x2="116" y2="46" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
+        <line x1="14" y1="64" x2="100" y2="64" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
+        <line x1="14" y1="82" x2="65" y2="82" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" opacity="0.5" />
       </svg>
     ),
     position: { bottom: "6%", right: "8%" },
@@ -477,7 +477,7 @@ const uiElements = [
     id: "dot-bottom",
     svg: (
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <circle cx="8" cy="8" r="7" strokeWidth="1.5" stroke="currentColor" />
+        <circle cx="8" cy="8" r="7" strokeWidth="2.5" stroke="currentColor" />
       </svg>
     ),
     position: { bottom: "15%", left: "25%" },
@@ -495,7 +495,7 @@ const uiElements = [
     animated: <AnimatedRadio delay={40} />,
     svg: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <circle cx="10" cy="10" r="8" strokeWidth="1.5" stroke="currentColor" />
+        <circle cx="10" cy="10" r="8" strokeWidth="2.5" stroke="currentColor" />
       </svg>
     ),
     position: { bottom: "22%", right: "38%" },
@@ -522,7 +522,7 @@ function FloatingElement({
   if (shouldReduceMotion) {
     return (
       <motion.div
-        className={`absolute text-slate-300/70 dark:text-slate-700/70 pointer-events-none ${
+        className={`absolute text-teal-900/[0.09] dark:text-teal-800 pointer-events-none ${
           element.hideOnMobile ? "hidden md:block" : ""
         }`}
         style={{
@@ -537,7 +537,7 @@ function FloatingElement({
 
   return (
     <motion.div
-      className={`absolute text-slate-300/70 dark:text-slate-700/70 pointer-events-none ${
+      className={`absolute text-teal-900/[0.09] dark:text-teal-800 pointer-events-none ${
         element.hideOnMobile ? "hidden md:block" : ""
       }`}
       style={element.position}

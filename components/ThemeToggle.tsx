@@ -133,7 +133,7 @@ export function ThemeToggle() {
     <>
       <button
         onClick={handleToggle}
-        className="group relative h-11 flex items-center justify-center rounded-full text-slate-600 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 w-11 md:hover:w-[5.5rem] md:hover:pl-3 md:hover:pr-4"
+        className="group relative h-11 flex items-center justify-center rounded-full text-slate-600 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:bg-teal-950/[0.06] dark:text-slate-300 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 w-11 md:hover:w-[5.5rem] md:hover:pl-3 md:hover:pr-4"
         aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       >
         <span className="flex items-center gap-2">

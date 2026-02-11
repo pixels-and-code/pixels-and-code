@@ -45,7 +45,7 @@ export default function BlogPage() {
                   <Link href={`/blog/${post.slug}`} className="block group">
                     <article className="relative bg-white p-10 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.01] dark:bg-slate-800 md:p-12">
                       <AccentBar className="mb-6" />
-                      <h2 className="font-serif text-2xl text-slate-900 dark:text-white md:text-3xl group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">
+                      <h2 className="font-serif text-2xl text-slate-900 dark:text-white md:text-3xl group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
                         {post.frontmatter.title}
                       </h2>
                       <p className="mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300 leading-relaxed">

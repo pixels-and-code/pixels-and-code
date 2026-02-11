@@ -48,7 +48,7 @@ export function LightboxImage({ src, alt, caption, crop }: LightboxImageProps) {
         <button
           ref={triggerRef}
           onClick={() => setIsOpen(true)}
-          className="group block w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/50 cursor-zoom-in transition-shadow duration-300 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
+          className="group block w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/50 cursor-zoom-in transition-shadow duration-300 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
           aria-label={`View ${alt} full size`}
         >
           {crop ? (
@@ -135,8 +135,10 @@ export function ImageGrid({ children, columns = 2 }: ImageGridProps) {
         : "md:grid-cols-2";
 
   return (
-    <div className={`my-8 grid gap-4 ${gridCols}`}>
-      {children}
+    <div className="relative my-12 left-1/2 right-1/2 -ml-[45vw] -mr-[45vw] w-[90vw] max-w-4xl md:left-1/2 md:-ml-[min(45vw,28rem)]  md:w-[min(90vw,56rem)]">
+      <div className={`grid gap-4 ${gridCols}`}>
+        {children}
+      </div>
     </div>
   );
 }

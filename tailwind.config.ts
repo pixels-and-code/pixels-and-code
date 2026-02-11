@@ -19,7 +19,7 @@ const config: Config = {
         pastel: {
           blue: "#dbeafe",
           violet: "#ede9fe",
-          cyan: "#cffafe",
+          teal: "#cffafe",
           rose: "#ffe4e6",
         },
       },

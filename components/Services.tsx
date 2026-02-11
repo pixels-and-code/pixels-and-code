@@ -8,10 +8,10 @@ const services = [
     title: "Frontend Engineering",
     description:
       "Production React and React Native applications built for performance and maintainability.",
-    accent: "bg-gradient-to-b from-cyan-500 to-cyan-700",
-    bg: "bg-cyan-50 dark:bg-cyan-950/30",
-    border: "border-cyan-200/50 dark:border-cyan-800/30",
-    glow: "hover:shadow-cyan-500/10",
+    accent: "bg-gradient-to-b from-teal-500 to-teal-700",
+    bg: "bg-teal-50 dark:bg-teal-950/30",
+    border: "border-teal-200/50 dark:border-teal-800/30",
+    glow: "hover:shadow-teal-500/10",
   },
   {
     title: "Design Systems",

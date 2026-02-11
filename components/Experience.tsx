@@ -33,11 +33,11 @@ export function Experience() {
               </p>
 
               <div className="mt-16 relative">
-                <div className="absolute inset-0 -m-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 via-violet-500/10 to-rose-500/10 dark:from-cyan-500/5 dark:via-violet-500/5 dark:to-rose-500/5" />
+                <div className="absolute inset-0 -m-6 rounded-2xl bg-gradient-to-br from-teal-500/10 via-violet-500/10 to-rose-500/10 dark:from-teal-500/5 dark:via-violet-500/5 dark:to-rose-500/5" />
                 <div className="relative grid grid-cols-3 gap-8 p-6">
                   {stats.map((stat) => (
                     <div key={stat.label}>
-                      <p className="font-serif text-4xl bg-gradient-to-b from-cyan-500 to-cyan-700 bg-clip-text text-transparent md:text-5xl">
+                      <p className="font-serif text-4xl bg-gradient-to-b from-teal-500 to-teal-700 bg-clip-text text-transparent md:text-5xl">
                         {stat.value}
                       </p>
                       <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
@@ -58,9 +58,9 @@ export function Experience() {
                   <StaggerItem key={item.id}>
                     <Link
                       href={`/work#${item.id}`}
-                      className="group flex items-center justify-between border-b border-slate-200 py-5 dark:border-slate-700 transition-colors hover:border-cyan-500 dark:hover:border-cyan-400"
+                      className="group flex items-center justify-between border-b border-slate-200 py-5 dark:border-slate-700 transition-colors hover:border-teal-500 dark:hover:border-teal-400"
                     >
-                      <span className="font-medium text-lg text-slate-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">
+                      <span className="font-medium text-lg text-slate-900 dark:text-white group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
                         {item.company}
                       </span>
                       <span className="text-slate-600 dark:text-slate-400">

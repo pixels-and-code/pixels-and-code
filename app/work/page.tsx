@@ -6,7 +6,7 @@ import {
   StaggerItem,
 } from "@/components/ScrollFadeIn";
 import { ContactCTA } from "@/components/ContactCTA";
-import { Label, Section, Container, AccentBar, Badge } from "@/components/ui";
+import { Label, Section, Container, Badge } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Work | Pixels and Code",
@@ -160,45 +160,38 @@ export default function WorkPage() {
 
               return (
               <StaggerItem key={study.slug}>
-                  <article className="relative">
-                    <AccentBar
-                      width="full"
-                      gradient={`bg-gradient-to-r ${study.frontmatter.accent}`}
-                      className="opacity-80"
-                    />
-                    <div className="bg-white p-10 shadow-sm dark:bg-slate-800 md:p-12">
-                      <div className="grid gap-8 md:grid-cols-[200px,1fr] md:gap-16">
-                        <div>
-                          <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
-                            {study.frontmatter.company}
-                          </h2>
-                          <p className="mt-2 text-base text-slate-600 dark:text-slate-400">
-                            {study.frontmatter.title}
-                          </p>
+                  <article className="relative overflow-hidden shadow-sm">
+                    <div className="grid md:grid-cols-[240px,1fr]">
+                      <div className={`bg-gradient-to-br ${study.frontmatter.accent} p-8 md:p-10 flex flex-col justify-end`}>
+                        <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
+                          {study.frontmatter.company}
+                        </h2>
+                        <p className="mt-2 text-sm text-slate-700/70 dark:text-white/70">
+                          {study.frontmatter.title}
+                        </p>
+                      </div>
+                      <div className="bg-white p-8 dark:bg-slate-800 md:p-10">
+                        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                          {study.frontmatter.excerpt}
+                        </p>
+                        <div className="mt-6 flex flex-wrap gap-2">
+                          {study.frontmatter.tags.map((tag) => (
+                            <Badge key={tag} variant="outline" size="sm">
+                              {tag}
+                            </Badge>
+                          ))}
                         </div>
-                        <div className="max-w-2xl">
-                          <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                            {study.frontmatter.excerpt}
-                          </p>
-                          <div className="mt-6 flex flex-wrap gap-2">
-                            {study.frontmatter.tags.map((tag) => (
-                              <Badge key={tag} variant="outline" size="sm">
-                                {tag}
-                              </Badge>
-                            ))}
-                          </div>
-                          {isLinked && (
-                            <a
-                              href={`/work/${study.slug}`}
-                              className="inline-flex items-center gap-2 mt-4 text-cyan-700 dark:text-cyan-400 font-medium text-sm hover:underline"
-                            >
-                              Read case study
-                              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                              </svg>
-                            </a>
-                          )}
-                        </div>
+                        {isLinked && (
+                          <a
+                            href={`/work/${study.slug}`}
+                            className="inline-flex items-center gap-2 mt-6 text-teal-700 dark:text-teal-400 font-medium text-sm hover:underline"
+                          >
+                            Read case study
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                          </a>
+                        )}
                       </div>
                     </div>
                   </article>
@@ -245,7 +238,7 @@ export default function WorkPage() {
                     </div>
 
                     <div>
-                      <p className="mt-1 text-cyan-700 dark:text-cyan-400">
+                      <p className="mt-1 text-teal-700 dark:text-teal-400">
                         {job.role}
                         {"contract" in job && job.contract && (
                           <span className="ml-2 inline-block align-middle text-xs font-medium uppercase tracking-wider text-slate-400 dark:text-slate-500">
@@ -268,7 +261,7 @@ export default function WorkPage() {
                         {"caseStudySlug" in job && job.caseStudySlug && (
                           <a
                             href={`/work/${job.caseStudySlug}`}
-                            className="inline-flex items-center gap-2 mt-4 text-cyan-700 dark:text-cyan-400 hover:underline font-medium"
+                            className="inline-flex items-center gap-2 mt-4 text-teal-700 dark:text-teal-400 hover:underline font-medium"
                           >
                             Read case study
                             <svg

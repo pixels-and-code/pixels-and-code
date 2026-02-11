@@ -37,7 +37,7 @@ export const mdxComponents: Record<string, React.ComponentType<any>> = {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-cyan-700 dark:text-cyan-400 underline underline-offset-2 hover:text-cyan-800 dark:hover:text-cyan-300 transition-colors"
+          className="text-teal-700 dark:text-teal-400 underline underline-offset-2 hover:text-teal-800 dark:hover:text-teal-300 transition-colors"
         >
           {children}
         </a>
@@ -46,7 +46,7 @@ export const mdxComponents: Record<string, React.ComponentType<any>> = {
     return (
       <Link
         href={href || "#"}
-        className="text-cyan-700 dark:text-cyan-400 underline underline-offset-2 hover:text-cyan-800 dark:hover:text-cyan-300 transition-colors"
+        className="text-teal-700 dark:text-teal-400 underline underline-offset-2 hover:text-teal-800 dark:hover:text-teal-300 transition-colors"
       >
         {children}
       </Link>
@@ -64,7 +64,7 @@ export const mdxComponents: Record<string, React.ComponentType<any>> = {
   ),
   li: ({ children }) => <li className="leading-relaxed">{children}</li>,
   blockquote: ({ children }) => (
-    <blockquote className="my-8 border-l-4 border-cyan-500 pl-6 italic text-slate-600 dark:text-slate-400">
+    <blockquote className="my-8 border-l-4 border-teal-500 pl-6 italic text-slate-600 dark:text-slate-400">
       {children}
     </blockquote>
   ),
