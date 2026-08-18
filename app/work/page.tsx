@@ -19,6 +19,21 @@ export const metadata: Metadata = {
 
 const workHistory = [
   {
+    id: "kerv-digital",
+    company: "Kerv Digital",
+    role: "Tech Lead / Frontend Architect",
+    period: "Mar 2026 - Present",
+    summary:
+      "Brought in to lead the rearchitecture of shared frontend foundations used across HMRC delivery teams.",
+    bullets: [
+      "Rearchitected two shared React component libraries consumed by multiple product teams",
+      "Rebuilt the React implementation of the GOV.UK Design System, aligning component APIs with GDS patterns and accessibility requirements",
+      "Centralised application scaffolding, configuration, tooling and cross-cutting concerns to reduce setup effort and divergence between teams",
+    ],
+    tags: ["React", "Design Systems", "GOV.UK", "Accessibility"],
+    contract: true,
+  },
+  {
     id: "foundational",
     company: "Foundational",
     role: "Frontend Engineering and Design Consultant",
