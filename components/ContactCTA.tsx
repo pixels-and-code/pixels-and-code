@@ -1,24 +1,22 @@
 import { ScrollFadeIn } from "./ScrollFadeIn";
-import { Button, Section, Container } from "@/components/ui";
 
 export function ContactCTA() {
   return (
-    <Section spacing="md">
-      <Container>
-        <ScrollFadeIn>
-          <div className="flex flex-col items-center text-center">
-            <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
-              Interested in working together?
-            </h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-md">
-              I&apos;d love to hear about your project.
-            </p>
-            <Button as="link" href="/contact" variant="primary" size="lg" className="mt-8">
-              Get in touch
-            </Button>
-          </div>
-        </ScrollFadeIn>
-      </Container>
-    </Section>
+    <section className="px-7 pb-[140px] pt-[130px] text-center">
+      <ScrollFadeIn>
+        <p className="font-mono text-[13px] uppercase tracking-label text-muted">
+          Interested in working together?
+        </p>
+        <a
+          href="mailto:dan@pixels-and-code.co.uk"
+          className="mt-6 inline-block font-display text-[clamp(3rem,8vw,7.5rem)] uppercase leading-none tracking-display text-ink transition-colors duration-[250ms] hover:text-accent"
+        >
+          Let&apos;s talk
+        </a>
+        <p className="mt-7 font-mono text-sm text-muted">
+          dan@pixels-and-code.co.uk
+        </p>
+      </ScrollFadeIn>
+    </section>
   );
 }

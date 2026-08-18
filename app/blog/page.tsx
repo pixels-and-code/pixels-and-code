@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/content";
-import { ScrollFadeIn, StaggerContainer, StaggerItem } from "@/components/ScrollFadeIn";
-import { ContactCTA } from "@/components/ContactCTA";
-import { Label, Section, Container, AccentBar, Badge } from "@/components/ui";
+import {
+  ScrollFadeIn,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ScrollFadeIn";
+import { Label, Badge } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Blog | Pixels and Code",
@@ -18,72 +21,74 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <>
-      <Section className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-[60vh]">
-        <Container>
-          <ScrollFadeIn>
-            <Label>Blog</Label>
-            <h1 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
-              Writing
-            </h1>
-            <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
-              Thoughts on frontend engineering, design systems, and building better
-              user experiences.
-            </p>
-          </ScrollFadeIn>
+    <section className="min-h-[60vh] px-7 pb-[130px] pt-[150px]">
+      <ScrollFadeIn>
+        <Label>Blog</Label>
+        <h1 className="mt-6 font-display text-[clamp(3rem,8vw,7.5rem)] uppercase leading-[0.92] tracking-hero text-ink">
+          Writing
+        </h1>
+        <p className="mt-8 max-w-[540px] text-lg leading-[1.6] text-muted">
+          Thoughts on frontend engineering, design systems, and building better
+          user experiences.
+        </p>
+      </ScrollFadeIn>
 
-          {posts.length === 0 ? (
-            <ScrollFadeIn delay={0.15}>
-              <p className="mt-20 text-lg text-slate-500 dark:text-slate-400">
-                No posts yet. Check back soon.
-              </p>
-            </ScrollFadeIn>
-          ) : (
-            <StaggerContainer className="mt-20 space-y-6" staggerDelay={0.15}>
-              {posts.map((post) => (
-                <StaggerItem key={post.slug}>
-                  <Link href={`/blog/${post.slug}`} className="block group">
-                    <article className="relative bg-white p-10 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.01] dark:bg-slate-800 md:p-12">
-                      <AccentBar className="mb-6" />
-                      <h2 className="font-serif text-2xl text-slate-900 dark:text-white md:text-3xl group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
-                        {post.frontmatter.title}
-                      </h2>
-                      <p className="mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                        {post.frontmatter.excerpt}
-                      </p>
-                      <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
-                        <span>{post.readingTime}</span>
-                        <span>•</span>
-                        <time dateTime={post.frontmatter.date}>
-                          {new Date(post.frontmatter.date).toLocaleDateString(
-                            "en-GB",
-                            {
-                              year: "numeric",
-                              month: "long",
-                              day: "numeric",
-                            }
-                          )}
-                        </time>
+      {posts.length === 0 ? (
+        <ScrollFadeIn delay={0.15}>
+          <p className="mt-20 text-lg text-muted">
+            No posts yet. Check back soon.
+          </p>
+        </ScrollFadeIn>
+      ) : (
+        <StaggerContainer className="mt-20 flex flex-col gap-5" staggerDelay={0.15}>
+          {posts.map((post) => (
+            <StaggerItem key={post.slug}>
+              <Link href={`/blog/${post.slug}`} className="group block">
+                <article className="grid items-center gap-6 rounded border border-line bg-card p-8 transition-all duration-[250ms] group-hover:-translate-y-1 group-hover:border-accent md:grid-cols-[180px,1fr,60px] md:gap-10 md:p-11">
+                  <div>
+                    <time
+                      dateTime={post.frontmatter.date}
+                      className="font-mono text-[13px] text-muted"
+                    >
+                      {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </time>
+                    <p className="mt-2 font-mono text-[13px] text-muted">
+                      {post.readingTime}
+                    </p>
+                  </div>
+
+                  <div>
+                    <h2 className="font-display text-[clamp(1.6rem,3vw,2.4rem)] uppercase leading-[1.05] tracking-[-0.01em] text-ink">
+                      {post.frontmatter.title}
+                    </h2>
+                    <p className="mt-4 max-w-[640px] text-base leading-[1.65] text-muted">
+                      {post.frontmatter.excerpt}
+                    </p>
+                    {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {post.frontmatter.tags.map((tag) => (
+                          <Badge key={tag}>{tag}</Badge>
+                        ))}
                       </div>
-                      {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          {post.frontmatter.tags.map((tag) => (
-                            <Badge key={tag} variant="outline" size="sm">
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                      )}
-                    </article>
-                  </Link>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          )}
-        </Container>
-      </Section>
+                    )}
+                  </div>
 
-      <ContactCTA />
-    </>
+                  <span
+                    aria-hidden="true"
+                    className="font-display text-4xl text-accent md:justify-self-end"
+                  >
+                    ↗
+                  </span>
+                </article>
+              </Link>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      )}
+    </section>
   );
 }

@@ -14,7 +14,7 @@ export default async function Image() {
     (
       <div
         style={{
-          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+          background: "#0c0d0b",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -33,7 +33,7 @@ export default async function Image() {
             width: "120px",
             height: "120px",
             borderRadius: "50%",
-            background: "linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)",
+            background: "#d7ff3f",
             opacity: 0.15,
           }}
         />
@@ -45,7 +45,7 @@ export default async function Image() {
             width: "200px",
             height: "200px",
             borderRadius: "50%",
-            background: "linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)",
+            background: "#d7ff3f",
             opacity: 0.1,
           }}
         />
@@ -74,7 +74,7 @@ export default async function Image() {
                 width: "48px",
                 height: "48px",
                 borderRadius: "12px",
-                background: "linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)",
+                background: "#d7ff3f",
               }}
             />
           </div>
@@ -84,7 +84,7 @@ export default async function Image() {
             style={{
               fontSize: "72px",
               fontWeight: 700,
-              color: "#f8fafc",
+              color: "#f4f3ee",
               margin: 0,
               marginBottom: "24px",
               letterSpacing: "-0.02em",
@@ -98,7 +98,7 @@ export default async function Image() {
             style={{
               fontSize: "32px",
               fontWeight: 400,
-              color: "#94a3b8",
+              color: "#a3a89b",
               margin: 0,
               marginBottom: "48px",
             }}
@@ -112,7 +112,7 @@ export default async function Image() {
               width: "120px",
               height: "4px",
               borderRadius: "2px",
-              background: "linear-gradient(90deg, #06b6d4 0%, #0891b2 100%)",
+              background: "#d7ff3f",
             }}
           />
         </div>
@@ -124,7 +124,7 @@ export default async function Image() {
             bottom: "40px",
             fontSize: "20px",
             fontWeight: 400,
-            color: "#64748b",
+            color: "#6b6f60",
             margin: 0,
           }}
         >

@@ -48,7 +48,7 @@ export function LightboxImage({ src, alt, caption, crop }: LightboxImageProps) {
         <button
           ref={triggerRef}
           onClick={() => setIsOpen(true)}
-          className="group block w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/50 cursor-zoom-in transition-shadow duration-300 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+          className="group block w-full cursor-zoom-in overflow-hidden rounded border border-line bg-card transition-colors duration-200 hover:border-accent"
           aria-label={`View ${alt} full size`}
         >
           {crop ? (
@@ -72,7 +72,7 @@ export function LightboxImage({ src, alt, caption, crop }: LightboxImageProps) {
           )}
         </button>
         {caption && (
-          <figcaption className="mt-2 text-center text-sm font-medium text-slate-500 dark:text-slate-400">
+          <figcaption className="mt-2 text-center font-mono text-xs text-muted">
             {caption}
           </figcaption>
         )}
@@ -89,7 +89,7 @@ export function LightboxImage({ src, alt, caption, crop }: LightboxImageProps) {
           <button
             ref={closeRef}
             onClick={close}
-            className="fixed top-4 right-4 z-10 rounded-full bg-white/10 p-2.5 text-white/80 hover:bg-white/20 hover:text-white transition-colors"
+            className="fixed right-4 top-4 z-10 rounded-full bg-white/10 p-2.5 text-white/80 transition-colors hover:bg-white/20 hover:text-white"
             aria-label="Close"
           >
             <svg
@@ -111,7 +111,7 @@ export function LightboxImage({ src, alt, caption, crop }: LightboxImageProps) {
             <img
               src={src}
               alt={alt}
-              className="w-full max-w-5xl h-auto object-contain rounded-lg"
+              className="h-auto w-full max-w-5xl rounded object-contain"
               onClick={(e) => e.stopPropagation()}
             />
           </div>

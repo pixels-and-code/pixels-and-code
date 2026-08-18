@@ -4,6 +4,7 @@ interface LabelProps extends ComponentProps<"p"> {
   as?: "p" | "span";
 }
 
+/** Accent mono eyebrow label, e.g. WORK / EXPERIENCE / ABOUT */
 export function Label({
   as: Component = "p",
   className = "",
@@ -12,7 +13,7 @@ export function Label({
 }: LabelProps) {
   return (
     <Component
-      className={`text-sm font-semibold tracking-widest uppercase text-teal-700 dark:text-teal-400 ${className}`.trim()}
+      className={`font-mono text-[13px] uppercase tracking-label text-accent ${className}`.trim()}
       {...props}
     >
       {children}

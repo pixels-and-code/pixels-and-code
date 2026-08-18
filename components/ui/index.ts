@@ -3,4 +3,4 @@ export { Badge } from "./Badge";
 export { Label } from "./Label";
 export { Section } from "./Section";
 export { Container } from "./Container";
-export { AccentBar } from "./AccentBar";
+export { Bleed } from "./Bleed";

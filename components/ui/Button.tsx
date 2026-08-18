@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ComponentProps, forwardRef } from "react";
 
-type ButtonVariant = "primary" | "outline" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonBaseProps {
@@ -32,7 +32,7 @@ type ButtonProps = ButtonAsButton | ButtonAsLink | ButtonAsAnchor;
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary: "btn-primary",
-  outline: "btn-outline",
+  secondary: "btn-secondary",
   ghost: "btn-ghost",
 };
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllCaseStudies, getCaseStudyBySlug, compileMDXContent } from "@/lib/content";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
-import { Container, Badge } from "@/components/ui";
+import { Container, Badge, Label } from "@/components/ui";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -51,10 +51,10 @@ export default async function CaseStudyPage({ params }: Props) {
     <article className="min-h-screen">
       {/* Hero banner */}
       {caseStudy.frontmatter.heroImage && (
-        <div className={`relative bg-gradient-to-br ${caseStudy.frontmatter.accent} mt-[4.5rem] pt-12 md:mt-20 md:pt-16`}>
+        <div className="mt-[4.5rem] border-b border-line bg-card pt-12 md:mt-20 md:pt-16">
           <Container size="md">
             <ScrollFadeIn>
-              <div className="relative aspect-[16/9] overflow-hidden rounded-t-lg shadow-2xl">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-t border border-b-0 border-line">
                 <Image
                   src={caseStudy.frontmatter.heroImage}
                   alt={`${caseStudy.frontmatter.company} design system`}
@@ -73,16 +73,14 @@ export default async function CaseStudyPage({ params }: Props) {
       <div className={caseStudy.frontmatter.heroImage ? "pt-12 md:pt-16" : "pt-32 md:pt-40"}>
         <Container size="sm">
           <ScrollFadeIn>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
-              {caseStudy.frontmatter.company}
-            </p>
-            <h1 className="font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
+            <Label>{caseStudy.frontmatter.company}</Label>
+            <h1 className="mt-4 font-display text-[clamp(2.2rem,5vw,4rem)] uppercase leading-[0.98] tracking-display text-ink">
               {caseStudy.frontmatter.title}
             </h1>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+            <div className="mt-6 flex flex-wrap items-center gap-3 font-mono text-[13px] text-muted">
               <span>{caseStudy.readingTime}</span>
-              <span>•</span>
+              <span aria-hidden="true">·</span>
               <time dateTime={caseStudy.frontmatter.date}>
                 {new Date(caseStudy.frontmatter.date).toLocaleDateString("en-GB", {
                   year: "numeric",
@@ -93,9 +91,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
             <div className="mt-6 flex flex-wrap gap-2">
               {caseStudy.frontmatter.tags.map((tag) => (
-                <Badge key={tag} variant="outline" size="sm">
-                  {tag}
-                </Badge>
+                <Badge key={tag}>{tag}</Badge>
               ))}
             </div>
           </ScrollFadeIn>
@@ -106,7 +102,7 @@ export default async function CaseStudyPage({ params }: Props) {
       <div className="pb-20 md:pb-32">
         <Container size="sm">
           <ScrollFadeIn delay={0.15}>
-            <div className="mt-12 case-study-content">{content}</div>
+            <div className="case-study-content mt-12">{content}</div>
           </ScrollFadeIn>
         </Container>
       </div>

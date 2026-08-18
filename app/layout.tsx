@@ -1,19 +1,41 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
-import { GeistSans } from "geist/font/sans";
+import { Archivo, Archivo_Black, Space_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
-const fraunces = Fraunces({
+// Body copy
+const archivo = Archivo({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-fraunces",
-  weight: ["400", "700"],
+  variable: "--font-archivo",
   adjustFontFallback: true, // Generates size-adjust to reduce CLS
-  fallback: ["Georgia", "serif"], // Matches Tailwind config
+  fallback: ["system-ui", "sans-serif"],
 });
+
+// Headings and logo
+const archivoBlack = Archivo_Black({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-archivo-black",
+  weight: "400",
+  adjustFontFallback: true,
+  fallback: ["Impact", "sans-serif"],
+});
+
+// Labels, nav, buttons, tags
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-mono",
+  weight: ["400", "700"],
+  adjustFontFallback: true,
+  fallback: ["ui-monospace", "monospace"],
+});
+
+// Applies the stored theme before first paint. Dark is the default.
+const themeScript = `(function(){try{if(localStorage.getItem("theme")!=="light"){document.documentElement.classList.add("dark")}}catch(e){document.documentElement.classList.add("dark")}})()`;
 
 export const metadata: Metadata = {
   title: "Pixels and Code | Frontend Engineering & Design Systems Consultant",
@@ -60,8 +82,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${GeistSans.variable} ${fraunces.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${archivo.variable} ${archivoBlack.variable} ${spaceMono.variable}`}
+    >
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -113,11 +140,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen font-sans antialiased">
+      <body className="min-h-screen overflow-x-hidden font-sans antialiased">
         <ThemeProvider>
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-teal-500 focus:px-4 focus:py-2 focus:text-white focus:outline-none"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-fill focus:px-5 focus:py-2.5 focus:font-mono focus:text-[13px] focus:uppercase focus:tracking-mono focus:text-onfill focus:outline-none"
           >
             Skip to main content
           </a>

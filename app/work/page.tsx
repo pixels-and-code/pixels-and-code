@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getAllCaseStudies } from "@/lib/content";
 import {
   ScrollFadeIn,
   StaggerContainer,
   StaggerItem,
 } from "@/components/ScrollFadeIn";
-import { ContactCTA } from "@/components/ContactCTA";
-import { Label, Section, Container, Badge } from "@/components/ui";
+import { Label, Badge } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Work | Pixels and Code",
@@ -155,164 +155,126 @@ export default function WorkPage() {
 
   return (
     <>
-      {/* Case Studies */}
-      <Section className="pt-32 pb-20 md:pt-40 md:pb-32">
-        <Container>
-          <ScrollFadeIn>
-            <Label>Work</Label>
-            <h1 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
-              Selected projects
-            </h1>
-            <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
-              Case studies from my work helping startups and scale-ups build
-              better frontend architecture and design systems.
-            </p>
-          </ScrollFadeIn>
+      {/* Page header */}
+      <section className="border-b border-line px-7 pb-[90px] pt-[150px]">
+        <ScrollFadeIn>
+          <Label>Work</Label>
+          <h1 className="mt-6 font-display text-[clamp(3rem,8vw,7.5rem)] uppercase leading-[0.92] tracking-hero text-ink">
+            Selected
+            <br />
+            <span className="text-outline">projects</span>
+          </h1>
+          <p className="mt-8 max-w-[540px] text-lg leading-[1.6] text-muted">
+            Case studies from my work helping startups and scale-ups build
+            better frontend architecture and design systems.
+          </p>
+        </ScrollFadeIn>
+      </section>
 
-          <StaggerContainer className="mt-20 space-y-6" staggerDelay={0.15}>
-            {caseStudies.map((study) => {
-              const isLinked = study.frontmatter.linked;
+      {/* Case studies */}
+      <section className="border-b border-line">
+        {caseStudies.map((study) => (
+          <article
+            key={study.slug}
+            className="grid border-b border-line transition-colors duration-200 last:border-b-0 hover:bg-card md:grid-cols-[1fr,2fr]"
+          >
+            <div className="px-7 pb-0 pt-14 md:border-r md:border-line md:py-14">
+              <h2 className="font-display text-[clamp(2rem,4vw,3.4rem)] uppercase leading-[0.95] tracking-display text-ink">
+                {study.frontmatter.company}
+              </h2>
+              <p className="mt-3.5 font-mono text-[13px] uppercase tracking-[0.06em] text-muted">
+                {study.frontmatter.title}
+              </p>
+            </div>
 
-              return (
-              <StaggerItem key={study.slug}>
-                  <article className="relative overflow-hidden shadow-sm">
-                    <div className="grid md:grid-cols-[240px,1fr]">
-                      <div className={`bg-gradient-to-br ${study.frontmatter.accent} p-8 md:p-10 flex flex-col justify-end`}>
-                        <h2 className="font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
-                          {study.frontmatter.company}
-                        </h2>
-                        <p className="mt-2 text-sm text-slate-700/70 dark:text-white/70">
-                          {study.frontmatter.title}
-                        </p>
-                      </div>
-                      <div className="bg-white p-8 dark:bg-slate-800 md:p-10">
-                        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                          {study.frontmatter.excerpt}
-                        </p>
-                        <div className="mt-6 flex flex-wrap gap-2">
-                          {study.frontmatter.tags.map((tag) => (
-                            <Badge key={tag} variant="outline" size="sm">
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                        {isLinked && (
-                          <a
-                            href={`/work/${study.slug}`}
-                            className="inline-flex items-center gap-2 mt-6 text-teal-700 dark:text-teal-400 font-medium text-sm hover:underline"
-                          >
-                            Read case study
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                            </svg>
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </article>
-              </StaggerItem>
-            );
-            })}
-          </StaggerContainer>
-        </Container>
-      </Section>
+            <div className="px-7 pb-14 pt-6 md:py-14">
+              <p className="max-w-[640px] text-[17px] leading-[1.7] text-muted">
+                {study.frontmatter.excerpt}
+              </p>
 
-      {/* Work History */}
-      <Section className="py-32 md:py-40">
-        <Container>
-          <ScrollFadeIn>
-            <Label>Experience</Label>
-            <h2 className="mt-3 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
-              Work history
-            </h2>
-          </ScrollFadeIn>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {study.frontmatter.tags.map((tag) => (
+                  <Badge key={tag} size="md">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
 
-          <StaggerContainer className="mt-16" staggerDelay={0.1}>
-            {workHistory.map((job, index) => (
-              <StaggerItem key={`${job.company}-${index}`}>
-                <article
-                  id={job.id}
-                  className="scroll-mt-24 py-10 border-t border-slate-200 dark:border-slate-700 first:border-t-0 first:pt-0"
+              {study.frontmatter.linked && (
+                <Link
+                  href={`/work/${study.slug}`}
+                  className="mt-7 inline-block border-b-2 border-accent pb-[3px] font-mono text-[13px] uppercase tracking-mono text-accent transition-colors hover:border-ink hover:text-ink"
                 >
-                  <div className="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-12">
-                    <p className="text-sm font-medium text-slate-500 dark:text-slate-400 md:w-[180px] md:text-right shrink-0">
-                      {job.period}
-                    </p>
-                    <h3 className="font-serif text-2xl text-slate-900 dark:text-white">
-                      {job.company}
-                    </h3>
-                  </div>
+                  Read case study ↗
+                </Link>
+              )}
+            </div>
+          </article>
+        ))}
+      </section>
 
-                  <div className="grid md:grid-cols-[180px,1fr] md:gap-12">
-                    <div className="hidden md:flex flex-col items-end gap-1.5 mt-3">
-                      {job.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" size="sm">
-                          {tag}
-                        </Badge>
+      {/* Work history */}
+      <section className="px-7 pb-[130px] pt-20 md:pt-[110px]">
+        <ScrollFadeIn>
+          <Label>Experience</Label>
+          <h2 className="mt-6 font-display text-[clamp(2.4rem,5.5vw,5rem)] uppercase leading-[0.95] tracking-display text-ink">
+            Work history
+          </h2>
+        </ScrollFadeIn>
+
+        <StaggerContainer className="mt-16" staggerDelay={0.1}>
+          {workHistory.map((job) => (
+            <StaggerItem key={job.id}>
+              <article
+                id={job.id}
+                className="grid scroll-mt-24 gap-6 border-t border-line py-12 md:grid-cols-[220px,1fr] md:gap-12"
+              >
+                <div>
+                  <p className="font-mono text-[13px] tracking-[0.02em] text-muted">
+                    {job.period}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {job.tags.map((tag) => (
+                      <Badge key={tag}>{tag}</Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-[28px] uppercase tracking-[-0.01em] text-ink">
+                    {job.company}
+                  </h3>
+                  <p className="mt-2 font-mono text-sm text-accent">
+                    {job.role}
+                    {"contract" in job && job.contract && (
+                      <span className="ml-3 inline-block rounded-[2px] border border-chip px-2 py-0.5 align-middle text-[11px] uppercase tracking-[0.1em] text-muted">
+                        Contract
+                      </span>
+                    )}
+                  </p>
+
+                  <div className="mt-5 flex max-w-[720px] flex-col gap-3 text-base leading-[1.7] text-muted">
+                    {"summary" in job && job.summary && <p>{job.summary}</p>}
+                    <ul className="ml-[18px] flex list-disc flex-col gap-2 marker:text-chip">
+                      {job.bullets.map((bullet, i) => (
+                        <li key={i}>{bullet}</li>
                       ))}
-                    </div>
-
-                    <div>
-                      <p className="mt-1 text-teal-700 dark:text-teal-400">
-                        {job.role}
-                        {"contract" in job && job.contract && (
-                          <span className="ml-2 inline-block align-middle text-xs font-medium uppercase tracking-wider text-slate-400 dark:text-slate-500">
-                            Contract
-                          </span>
-                        )}
-                      </p>
-
-                      <div className="mt-4 space-y-3 text-slate-600 dark:text-slate-300 leading-relaxed">
-                        {"summary" in job && job.summary && (
-                          <p>{job.summary}</p>
-                        )}
-                        {job.bullets && (
-                          <ul className="ml-5 list-disc space-y-2 marker:text-slate-400 dark:marker:text-slate-500">
-                            {job.bullets.map((bullet, i) => (
-                              <li key={i}>{bullet}</li>
-                            ))}
-                          </ul>
-                        )}
-                        {"caseStudySlug" in job && job.caseStudySlug && (
-                          <a
-                            href={`/work/${job.caseStudySlug}`}
-                            className="inline-flex items-center gap-2 mt-4 text-teal-700 dark:text-teal-400 hover:underline font-medium"
-                          >
-                            Read case study
-                            <svg
-                              className="w-4 h-4"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1.5}
-                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                              />
-                            </svg>
-                          </a>
-                        )}
-                      </div>
-
-                      <div className="mt-5 flex flex-wrap gap-2 md:hidden">
-                        {job.tags.map((tag) => (
-                          <Badge key={tag} variant="outline" size="sm">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
+                    </ul>
+                    {"caseStudySlug" in job && job.caseStudySlug && (
+                      <Link
+                        href={`/work/${job.caseStudySlug}`}
+                        className="mt-2 inline-block self-start border-b-2 border-accent pb-[3px] font-mono text-[13px] uppercase tracking-mono text-accent transition-colors hover:border-ink hover:text-ink"
+                      >
+                        Read case study ↗
+                      </Link>
+                    )}
                   </div>
-                </article>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </Container>
-      </Section>
-
-      <ContactCTA />
+                </div>
+              </article>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </section>
     </>
   );
 }

@@ -7,27 +7,28 @@ import { Pullquote } from "./Pullquote";
 // Configure bright theme
 Code.theme = "github-dark";
 
+const linkClasses =
+  "text-accent underline underline-offset-2 transition-colors hover:text-ink";
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const mdxComponents: Record<string, React.ComponentType<any>> = {
   h1: ({ children }) => (
-    <h1 className="mt-12 mb-6 font-serif text-4xl text-slate-900 dark:text-white md:text-5xl first:mt-0">
+    <h1 className="mb-6 mt-12 font-display text-3xl uppercase tracking-display text-ink first:mt-0 md:text-4xl">
       {children}
     </h1>
   ),
   h2: ({ children }) => (
-    <h2 className="mt-10 mb-4 font-serif text-3xl text-slate-900 dark:text-white md:text-4xl">
+    <h2 className="mb-4 mt-10 font-display text-2xl uppercase tracking-display text-ink md:text-3xl">
       {children}
     </h2>
   ),
   h3: ({ children }) => (
-    <h3 className="mt-8 mb-3 font-serif text-2xl text-slate-900 dark:text-white md:text-3xl">
+    <h3 className="mb-3 mt-8 font-display text-xl uppercase tracking-display text-ink md:text-2xl">
       {children}
     </h3>
   ),
   p: ({ children }) => (
-    <p className="mb-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-      {children}
-    </p>
+    <p className="mb-6 text-[17px] leading-[1.7] text-muted">{children}</p>
   ),
   a: ({ href, children }) => {
     const isExternal = href?.startsWith("http");
@@ -37,39 +38,39 @@ export const mdxComponents: Record<string, React.ComponentType<any>> = {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-teal-700 dark:text-teal-400 underline underline-offset-2 hover:text-teal-800 dark:hover:text-teal-300 transition-colors"
+          className={linkClasses}
         >
           {children}
         </a>
       );
     }
     return (
-      <Link
-        href={href || "#"}
-        className="text-teal-700 dark:text-teal-400 underline underline-offset-2 hover:text-teal-800 dark:hover:text-teal-300 transition-colors"
-      >
+      <Link href={href || "#"} className={linkClasses}>
         {children}
       </Link>
     );
   },
   ul: ({ children }) => (
-    <ul className="mb-6 ml-6 list-disc space-y-2 text-lg text-slate-600 dark:text-slate-300">
+    <ul className="mb-6 ml-6 list-disc space-y-2 text-[17px] text-muted marker:text-chip">
       {children}
     </ul>
   ),
   ol: ({ children }) => (
-    <ol className="mb-6 ml-6 list-decimal space-y-2 text-lg text-slate-600 dark:text-slate-300">
+    <ol className="mb-6 ml-6 list-decimal space-y-2 text-[17px] text-muted marker:text-chip">
       {children}
     </ol>
   ),
-  li: ({ children }) => <li className="leading-relaxed">{children}</li>,
+  li: ({ children }) => <li className="leading-[1.7]">{children}</li>,
+  strong: ({ children }) => (
+    <strong className="font-semibold text-ink">{children}</strong>
+  ),
   blockquote: ({ children }) => (
-    <blockquote className="my-8 border-l-4 border-teal-500 pl-6 italic text-slate-600 dark:text-slate-400">
+    <blockquote className="my-8 border-l-2 border-accent pl-6 italic text-muted">
       {children}
     </blockquote>
   ),
   code: ({ children }) => (
-    <code className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-sm text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+    <code className="rounded-[2px] border border-line bg-card px-1.5 py-0.5 font-mono text-sm text-ink">
       {children}
     </code>
   ),
@@ -80,10 +81,10 @@ export const mdxComponents: Record<string, React.ComponentType<any>> = {
       alt={alt || "Image"}
       width={800}
       height={450}
-      className="my-8 rounded-lg"
+      className="my-8 rounded border border-line"
     />
   ),
-  hr: () => <hr className="my-12 border-slate-200 dark:border-slate-800" />,
+  hr: () => <hr className="my-12 border-line" />,
   LightboxImage,
   ImageGrid,
   Pullquote,
@@ -93,13 +94,11 @@ export const mdxComponents: Record<string, React.ComponentType<any>> = {
     </div>
   ),
   th: ({ children }) => (
-    <th className="border-b border-slate-300 bg-slate-100 px-4 py-3 font-medium text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-white">
+    <th className="border-b border-line bg-card px-4 py-3 font-mono text-[13px] uppercase tracking-mono text-ink">
       {children}
     </th>
   ),
   td: ({ children }) => (
-    <td className="border-b border-slate-200 px-4 py-3 text-slate-600 dark:border-slate-800 dark:text-slate-300">
-      {children}
-    </td>
+    <td className="border-b border-line px-4 py-3 text-muted">{children}</td>
   ),
 };

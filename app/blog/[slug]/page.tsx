@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug, compileMDXContent } from "@/lib/content";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
-import { Button, Container, AccentBar, Badge } from "@/components/ui";
+import { Container, Badge } from "@/components/ui";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -45,35 +46,23 @@ export default async function BlogPostPage({ params }: Props) {
   const content = await compileMDXContent(post.content);
 
   return (
-    <article className="pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen">
+    <article className="min-h-screen pb-20 pt-32 md:pb-32 md:pt-40">
       <Container size="sm">
         <ScrollFadeIn>
-          <Button as="link" href="/blog" variant="ghost" className="gap-2 mb-8">
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-              />
-            </svg>
-            Back to blog
-          </Button>
+          <Link
+            href="/blog"
+            className="font-mono text-[13px] uppercase tracking-mono text-muted transition-colors hover:text-accent"
+          >
+            ← Back to blog
+          </Link>
 
-          <AccentBar className="mb-6" />
-
-          <h1 className="font-serif text-4xl text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
+          <h1 className="mt-8 font-display text-[clamp(2.2rem,5vw,4rem)] uppercase leading-[0.98] tracking-display text-ink">
             {post.frontmatter.title}
           </h1>
 
-          <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+          <div className="mt-6 flex flex-wrap items-center gap-3 font-mono text-[13px] text-muted">
             <span>{post.readingTime}</span>
-            <span>•</span>
+            <span aria-hidden="true">·</span>
             <time dateTime={post.frontmatter.date}>
               {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
                 year: "numeric",
@@ -86,9 +75,7 @@ export default async function BlogPostPage({ params }: Props) {
           {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
             <div className="mt-6 flex flex-wrap gap-2">
               {post.frontmatter.tags.map((tag) => (
-                <Badge key={tag} variant="outline" size="sm">
-                  {tag}
-                </Badge>
+                <Badge key={tag}>{tag}</Badge>
               ))}
             </div>
           )}

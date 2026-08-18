@@ -6,7 +6,6 @@ interface PullquoteProps {
   title: string;
   company: string;
   avatar: string;
-  accent?: string;
 }
 
 export function Pullquote({
@@ -15,34 +14,24 @@ export function Pullquote({
   title,
   company,
   avatar,
-  accent = "from-violet-400 to-violet-600",
 }: PullquoteProps) {
   return (
-    <figure className="relative my-12 bg-white dark:bg-slate-800 p-8 md:p-10 shadow-sm">
-      <span
-        className={`absolute top-3 left-3 block font-serif text-[8rem] leading-none bg-gradient-to-br ${accent} bg-clip-text text-transparent opacity-[12%] select-none`}
-        aria-hidden="true"
-      >
-        &ldquo;
-      </span>
-
-      <blockquote className="relative z-10 text-lg text-slate-600 dark:text-slate-300 leading-relaxed italic">
-        <p>{quote}</p>
+    <figure className="my-12 rounded-md border border-line bg-card p-8 md:p-10">
+      <blockquote className="text-[17px] leading-[1.7] text-ink">
+        <p>&ldquo;{quote}&rdquo;</p>
       </blockquote>
 
-      <figcaption className="relative z-10 mt-6 flex items-center gap-4">
+      <figcaption className="mt-6 flex items-center gap-3.5">
         <Image
           src={avatar}
-          alt={author}
-          width={48}
-          height={48}
-          className="rounded-full grayscale w-12 h-12"
+          alt=""
+          width={44}
+          height={44}
+          className="h-11 w-11 shrink-0 rounded-full object-cover grayscale"
         />
         <div>
-          <p className="font-medium text-slate-900 dark:text-white">
-            {author}
-          </p>
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm font-semibold text-ink">{author}</p>
+          <p className="mt-0.5 font-mono text-xs text-muted">
             {title}, {company}
           </p>
         </div>
