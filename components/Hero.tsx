@@ -55,8 +55,7 @@ export function Hero() {
         >
           <p className="max-w-[480px] text-lg leading-[1.65] text-muted">
             I help startups and scale-ups ship production React applications and
-            design systems that hold up at scale. Fifteen years in, still
-            obsessed with the craft.
+            design systems that hold up at scale.
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
