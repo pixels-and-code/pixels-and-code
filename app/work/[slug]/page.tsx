@@ -57,7 +57,7 @@ export default async function CaseStudyPage({ params }: Props) {
               <div className="relative aspect-[16/9] overflow-hidden rounded-t border border-b-0 border-line">
                 <Image
                   src={caseStudy.frontmatter.heroImage}
-                  alt={`${caseStudy.frontmatter.company} design system`}
+                  alt={`${caseStudy.frontmatter.company}: ${caseStudy.frontmatter.title}`}
                   fill
                   priority
                   sizes="(min-width: 1024px) 896px, (min-width: 768px) 90vw, 100vw"

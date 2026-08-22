@@ -1,9 +1,122 @@
 ---
-title: "Greenfield Healthcare App"
+title: "Scheduling Treatment Plans Without a Calendar"
 company: "Orri"
-date: "2023-01-01"
-excerpt: "Designed frontend architecture for eating disorder treatment platform. Built TypeScript SDK and design system foundations."
-tags: ["React", "TypeScript", "Architecture", "Design Systems", "SDK"]
+date: "2024-10-01"
+excerpt: "Designed the scheduling flow for an eating disorder clinic. A RAG availability view answers whether a stream has room for a client's entire treatment programme, then books every session in one pass."
+tags: ["UX Design", "Healthcare", "Scheduling", "Figma", "React"]
 accent: "from-rose-100 to-rose-300 dark:from-rose-700 dark:to-rose-900"
 published: true
+linked: true
 ---
+
+## Overview
+
+Orri are specialists in eating disorder treatment for young people and adults. Clients are vulnerable, and many are neurodivergent, so consistency in their care matters. Treatment runs as day programmes of six, twelve or eighteen weeks, and the team builds each client a plan covering that whole period.
+
+The majority of plans have two kinds of session in them. Group sessions run as streams, named by colour, that a client joins for the duration. Alongside those sit one-to-one therapies with a named clinician. Clients do not all start on the same date, and the number of days a week someone attends is not fixed.
+
+---
+
+## The Challenge
+
+We spent a lot of time with the teams responsible for booking, talking through their process and watching them work. Staff placed clients using weekly and daily calendars: to find a home for someone, they opened a stream, checked week one, checked week two, and kept going to the end of the programme, holding the running answer in their head.
+
+Because clients join at different points, streams fill unevenly. Space in week one is no use if it has gone by week four, and a client who needs consistency cannot be moved into a different group halfway through. The real question was never "who is in on Tuesday?". It was:
+
+> Does this stream have room for this client, on the days they attend, for every week of their programme?
+
+No view in the system answered that. Every view answered a smaller question and left the staff member to assemble the rest. From a cost perspective, the clinic ideally wanted to fill streams before opening up others.
+
+One-to-one therapy was the same problem with a different shape. Clinicians offer slots rather than open diaries, and need gaps between appointments to write up notes, so their availability is not a simple grid of free time. Staff had to find a repeating slot that landed on days the client was already in the building.
+
+---
+
+## Starting From the Plan
+
+The first move was to make the plan, not the appointment, the unit of work.
+
+Each item on a plan declares its own shape: when it starts, when it ends, how often it recurs, and on which days. "Fortnightly on Tuesday, Thursday and Friday, from week 1 to week 6" is nine sessions. The item carries that number, tracks how many are actually scheduled, and records which stream they belong to.
+
+<LightboxImage
+  src="/work/orri/step-1-plan-with-items.avif"
+  alt="Treatment plan screen showing two items, Full Day and Therapy, each with start week, end week, recurrence pattern, a scheduled count of 0 of 9, and an empty stream column"
+  caption="A draft plan with nothing scheduled yet"
+/>
+
+That reframing did most of the work. Scheduling stopped being "book an appointment" and became "fill this item", which meant every downstream view could be built to answer one question: what satisfies these nine sessions?
+
+---
+
+## The Availability View
+
+For streams, the answer needed to be visible in a single glance, so the view lays the entire programme out at once: each stream gets its own grid, months across, weekdays as columns, one dot per day.
+
+Each dot is coded green for available, amber for limited, meaning one or two places left, and red for full, plus muted states for public holidays, closures and days that fall outside the programme. The days the item actually needs are brought forward; everything else recedes, so a fortnightly Tuesday, Thursday and Friday pattern reads as a rhythm down the grid rather than something to be counted out.
+
+<LightboxImage
+  src="/work/orri/step-2-select-stream.avif"
+  alt="Stream selection modal showing a colour key and four streams, Aqua, Blue, Copper and Purple, each with a nine treatment count and a grid of coloured availability dots covering November and December"
+  caption="Stream availability across the full programme, not one week at a time"
+/>
+
+Each stream shows the treatment count it can cover, so the number can be checked against the item without arithmetic. Reading down a stream tells you at a glance whether it holds for the whole programme.
+
+Amber is not a warning here, it is a recommendation. One or two places left is exactly the space the clinic most wants filled: topping up a group that is already running is better value than starting to fill an emptier one. So streams are ordered by how close they are to capacity, not by how much room they have. Aqua leads the list above because it has a limited day in it; Blue, Copper and Purple sit below with more space going spare.
+
+That puts the commercially sensible option at the top without making it the only option.
+
+The system could go further and choose outright: it knows which streams hold and which sit closest to capacity. It stops short deliberately. The person booking knows things it never will, the character of each stream and the clinicians who run it, and the plan has to stay bespoke to the client's clinical needs. So the ranking is a default rather than a rule, and every stream that holds is still one click away. The system is an enabler; the judgement stays human.
+
+---
+
+## Slots for One-to-One Therapy
+
+The same principle applied to one-to-one therapy, with the axes swapped. Clinicians run down the side, the client's days run across, and every slot a clinician can offer appears as a chip.
+
+There are two states, and the second is the useful one. Available means the slot works for every session the item needs. Partially available means it works for most weeks but not all, which is precisely the case the old calendars buried: it looked fine on the day you checked and fell apart three weeks later.
+
+<LightboxImage
+  src="/work/orri/step-3-select-slot.avif"
+  alt="Available weekly appointment times modal, with four clinicians listed down the left and Monday to Friday across the top, each cell holding time chips marked either available with a solid tick or partially available with a dashed outline"
+  caption="Weekly slots by clinician, showing full and partial availability"
+/>
+
+Because the gaps clinicians need between appointments are baked into the slots they publish, staff never have to reason about note-writing time. It is simply not offered.
+
+---
+
+## Confirming the Booking
+
+Choosing a slot expands it into the real appointments: every week it covers, with its date, its time and a room. Anything that could not be honoured at the chosen time can be swapped here, session by session, and the room booked at the same time. Nothing is committed until the whole set is confirmed.
+
+<LightboxImage
+  src="/work/orri/step-4-confirm-appointments.avif"
+  alt="Confirm and book appointments modal listing three sessions for clinician Spring Stracke by week and date, each with an editable time and a room selector, above a book button"
+  caption="Every session in the item, confirmed as one booking"
+/>
+
+Once booked, the plan item shows nine of nine scheduled against the Aqua stream. The nine sessions the item asked for now exist as nine bookings.
+
+---
+
+## Finance as a By-product
+
+Every session now exists as a booking attached to a plan item, with a product, the stream or clinician that delivered it, a location and a date. That makes the finance view a report rather than a reconstruction.
+
+<LightboxImage
+  src="/work/orri/step-5-finance.avif"
+  alt="Finance tab showing a table of scheduled treatments with columns for product, lead or stream, location, scheduled date, price, discount, amount and invoice status"
+  caption="A complete, priceable list of sessions, straight out of the plan"
+/>
+
+The finance team get a full list of what has been scheduled, ready to price, discount and invoice, without chasing the clinical team for what actually happened.
+
+---
+
+## Reflection
+
+**Design for the question, not the data.** The underlying records were appointments, so every existing view was a calendar. The question was about a run of weeks, and once the view matched the question the interface got simpler rather than more complex.
+
+**Partial availability deserved its own state.** The temptation was to treat a slot as free or taken. Surfacing "works for most of your weeks" as a first-class state is what stopped staff discovering a problem in week four.
+
+**The slot view is more accessible than the stream grid.** Slots are distinguished by shape as well as colour, a solid tick against a dashed outline, so they hold up without colour vision. The stream grid leans on colour and a key alone. Given the user base, that is the piece I would revisit first: the same information needs a non-colour carrier, whether that is a glyph inside the dot or a pattern.

@@ -82,6 +82,7 @@ const workHistory = [
       "Supported backend engineers with API design (Ruby on Rails) and database schema decisions for event scheduling and treatment plans",
     ],
     tags: ["React", "TypeScript", "UX Design", "Design Systems"],
+    caseStudySlug: "orri",
   },
   {
     id: "unit4",

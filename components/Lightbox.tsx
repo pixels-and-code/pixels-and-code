@@ -44,7 +44,7 @@ export function LightboxImage({ src, alt, caption, crop }: LightboxImageProps) {
 
   return (
     <>
-      <figure>
+      <figure className="my-12">
         <button
           ref={triggerRef}
           onClick={() => setIsOpen(true)}
@@ -136,7 +136,7 @@ export function ImageGrid({ children, columns = 2 }: ImageGridProps) {
 
   return (
     <div className="relative my-12 left-1/2 right-1/2 -ml-[45vw] -mr-[45vw] w-[90vw] max-w-4xl md:left-1/2 md:-ml-[min(45vw,28rem)]  md:w-[min(90vw,56rem)]">
-      <div className={`grid gap-4 ${gridCols}`}>
+      <div className={`grid gap-4 [&>figure]:my-0 ${gridCols}`}>
         {children}
       </div>
     </div>
