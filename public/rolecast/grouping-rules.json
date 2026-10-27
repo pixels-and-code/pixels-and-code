@@ -1,20 +1,22 @@
 {
-  "version": 10,
-  "updated": "2026-10-27T19:00:00Z",
+  "version": 11,
+  "updated": "2026-10-27T20:00:00Z",
   "longCampaignEpisodes": 20,
   "discoverTags": [
     {
       "title": "TTRPG",
       "kind": "format",
       "notSections": [
-        "improv"
+        "improv",
+        "fiction"
       ]
     },
     {
-      "title": "Improv",
+      "title": "Fiction",
       "kind": "format",
       "sections": [
-        "improv"
+        "improv",
+        "fiction"
       ]
     },
     {
@@ -2803,6 +2805,389 @@
       },
       "systems": {
         "Mission to D-Syxx": "D&D"
+      }
+    },
+    {
+      "name": "Improvised Star Trek",
+      "author": "Improvised Star Trek",
+      "appleID": 430362452,
+      "discover": "improv",
+      "feeds": [
+        "https://rss.libsyn.com/shows/30607/destinations/399111.xml"
+      ],
+      "links": {
+        "website": "https://www.theimprovisedstartrek.com"
+      },
+      "campaigns": [
+        {
+          "name": "Main Series",
+          "titles": [
+            "^(Ep\\.?|Episode|IST|E) ?\\d+"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Off Book: The Improvised Musical",
+      "author": "Jessica McKenna and Zach Reino",
+      "appleID": 1260742439,
+      "discover": "improv",
+      "feeds": [
+        "https://rss.art19.com/off-book"
+      ],
+      "links": {
+        "website": "https://www.thezachandthejess.com/podcast-off-book.html",
+        "support": "https://offbookclubhouse.com"
+      }
+    },
+    {
+      "name": "Our Fair City",
+      "author": "Audacious Machine Creative",
+      "appleID": 514748675,
+      "discover": "fiction",
+      "feeds": [
+        "https://rss.art19.com/our-fair-city"
+      ],
+      "links": {
+        "website": "https://www.audaciousmachinecreative.com/our-fair-city",
+        "support": "https://audaciousmachinecreative.memberful.com/join"
+      }
+    },
+    {
+      "name": "The Two Princes",
+      "author": "Spotify Studios",
+      "appleID": 1464586861,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.megaphone.fm/tp-spot"
+      ],
+      "links": {},
+      "campaigns": [
+        {
+          "name": "Season 1",
+          "titles": [
+            "^S1 Ep\\d+"
+          ]
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^S2 Ep\\d+"
+          ]
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^S3 Ep\\d+"
+          ]
+        },
+        {
+          "name": "Trailer",
+          "titles": [
+            "^Introducing: The Two Princes"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Alba Salix, Royal Physician",
+      "author": "Fable and Folly",
+      "appleID": 938040414,
+      "discover": "fiction",
+      "feeds": [
+        "https://rss.art19.com/alba-salix--royal-physician"
+      ],
+      "links": {
+        "website": "https://albasalix.com",
+        "support": "https://www.patreon.com/albasalix"
+      },
+      "longCampaignEpisodes": 10
+    },
+    {
+      "name": "Wolf 359",
+      "author": "Kinda Evil Genius Productions, LLC",
+      "appleID": 909552816,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.megaphone.fm/wolf359radio"
+      ],
+      "links": {
+        "website": "https://wolf359.fm",
+        "support": "https://www.patreon.com/Wolf359Radio"
+      },
+      "renames": {
+        "Mini": "Mini Episodes"
+      }
+    },
+    {
+      "name": "The Thrilling Adventure Hour",
+      "author": "WorkJuice Corp",
+      "appleID": 408691897,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.acast.com/public/shows/6414da1f9a87fc0011e7a8ee"
+      ],
+      "links": {
+        "website": "https://thrillingadventure.live",
+        "support": "https://www.patreon.com/thrillingadventurehour"
+      },
+      "campaigns": [
+        {
+          "name": "Sparks Nevada, Marshal on Mars",
+          "titles": [
+            "Sparks Nevada"
+          ]
+        },
+        {
+          "name": "Beyond Belief",
+          "titles": [
+            "Beyond Belief"
+          ]
+        },
+        {
+          "name": "Amelia Earhart, Fearless Flyer",
+          "titles": [
+            "Amelia Earhart"
+          ]
+        },
+        {
+          "name": "Captain Laserbeam",
+          "titles": [
+            "Captain Laserbeam"
+          ]
+        },
+        {
+          "name": "Colonel Tick-Tock",
+          "titles": [
+            "Colonel Tick[- ]Tock"
+          ]
+        },
+        {
+          "name": "Down in Moonshine Holler",
+          "titles": [
+            "Moonshine Holler"
+          ]
+        },
+        {
+          "name": "Cactoid Jim",
+          "titles": [
+            "Cactoid Jim"
+          ]
+        },
+        {
+          "name": "Miss America",
+          "titles": [
+            "^Miss America"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bubble",
+      "author": "MaximumFun.org",
+      "appleID": 1391441620,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.simplecast.com/XqNLT4El"
+      ],
+      "links": {
+        "website": "https://maximumfun.org/podcasts/bubble/",
+        "support": "https://maximumfun.org/join/"
+      },
+      "campaigns": [
+        {
+          "name": "Season 1",
+          "titles": [
+            "^Episode \\d+:"
+          ],
+          "section": "campaign"
+        }
+      ]
+    },
+    {
+      "name": "Wooden Overcoats",
+      "author": "Wooden Overcoats Ltd",
+      "appleID": 1039662268,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.megaphone.fm/woodenovercoats"
+      ],
+      "links": {
+        "website": "https://www.woodenovercoats.com"
+      },
+      "campaigns": [
+        {
+          "name": "Rudyard Ruins Everything",
+          "titles": [
+            "^Rudyard Ruins Everything"
+          ],
+          "section": "miniseries"
+        },
+        {
+          "name": "Piffling Lives",
+          "titles": [
+            "^Piffling Lives:"
+          ],
+          "section": "miniseries"
+        },
+        {
+          "name": "Funn Fragments",
+          "titles": [
+            "^Funn Fragments:"
+          ],
+          "section": "miniseries"
+        }
+      ]
+    },
+    {
+      "name": "EOS 10",
+      "author": "Justin McLachlan and PlanetM",
+      "appleID": 928069318,
+      "discover": "fiction",
+      "feeds": [
+        "https://feed.podbean.com/planetm/feed.xml"
+      ],
+      "links": {}
+    },
+    {
+      "name": "Welcome to Night Vale",
+      "author": "Night Vale Presents",
+      "appleID": 536258179,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.megaphone.fm/SBP4591212513"
+      ],
+      "links": {
+        "website": "https://www.welcometonightvale.com",
+        "support": "https://www.patreon.com/welcometonightvale"
+      },
+      "campaigns": [
+        {
+          "name": "Main Series",
+          "titles": [
+            "^\\d+[AB]? [-–] "
+          ]
+        },
+        {
+          "name": "Other Shows",
+          "titles": [
+            "^Alice Isn't Dead",
+            "^Within the Wires",
+            "^The Orbiting Human Circus",
+            "^The Summer of Night Vale Presents",
+            "^Unlicensed",
+            "^New Podcast Teaser",
+            "^Conversations with People Who Hate Me",
+            "^I Only Listen to the Mountain Goats",
+            "^It Makes A Sound",
+            "^Pounded in the Butt",
+            "^Good Morning Night Vale",
+            "^Adventures in New America",
+            "^Dreamboy",
+            "^The Best Worst",
+            "^From the creators of Welcome to Night Vale"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "The Penumbra Podcast",
+      "author": "Harley Takagi Kaner and Kevin Vibert",
+      "appleID": 1090666976,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.acast.com/public/shows/6831c608381499796b234652"
+      ],
+      "links": {
+        "website": "https://www.thepenumbrapodcast.com",
+        "support": "https://www.patreon.com/thepenumbrapodcast"
+      }
+    },
+    {
+      "name": "The Magnus Archives",
+      "author": "Rusty Quill",
+      "appleID": 1095138637,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.acast.com/public/shows/b6085bcd-3542-4a43-b6a8-021e3fd251b8"
+      ],
+      "links": {
+        "website": "https://rustyquill.com/show/the-magnus-archives/",
+        "support": "https://www.patreon.com/rustyquill"
+      },
+      "campaigns": [
+        {
+          "name": "Season 1",
+          "titles": [
+            "^MAG (0\\.\\d|[1-9]|[1-3]\\d|40)\\b"
+          ]
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^MAG (4[1-9]|[5-7]\\d|80)\\b"
+          ]
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^MAG (8[1-9]|9\\d|1[01]\\d|120)\\b"
+          ]
+        },
+        {
+          "name": "Season 4",
+          "titles": [
+            "^MAG (12[1-9]|1[3-5]\\d|160)\\b"
+          ]
+        },
+        {
+          "name": "Season 5",
+          "titles": [
+            "^MAG (16[1-9]|1[7-9]\\d|200)\\b"
+          ]
+        },
+        {
+          "name": "Extras",
+          "titles": [
+            "^MAG (Fluff|Bloopers|Twilight Abyss|Retrospective|Mothership|Camp Flying Moose|Duskhollow|Roundtable|Commentary|Cast Q&A|Season 5 Q&A|Outtakes|2019 Liveshow)",
+            "^MAG - ",
+            "^Magnus Bloopers",
+            "^What The Ghost",
+            "^Rusty Quill Company Chat",
+            "^Rusty Fears Competition"
+          ],
+          "section": "specials"
+        }
+      ],
+      "renames": {
+        "The Lost Tapes, Tape": "The Lost Tapes"
+      }
+    },
+    {
+      "name": "Limetown",
+      "author": "Two-Up",
+      "appleID": 1024247322,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.megaphone.fm/PPY5621646923"
+      ],
+      "links": {
+        "website": "https://twoupproductions.com/limetown/tv-series"
+      }
+    },
+    {
+      "name": "Old Gods of Appalachia",
+      "author": "DeepNerd Media",
+      "appleID": 1485435369,
+      "discover": "fiction",
+      "feeds": [
+        "https://feeds.acast.com/public/shows/61ba0a431a8cbeb6ea3cf11a"
+      ],
+      "links": {
+        "website": "https://www.oldgodsofappalachia.com",
+        "support": "https://www.patreon.com/oldgodsofappalachia"
       }
     },
     {
