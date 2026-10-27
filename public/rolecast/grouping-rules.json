@@ -1,21 +1,530 @@
 {
-  "version": 5,
+  "version": 7,
   "updated": "2026-10-27",
   "longCampaignEpisodes": 20,
+  "featured": [
+    {
+      "appleID": 1453805439,
+      "title": "Critical Role",
+      "author": "Critical Role",
+      "feed": "https://feeds.simplecast.com/LXz4Q9rJ",
+      "section": "popular"
+    },
+    {
+      "appleID": 947899573,
+      "title": "The Adventure Zone",
+      "author": "The McElroys",
+      "feed": "https://feeds.simplecast.com/cYQVc__c",
+      "section": "popular"
+    },
+    {
+      "appleID": 1344003690,
+      "title": "Not Another D&D Podcast",
+      "author": "Headgum",
+      "feed": "https://rss.art19.com/not-another-d-and-d-podcast",
+      "section": "popular"
+    },
+    {
+      "appleID": 1450241676,
+      "title": "Dungeons and Daddies",
+      "author": "Dungeons and Daddies",
+      "feed": "https://feeds.acast.com/public/shows/46e42ca7-4921-5f04-a297-1970e72fd86d",
+      "section": "popular"
+    },
+    {
+      "appleID": 1007021910,
+      "title": "The Glass Cannon Podcast",
+      "author": "The Glass Cannon Network",
+      "feed": "https://feeds.megaphone.fm/QCD8414694967",
+      "section": "popular"
+    },
+    {
+      "appleID": 581324591,
+      "title": "Greetings Adventurers",
+      "author": "GeeklyInc.com",
+      "feed": "https://feeds.acast.com/public/shows/6148f0896701c5001adfa2ca",
+      "section": "popular"
+    },
+    {
+      "appleID": 1563814788,
+      "title": "Tales from the Stinky Dragon",
+      "author": "Stinky Dragon",
+      "feed": "https://feeds.megaphone.fm/stinkydragon",
+      "section": "popular"
+    },
+    {
+      "appleID": 1670750937,
+      "title": "Worlds Beyond Number",
+      "author": "Worlds Beyond Number",
+      "feed": "https://feeds.simplecast.com/IAPnSSRO",
+      "section": "popular"
+    },
+    {
+      "appleID": 582573564,
+      "title": "Nerd Poker",
+      "author": "Nerd Poker",
+      "feed": "https://rss.libsyn.com/shows/98150/destinations/510364.xml",
+      "section": "popular"
+    },
+    {
+      "appleID": 327725953,
+      "title": "Critical Hit",
+      "author": "Major Spoilers",
+      "feed": "https://feeds.libsyn.com/603370/rss",
+      "section": "popular"
+    },
+    {
+      "appleID": 918732047,
+      "title": "Friends at the Table",
+      "author": "Friends at the Table",
+      "feed": "https://rss.libsyn.com/shows/103371/destinations/550849.xml",
+      "section": "popular"
+    },
+    {
+      "appleID": 1401508198,
+      "title": "High Rollers DnD",
+      "author": "Pickaxe",
+      "feed": "https://feeds.megaphone.fm/NSR8625352094",
+      "section": "popular"
+    },
+    {
+      "appleID": 1018110695,
+      "title": "D&D is For Nerds",
+      "author": "Sanspants Radio",
+      "feed": "https://feeds.acast.com/public/shows/2158de25-bc3d-4828-b81f-efac999110de",
+      "section": "popular"
+    },
+    {
+      "appleID": 1528568221,
+      "title": "Oxventure",
+      "author": "Oxventure & Geek Media",
+      "feed": "https://feeds.megaphone.fm/GNL2128031227",
+      "section": "popular"
+    },
+    {
+      "appleID": 927205926,
+      "title": "Campaign: Skyjacks",
+      "author": "James D'Amato",
+      "feed": "https://feeds.megaphone.fm/OSPN2193291028",
+      "section": "popular"
+    },
+    {
+      "appleID": 1480593911,
+      "title": "Rude Tales of Magic",
+      "author": "Bucket of Milk",
+      "feed": "https://rss.art19.com/rude-tales-of-magic",
+      "section": "popular"
+    },
+    {
+      "appleID": 1684174612,
+      "title": "Legends of Avantris",
+      "author": "Avantris Entertainment",
+      "feed": "https://feed.podbean.com/legendsofavantris/feed.xml",
+      "section": "popular"
+    },
+    {
+      "appleID": 574192620,
+      "title": "Dungeons & Randomness",
+      "author": "Pickaxe",
+      "feed": "https://feeds.megaphone.fm/NEUAU3635051858",
+      "section": "popular"
+    },
+    {
+      "appleID": 1018714948,
+      "title": "Dragon Friends",
+      "author": "Dragon Friends Podcasting",
+      "feed": "https://feeds.acast.com/public/shows/bedc4097-c415-4d09-a9a9-967c0d551eb5",
+      "section": "popular"
+    },
+    {
+      "appleID": 688242106,
+      "title": "One Shot",
+      "author": "Dillin Apelyan",
+      "feed": "https://feeds.megaphone.fm/OSPN6518234516",
+      "section": "popular"
+    },
+    {
+      "appleID": 1437360249,
+      "title": "Dark Dice",
+      "author": "Fool and Scholar Productions",
+      "feed": "https://feeds.megaphone.fm/SBP9028289759",
+      "section": "popular"
+    },
+    {
+      "appleID": 1002611243,
+      "title": "Rusty Quill Gaming",
+      "author": "Rusty Quill",
+      "feed": "https://feeds.acast.com/public/shows/1d9e5af4-c938-42bb-bc57-289b59a4682b",
+      "section": "popular"
+    },
+    {
+      "appleID": 1443447819,
+      "title": "Pretending to be People",
+      "author": "Pretending to be People",
+      "feed": "https://rss.libsyn.com/shows/575895/destinations/4987575.xml",
+      "section": "popular"
+    },
+    {
+      "appleID": 1581313901,
+      "title": "Girls Who Don't DnD",
+      "author": "Girls Who Don't DnD",
+      "feed": "https://feeds.megaphone.fm/GWD8899491190",
+      "section": "popular"
+    },
+    {
+      "appleID": 1307373953,
+      "title": "Spout Lore",
+      "author": "Spout Lore Studios",
+      "feed": "https://feeds.megaphone.fm/spoutlore",
+      "section": "popular"
+    },
+    {
+      "appleID": 1462075800,
+      "title": "The Dungeon Run",
+      "author": "The Dungeon Run",
+      "feed": "https://rss.libsyn.com/shows/181535/destinations/1239134.xml",
+      "section": "popular"
+    },
+    {
+      "appleID": 1236581365,
+      "title": "Dumb-Dumbs & Dragons",
+      "author": "Dumb-Dumbs & Dice",
+      "feed": "https://feeds.megaphone.fm/GLSS5890042670",
+      "section": "popular"
+    },
+    {
+      "appleID": 1494530079,
+      "title": "Ain't Slayed Nobody",
+      "author": "cuppycup & Scott Dorward",
+      "feed": "https://feeds.acast.com/public/shows/632da7cf6d7ffa0012565ffa",
+      "section": "popular"
+    },
+    {
+      "appleID": 1260099852,
+      "title": "Cosmic Crit",
+      "author": "Cosmic Crit",
+      "feed": "https://cosmiccrit.com/feed/podcast/",
+      "section": "popular"
+    },
+    {
+      "appleID": 1582654902,
+      "title": "The Apocalypse Players",
+      "author": "The Apocalypse Players",
+      "feed": "https://www.apocalypseplayers.com/feed.xml",
+      "section": "popular"
+    },
+    {
+      "appleID": 339817701,
+      "title": "RPPR Actual Play",
+      "author": "Ross Payton",
+      "feed": "https://actualplay.roleplayingpublicradio.com/feed/podcast/",
+      "section": "popular"
+    },
+    {
+      "appleID": 1050971057,
+      "title": "Dice Funk",
+      "author": "Austin Yorski",
+      "feed": "https://feed.podbean.com/austinyorski/feed.xml",
+      "section": "popular"
+    },
+    {
+      "appleID": 818817570,
+      "title": "Total Party Kill",
+      "author": "The Incomparable",
+      "feed": "https://feeds.theincomparable.com/tpk",
+      "section": "popular"
+    },
+    {
+      "appleID": 1633759050,
+      "title": "Twenty Sides",
+      "author": "Twenty Sides",
+      "feed": "https://rss.buzzsprout.com/2016568.rss",
+      "section": "popular"
+    },
+    {
+      "appleID": 1459282319,
+      "title": "EveryTenday D&D",
+      "author": "Every Tenday D&D",
+      "feed": "https://anchor.fm/s/9fce604/podcast/rss",
+      "section": "popular"
+    },
+    {
+      "appleID": 1549575586,
+      "title": "Bards of New York",
+      "author": "Bards of New York",
+      "feed": "https://anchor.fm/s/ebac13b8/podcast/rss",
+      "section": "popular"
+    },
+    {
+      "appleID": 1223825664,
+      "title": "Inn at the End",
+      "author": "Inn at the End",
+      "feed": "https://dndpodcast.net/podcast?format=rss",
+      "section": "popular"
+    },
+    {
+      "appleID": 1694756842,
+      "title": "Mystery Quest",
+      "author": "Pickaxe",
+      "feed": "https://feeds.megaphone.fm/NSR3713660967",
+      "section": "newer"
+    },
+    {
+      "appleID": 1709543811,
+      "title": "Rotating Heroes",
+      "author": "Rotating Heroes",
+      "feed": "https://audioboom.com/channels/5167570.rss",
+      "section": "newer"
+    },
+    {
+      "appleID": 1693651529,
+      "title": "One Piece D&D: Marines",
+      "author": "Daniel Rustage",
+      "feed": "https://www.spreaker.com/show/5894100/episodes/feed",
+      "section": "newer"
+    },
+    {
+      "appleID": 1762316572,
+      "title": "Mall Brats",
+      "author": "Pickaxe",
+      "feed": "https://feeds.megaphone.fm/mallbrats",
+      "section": "newer"
+    },
+    {
+      "appleID": 1740530132,
+      "title": "Natural Six",
+      "author": "Natural Six",
+      "feed": "https://feeds.acast.com/public/shows/65de51ac5568ae001627fe39",
+      "section": "newer"
+    },
+    {
+      "appleID": 1723887297,
+      "title": "Dead Suns Company",
+      "author": "Dead Suns Company",
+      "feed": "https://anchor.fm/s/ee45e6e4/podcast/rss",
+      "section": "newer"
+    },
+    {
+      "appleID": 975078285,
+      "title": "Hello From The Magic Tavern",
+      "author": "Arnie Niekamp",
+      "feed": "https://rss.art19.com/hello-from-magic-tavern",
+      "section": "improv"
+    },
+    {
+      "appleID": 1276705357,
+      "title": "Mission to Zyxx",
+      "author": "Mission To Zyxx",
+      "feed": "https://feeds.simplecast.com/ZL7iUDiH",
+      "section": "improv"
+    },
+    {
+      "appleID": 1006030122,
+      "title": "Sneak Attack!",
+      "author": "Sneak Attack! Podcast",
+      "feed": "https://rss.libsyn.com/shows/68568/destinations/282736.xml",
+      "section": "finished"
+    },
+    {
+      "appleID": 1485306667,
+      "title": "Dimension 20",
+      "author": "Dropout",
+      "feed": "https://www.spreaker.com/show/4113133/episodes/feed",
+      "section": "finished"
+    },
+    {
+      "appleID": 1238902672,
+      "title": "Join the Party",
+      "author": "Multitude",
+      "feed": "https://rss.art19.com/join-the-party",
+      "section": "finished"
+    },
+    {
+      "appleID": 1271236770,
+      "title": "bomBARDed",
+      "author": "Lindby",
+      "feed": "https://feed.podbean.com/bombarded/feed.xml",
+      "section": "finished"
+    },
+    {
+      "appleID": 1507699163,
+      "title": "One Piece D&D",
+      "author": "Daniel Rustage",
+      "feed": "https://www.spreaker.com/show/4269462/episodes/feed",
+      "section": "finished"
+    },
+    {
+      "appleID": 1476022900,
+      "title": "Dungeons of Drakkenheim",
+      "author": "Dungeon Dudes",
+      "feed": "https://rss.libsyn.com/shows/201575/destinations/1438583.xml",
+      "section": "finished"
+    },
+    {
+      "appleID": 1137789035,
+      "title": "Acquisitions Incorporated",
+      "author": "Penny Arcade",
+      "feed": "https://www.penny-arcade.com/feed/podcasts-ai",
+      "section": "finished"
+    },
+    {
+      "appleID": 1115818419,
+      "title": "Dungeon Delve",
+      "author": "Dungeons & Dragons",
+      "feed": "https://feeds.transistor.fm/dungeon-delve",
+      "section": "finished"
+    },
+    {
+      "appleID": 1687127481,
+      "title": "Candela Obscura",
+      "author": "Critical Role",
+      "feed": "https://anchor.fm/s/e11a9514/podcast/rss",
+      "section": "finished"
+    },
+    {
+      "appleID": 1309888040,
+      "title": "Lawful Stupid",
+      "author": "Lawful Stupid DnD",
+      "feed": "https://anchor.fm/s/35ef2de4/podcast/rss",
+      "section": "finished"
+    },
+    {
+      "appleID": 1289105668,
+      "title": "Roll For Combat",
+      "author": "Roll For Combat",
+      "feed": "https://rollforcombat.com/index.php/feed/podcast/",
+      "section": "finished"
+    },
+    {
+      "appleID": 1746366965,
+      "title": "The Re-Slayer's Take",
+      "author": "Critical Role",
+      "feed": "https://feeds.megaphone.fm/GLSS4504081211",
+      "section": "finished"
+    },
+    {
+      "appleID": 1456298208,
+      "title": "KOllOK 1991",
+      "author": "Hyper RPG",
+      "feed": "https://feeds.simplecast.com/X2Oy5QBB",
+      "section": "finished"
+    },
+    {
+      "appleID": 1434502128,
+      "title": "Rivals of Waterdeep",
+      "author": "Rivals of Waterdeep",
+      "feed": "https://feeds.simplecast.com/uQZx55QO",
+      "section": "finished"
+    },
+    {
+      "appleID": 1736203457,
+      "title": "Viva La Dirt League D&D",
+      "author": "Viva La Dirt League",
+      "feed": "https://anchor.fm/s/10f6226d0/podcast/rss",
+      "section": "finished"
+    }
+  ],
+  "discoverTags": [
+    {
+      "title": "TTRPG",
+      "kind": "format",
+      "notSections": [
+        "improv"
+      ]
+    },
+    {
+      "title": "Improv",
+      "kind": "format",
+      "sections": [
+        "improv"
+      ]
+    },
+    {
+      "title": "D&D",
+      "kind": "system",
+      "systems": [
+        "D&D",
+        "AD&D"
+      ]
+    },
+    {
+      "title": "Daggerheart",
+      "kind": "system",
+      "systems": [
+        "Daggerheart"
+      ]
+    },
+    {
+      "title": "Cthulhu",
+      "kind": "system",
+      "systems": [
+        "Call of Cthulhu",
+        "Pulp Cthulhu",
+        "Cthulhu",
+        "Trail of Cthulhu",
+        "Delta Green",
+        "Achtung! Cthulhu"
+      ]
+    },
+    {
+      "title": "Pathfinder",
+      "kind": "system",
+      "systems": [
+        "Pathfinder",
+        "Starfinder"
+      ]
+    },
+    {
+      "title": "Blades in the Dark",
+      "kind": "system",
+      "systems": [
+        "Blades in the Dark"
+      ]
+    },
+    {
+      "title": "New",
+      "kind": "status",
+      "sections": [
+        "newer"
+      ]
+    },
+    {
+      "title": "Complete",
+      "kind": "status",
+      "sections": [
+        "finished"
+      ]
+    }
+  ],
   "shows": [
     {
       "name": "Critical Role",
-      "feeds": ["https://feeds.simplecast.com/LXz4Q9rJ"],
+      "feeds": [
+        "https://feeds.simplecast.com/LXz4Q9rJ"
+      ],
       "extraFeeds": [
         {
           "url": "https://feeds.megaphone.fm/DYEAN7027366551",
-          "include": ["^Vox Machina Ep\\. \\d+", "^C2E\\d+\\b"],
+          "include": [
+            "^Vox Machina Ep\\. \\d+",
+            "^C2E\\d+\\b"
+          ],
           "comesFirst": true
         }
       ],
       "campaigns": [
-        {"name": "Campaign 1", "titles": ["^Vox Machina Ep\\. \\d+"]},
-        {"name": "Thresher", "titles": ["^Thresher:"]}
+        {
+          "name": "Campaign 1",
+          "titles": [
+            "^Vox Machina Ep\\. \\d+"
+          ]
+        },
+        {
+          "name": "Thresher",
+          "titles": [
+            "^Thresher:"
+          ]
+        }
       ],
       "renames": {
         "Campaign 1": "Vox Machina",
@@ -35,20 +544,69 @@
         "Age of Umbra": "Daggerheart",
         "Sallowlands": "Daggerheart",
         "Aramán": "D&D 5.5e"
-      }
+      },
+      "alsoPlays": [
+        "Call of Cthulhu",
+        "Monsterhearts",
+        "Honey Heist",
+        "Tails of Equestria"
+      ]
     },
     {
       "name": "Legends of Avantris",
-      "feeds": ["https://feed.podbean.com/legendsofavantris/feed.xml"],
+      "feeds": [
+        "https://feed.podbean.com/legendsofavantris/feed.xml"
+      ],
       "campaigns": [
-        {"name": "Stardust Rhapsody: Overture", "titles": ["^Stardust Rhapsody: Overture \\|"]},
-        {"name": "Stardust Rhapsody: Anthem", "titles": ["^(\\[[^\\]]*\\]\\s*)?Stardust Rhapsody: Anthem \\|"]},
-        {"name": "Icebound Side Stories", "titles": ["^Icebound \\| Side Story"], "section": "miniseries"},
-        {"name": "Curse of Strahdanya", "titles": ["^Curse of Strahdanya \\|"]},
-        {"name": "Uproot-a-rama", "titles": ["^\\[[^\\]]*\\]\\s*Uproot-a-rama \\|"]},
-        {"name": "Once Upon a Starlight", "titles": ["^\\[[^\\]]*\\]\\s*Once Upon a Starlight \\|"]},
-        {"name": "Waltz for Eternity", "titles": ["^\\[[^\\]]*\\]\\s*Waltz for Eternity \\|"]},
-        {"name": "Voidbound", "titles": ["^\\[[^\\]]*\\]\\s*Voidbound \\|"]}
+        {
+          "name": "Stardust Rhapsody: Overture",
+          "titles": [
+            "^Stardust Rhapsody: Overture \\|"
+          ]
+        },
+        {
+          "name": "Stardust Rhapsody: Anthem",
+          "titles": [
+            "^(\\[[^\\]]*\\]\\s*)?Stardust Rhapsody: Anthem \\|"
+          ]
+        },
+        {
+          "name": "Icebound Side Stories",
+          "titles": [
+            "^Icebound \\| Side Story"
+          ],
+          "section": "miniseries"
+        },
+        {
+          "name": "Curse of Strahdanya",
+          "titles": [
+            "^Curse of Strahdanya \\|"
+          ]
+        },
+        {
+          "name": "Uproot-a-rama",
+          "titles": [
+            "^\\[[^\\]]*\\]\\s*Uproot-a-rama \\|"
+          ]
+        },
+        {
+          "name": "Once Upon a Starlight",
+          "titles": [
+            "^\\[[^\\]]*\\]\\s*Once Upon a Starlight \\|"
+          ]
+        },
+        {
+          "name": "Waltz for Eternity",
+          "titles": [
+            "^\\[[^\\]]*\\]\\s*Waltz for Eternity \\|"
+          ]
+        },
+        {
+          "name": "Voidbound",
+          "titles": [
+            "^\\[[^\\]]*\\]\\s*Voidbound \\|"
+          ]
+        }
       ],
       "renames": {
         "A Dimwood Tale": "Vagabond's Heart: A Dimwood Tale"
@@ -61,7 +619,7 @@
         "Stardust Rhapsody: Overture": "D&D 5e",
         "Stardust Rhapsody: Anthem": "D&D 5e",
         "Beneath Dark Wings": "D&D 5e",
-        "Vagabond's Heart: A Dimwood Tale": "D&D 5e",
+        "Vagabond's Heart: A Dimwood Tale": "Root RPG",
         "Tainted Grail": "Tainted Grail",
         "Uprooted": "D&D 5e",
         "The Mighty Trunks": "D&D 5e",
@@ -72,13 +630,27 @@
         "Once Upon a Starlight": "D&D 5e",
         "Waltz for Eternity": "D&D 5e",
         "Voidbound": "D&D 5e"
-      }
+      },
+      "alsoPlays": [
+        "Warhammer Fantasy Roleplay"
+      ]
     },
     {
       "name": "Dungeons of Drakkenheim (Dungeon Dudes)",
-      "feeds": ["https://rss.libsyn.com/shows/201575/destinations/1438583.xml"],
+      "feeds": [
+        "https://rss.libsyn.com/shows/201575/destinations/1438583.xml"
+      ],
       "campaigns": [
-        {"name": "Monster one-shots", "titles": ["^Pluto Jackson's Monster Hunt", "^Against the Apothecary Abominations", "^Journey to the Space Between Worlds", "^Facing the Horrors of Drakkenheim"], "section": "specials"}
+        {
+          "name": "Monster one-shots",
+          "titles": [
+            "^Pluto Jackson's Monster Hunt",
+            "^Against the Apothecary Abominations",
+            "^Journey to the Space Between Worlds",
+            "^Facing the Horrors of Drakkenheim"
+          ],
+          "section": "specials"
+        }
       ],
       "renames": {
         "Season 1": "Dungeons of Drakkenheim",
@@ -91,66 +663,330 @@
     },
     {
       "name": "Dungeon Delve (official D&D)",
-      "feeds": ["https://feeds.transistor.fm/dungeon-delve"],
+      "feeds": [
+        "https://feeds.transistor.fm/dungeon-delve"
+      ],
       "campaigns": [
-        {"name": "Acquisitions Incorporated", "titles": ["^Acquisitions Incor"]},
-        {"name": "Podcasts of Annihilation", "titles": ["Podcasts of Annihilation$"]},
-        {"name": "Podcasts of Foes", "titles": ["^Podcasts? of Foes:"]},
-        {"name": "Podcasts of Waterdeep", "titles": ["PoWD Ep"]},
-        {"name": "Podcasts of Ravnica", "titles": ["^Podcasts of Ravnica"]},
-        {"name": "Podcasts into Avernus", "titles": ["^Podcasts into Avernus"]},
-        {"name": "Podcasts of Wildemount", "titles": ["^Podcasts of Wildemount:"]},
-        {"name": "Podcast of the Frostmaiden", "titles": ["^Podcast of the Frostmaiden"]}
+        {
+          "name": "Acquisitions Incorporated",
+          "titles": [
+            "^Acquisitions Incor"
+          ]
+        },
+        {
+          "name": "Podcasts of Annihilation",
+          "titles": [
+            "Podcasts of Annihilation$"
+          ]
+        },
+        {
+          "name": "Podcasts of Foes",
+          "titles": [
+            "^Podcasts? of Foes:"
+          ]
+        },
+        {
+          "name": "Podcasts of Waterdeep",
+          "titles": [
+            "PoWD Ep"
+          ]
+        },
+        {
+          "name": "Podcasts of Ravnica",
+          "titles": [
+            "^Podcasts of Ravnica"
+          ]
+        },
+        {
+          "name": "Podcasts into Avernus",
+          "titles": [
+            "^Podcasts into Avernus"
+          ]
+        },
+        {
+          "name": "Podcasts of Wildemount",
+          "titles": [
+            "^Podcasts of Wildemount:"
+          ]
+        },
+        {
+          "name": "Podcast of the Frostmaiden",
+          "titles": [
+            "^Podcast of the Frostmaiden"
+          ]
+        }
       ],
       "system": "D&D 5e"
     },
     {
       "name": "Greetings Adventurers",
-      "feeds": ["https://feeds.acast.com/public/shows/6148f0896701c5001adfa2ca"],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/6148f0896701c5001adfa2ca"
+      ],
       "campaigns": [
-        {"name": "Season 1", "titles": ["\\bC1: E"]},
-        {"name": "Campaign 2", "titles": ["\\bC2: E"]},
-        {"name": "Mailbag", "titles": ["^Mailbag!?$"], "section": "specials"}
+        {
+          "name": "Season 1",
+          "titles": [
+            "\\bC1: E"
+          ]
+        },
+        {
+          "name": "Campaign 2",
+          "titles": [
+            "\\bC2: E"
+          ]
+        },
+        {
+          "name": "Mailbag",
+          "titles": [
+            "^Mailbag!?$"
+          ],
+          "section": "specials"
+        }
       ],
       "renames": {
         "Season 1": "Campaign 1"
       },
-      "system": "D&D 5e"
+      "system": "D&D 5e",
+      "alsoPlays": [
+        "D&D 4e",
+        "Fiasco"
+      ]
     },
     {
       "name": "Nerd Poker",
-      "feeds": ["https://rss.libsyn.com/shows/98150/destinations/510364.xml"],
+      "feeds": [
+        "https://rss.libsyn.com/shows/98150/destinations/510364.xml"
+      ],
       "campaigns": [
-        {"name": "The Cavern Campaign", "titles": ["^The Cavern Campaign\\b"], "section": "campaign"},
-        {"name": "Announcements", "titles": ["^Coming in January:", "^Update: New Campaign"], "section": "specials"}
+        {
+          "name": "The Cavern Campaign",
+          "titles": [
+            "^The Cavern Campaign\\b"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Announcements",
+          "titles": [
+            "^Coming in January:",
+            "^Update: New Campaign"
+          ],
+          "section": "specials"
+        }
       ],
       "system": "D&D 5e"
     },
     {
       "name": "Critical Hit",
-      "feeds": ["https://feeds.libsyn.com/603370/rss", "https://rss.pdrl.fm/f6238b/feeds.libsyn.com/603370/rss/?redirect=false"],
+      "feeds": [
+        "https://feeds.libsyn.com/603370/rss",
+        "https://rss.pdrl.fm/f6238b/feeds.libsyn.com/603370/rss/?redirect=false"
+      ],
       "campaigns": [
-        {"name": "Void Saga: Season 1", "titles": ["Void Saga S0?1-"], "section": "campaign"},
-        {"name": "Void Saga: Season 2", "titles": ["Void Saga S0?2-"], "section": "campaign"},
-        {"name": "Void Saga: Season 3", "titles": ["Void Saga S0?3-"], "section": "campaign"},
-        {"name": "Void Saga: Season 4", "titles": ["Void Saga S0?4-"], "section": "campaign"},
-        {"name": "Void Saga: Season 5", "titles": ["Void Saga S0?5-", "\\(S05-E\\d+\\)"], "section": "campaign"},
-        {"name": "Void Saga: Season 6", "titles": ["Void Saga S0?6", "\\(VS-?S?06", "\\(V06-", "\\(FS06-", "\\(S06-E\\d+\\)", "^Critical Hit #50[034]:"], "section": "campaign"},
-        {"name": "Lost Mine of Phandelver", "titles": ["^Critical Hit #2(7[89]|8[0-7]):"]},
-        {"name": "Modern City Tales", "titles": ["\\(MC-\\d+\\)"]},
-        {"name": "Yellow Light", "titles": ["\\(CoC-\\d+\\)"]},
-        {"name": "Weird Western", "titles": ["\\(PF\\d+\\)", "Character Creation in Pathfinder"]},
-        {"name": "Urban Shadows", "titles": ["\\(US\\d+\\)"]},
-        {"name": "Sentinel Comics", "titles": ["Sentinels? (Comics|of the Multiverse)", "Tome of the Bizarre #86", "Journey into the Radioactive Zone \\(Part 5\\)", "The Final Chapter \\(Part 6\\)"]},
-        {"name": "Drifters", "titles": ["\\(DF ?S0\\d", "^Critical Hit #578: Drifters!", "\\(S01-E002\\)"]},
-        {"name": "Panic at the Dojo", "titles": ["Panic at the Dojo", "\\(PA[Tt]DS01"]},
-        {"name": "Modern City Adventures", "titles": ["\\(SCRPG-"]},
-        {"name": "Numenera", "titles": ["\\(NMNS\\d"]},
-        {"name": "Shadow of the Demon Lord", "titles": ["Shadow of the Demon Lord", "\\(SotDL\\d+\\)"]},
-        {"name": "Achtung! Cthulhu", "titles": ["\\(PAN ?S\\d"]},
-        {"name": "Monster Wrangler", "titles": ["\\((MWS|WMS)\\d", "Monster Wrangler"]},
-        {"name": "Moon Generation", "titles": ["\\(LNRS\\d", "Moon Generation"]},
-        {"name": "Specials", "titles": ["Mail ?Bag", "MAIL CALL", "General Chat", "GM Roundtable", "Other Games", "Major Spoilers", "^Introducing", "Missing GM", "Important Updates", "Final Thoughts", "Post Game Wrap", "Post Show", "#788: The Return\\.\\.\\.", "\\(OS-\\d+\\)", "A Magical Forest \\(Part", "F\\.I\\.S\\.T\\.", "What's the Meta", "New Surprises Void Saga", "Wrap Up Episode", "InSpectres", "Dusk City Outlaws", "Flashback", "Legion Clubhouse", "Munchkin Land", "Wayne's Comics", "Dueling Review", "Top Five Sequels", "^A Message (From|To)", "Programming Note", "^Bonus:", "Welcome to Season Three", "Level(ing|ling)? ?Up", "Level 9", "Thanksgiving", "Holiday Special", "Questions", "Listener", "Game Master's Workshop", "Coping with Loss", "Players? Handbook", "Adventurer's Vault", "411 on Rituals", "Dungeons and Dragons 4E", "Legend of Drizzt", "Wrath of Ashardalon", "Reflections of 5e", "Aftermath\\.\\.\\.", "NT14", "Skinning characters", "Podcast@", "Choosing Sides", "Travels North", "Warky", "Bug Challenge", "Podcast Award"], "section": "specials"}
+        {
+          "name": "Void Saga: Season 1",
+          "titles": [
+            "Void Saga S0?1-"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Void Saga: Season 2",
+          "titles": [
+            "Void Saga S0?2-"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Void Saga: Season 3",
+          "titles": [
+            "Void Saga S0?3-"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Void Saga: Season 4",
+          "titles": [
+            "Void Saga S0?4-"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Void Saga: Season 5",
+          "titles": [
+            "Void Saga S0?5-",
+            "\\(S05-E\\d+\\)"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Void Saga: Season 6",
+          "titles": [
+            "Void Saga S0?6",
+            "\\(VS-?S?06",
+            "\\(V06-",
+            "\\(FS06-",
+            "\\(S06-E\\d+\\)",
+            "^Critical Hit #50[034]:"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Lost Mine of Phandelver",
+          "titles": [
+            "^Critical Hit #2(7[89]|8[0-7]):"
+          ]
+        },
+        {
+          "name": "Modern City Tales",
+          "titles": [
+            "\\(MC-\\d+\\)"
+          ]
+        },
+        {
+          "name": "Yellow Light",
+          "titles": [
+            "\\(CoC-\\d+\\)"
+          ]
+        },
+        {
+          "name": "Weird Western",
+          "titles": [
+            "\\(PF\\d+\\)",
+            "Character Creation in Pathfinder"
+          ]
+        },
+        {
+          "name": "Urban Shadows",
+          "titles": [
+            "\\(US\\d+\\)"
+          ]
+        },
+        {
+          "name": "Sentinel Comics",
+          "titles": [
+            "Sentinels? (Comics|of the Multiverse)",
+            "Tome of the Bizarre #86",
+            "Journey into the Radioactive Zone \\(Part 5\\)",
+            "The Final Chapter \\(Part 6\\)"
+          ]
+        },
+        {
+          "name": "Drifters",
+          "titles": [
+            "\\(DF ?S0\\d",
+            "^Critical Hit #578: Drifters!",
+            "\\(S01-E002\\)"
+          ]
+        },
+        {
+          "name": "Panic at the Dojo",
+          "titles": [
+            "Panic at the Dojo",
+            "\\(PA[Tt]DS01"
+          ]
+        },
+        {
+          "name": "Modern City Adventures",
+          "titles": [
+            "\\(SCRPG-"
+          ]
+        },
+        {
+          "name": "Numenera",
+          "titles": [
+            "\\(NMNS\\d"
+          ]
+        },
+        {
+          "name": "Shadow of the Demon Lord",
+          "titles": [
+            "Shadow of the Demon Lord",
+            "\\(SotDL\\d+\\)"
+          ]
+        },
+        {
+          "name": "Achtung! Cthulhu",
+          "titles": [
+            "\\(PAN ?S\\d"
+          ]
+        },
+        {
+          "name": "Monster Wrangler",
+          "titles": [
+            "\\((MWS|WMS)\\d",
+            "Monster Wrangler"
+          ]
+        },
+        {
+          "name": "Moon Generation",
+          "titles": [
+            "\\(LNRS\\d",
+            "Moon Generation"
+          ]
+        },
+        {
+          "name": "Specials",
+          "titles": [
+            "Mail ?Bag",
+            "MAIL CALL",
+            "General Chat",
+            "GM Roundtable",
+            "Other Games",
+            "Major Spoilers",
+            "^Introducing",
+            "Missing GM",
+            "Important Updates",
+            "Final Thoughts",
+            "Post Game Wrap",
+            "Post Show",
+            "#788: The Return\\.\\.\\.",
+            "\\(OS-\\d+\\)",
+            "A Magical Forest \\(Part",
+            "F\\.I\\.S\\.T\\.",
+            "What's the Meta",
+            "New Surprises Void Saga",
+            "Wrap Up Episode",
+            "InSpectres",
+            "Dusk City Outlaws",
+            "Flashback",
+            "Legion Clubhouse",
+            "Munchkin Land",
+            "Wayne's Comics",
+            "Dueling Review",
+            "Top Five Sequels",
+            "^A Message (From|To)",
+            "Programming Note",
+            "^Bonus:",
+            "Welcome to Season Three",
+            "Level(ing|ling)? ?Up",
+            "Level 9",
+            "Thanksgiving",
+            "Holiday Special",
+            "Questions",
+            "Listener",
+            "Game Master's Workshop",
+            "Coping with Loss",
+            "Players? Handbook",
+            "Adventurer's Vault",
+            "411 on Rituals",
+            "Dungeons and Dragons 4E",
+            "Legend of Drizzt",
+            "Wrath of Ashardalon",
+            "Reflections of 5e",
+            "Aftermath\\.\\.\\.",
+            "NT14",
+            "Skinning characters",
+            "Podcast@",
+            "Choosing Sides",
+            "Travels North",
+            "Warky",
+            "Bug Challenge",
+            "Podcast Award"
+          ],
+          "section": "specials"
+        }
       ],
       "systems": {
         "Void Saga: Season 1": "D&D 4e",
@@ -173,11 +1009,19 @@
         "Achtung! Cthulhu": "Achtung! Cthulhu",
         "Monster Wrangler": "Monster Wrangler",
         "Moon Generation": "Lancer"
-      }
+      },
+      "alsoPlays": [
+        "Fiasco",
+        "InSpectres",
+        "Dusk City Outlaws"
+      ]
     },
     {
       "name": "Join the Party",
-      "feeds": ["https://rss.art19.com/join-the-party", "https://rss.introcast.io/1238902672/rss.art19.com/join-the-party"],
+      "feeds": [
+        "https://rss.art19.com/join-the-party",
+        "https://rss.introcast.io/1238902672/rss.art19.com/join-the-party"
+      ],
       "renames": {
         "Season 1": "Campaign 1",
         "Season 3": "The Camp-Paign",
@@ -190,13 +1034,28 @@
         "The Camp-Paign": "Monster of the Week",
         "Campaign 3": "D&D 5e",
         "Superhero School": "Masks"
-      }
+      },
+      "alsoPlays": [
+        "Lasers and Feelings",
+        "Fiasco",
+        "Brindlewood Bay",
+        "True Crime Podcast Game",
+        "The Great Soul Train Robbery",
+        "Goat Crashers"
+      ]
     },
     {
       "name": "Campaign: Skyjacks",
-      "feeds": ["https://feeds.megaphone.fm/OSPN2193291028"],
+      "feeds": [
+        "https://feeds.megaphone.fm/OSPN2193291028"
+      ],
       "campaigns": [
-        {"name": "Binbon and Jubna", "titles": ["Binbon (and|2) Jubna"]}
+        {
+          "name": "Binbon and Jubna",
+          "titles": [
+            "Binbon (and|2) Jubna"
+          ]
+        }
       ],
       "renames": {
         "Season 1": "Star Wars",
@@ -210,14 +1069,47 @@
     },
     {
       "name": "Oxventure",
-      "feeds": ["https://feeds.megaphone.fm/GNL2128031227"],
+      "feeds": [
+        "https://feeds.megaphone.fm/GNL2128031227"
+      ],
       "campaigns": [
-        {"name": "Wyrdwood", "titles": ["\\| Oxventure D&D:? Wyrdwood"]},
-        {"name": "D&D But…", "titles": ["^D&D But"], "section": "specials"},
-        {"name": "Blades in the Dark", "titles": ["\\| Blades in the Dark"]},
-        {"name": "Deadlands", "titles": ["\\| Deadlands"]},
-        {"name": "Teens in Space", "titles": ["\\| Teens in Space"]},
-        {"name": "The Oxventurers Guild", "titles": ["\\| D&D\\s*$"]}
+        {
+          "name": "Wyrdwood",
+          "titles": [
+            "\\| Oxventure D&D:? Wyrdwood"
+          ]
+        },
+        {
+          "name": "D&D But…",
+          "titles": [
+            "^D&D But"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Blades in the Dark",
+          "titles": [
+            "\\| Blades in the Dark"
+          ]
+        },
+        {
+          "name": "Deadlands",
+          "titles": [
+            "\\| Deadlands"
+          ]
+        },
+        {
+          "name": "Teens in Space",
+          "titles": [
+            "\\| Teens in Space"
+          ]
+        },
+        {
+          "name": "The Oxventurers Guild",
+          "titles": [
+            "\\| D&D\\s*$"
+          ]
+        }
       ],
       "systems": {
         "The Oxventurers Guild": "D&D 5e",
@@ -225,14 +1117,49 @@
         "Deadlands": "Deadlands",
         "Teens in Space": "Teens in Space",
         "Wyrdwood": "D&D 5e"
-      }
+      },
+      "alsoPlays": [
+        "Daggerheart",
+        "Blade Runner RPG",
+        "Alien RPG",
+        "Traveller",
+        "Dread",
+        "Kids on Bikes",
+        "World Wide Wrestling",
+        "Discworld: Adventures in Ankh-Morpork",
+        "Invincible: Superhero Roleplaying",
+        "Teatime Adventures",
+        "You Awaken in a Strange Place",
+        "Adventure Skeletons"
+      ]
     },
     {
       "name": "Rusty Quill Gaming",
-      "feeds": ["https://feeds.acast.com/public/shows/1d9e5af4-c938-42bb-bc57-289b59a4682b"],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/1d9e5af4-c938-42bb-bc57-289b59a4682b"
+      ],
       "campaigns": [
-        {"name": "Roman Rogues", "titles": ["Ancient Rome Sidequest", "Roman Rogues"]},
-        {"name": "Specials", "titles": ["^(?!RQG \\d+ - ).*Special\\b", "Crossover", "Raging Grannies", "Into the Wilds", "METACAST \\d", "Making of RQG", "Gaming and Giving", "Mailbag"], "section": "specials"}
+        {
+          "name": "Roman Rogues",
+          "titles": [
+            "Ancient Rome Sidequest",
+            "Roman Rogues"
+          ]
+        },
+        {
+          "name": "Specials",
+          "titles": [
+            "^(?!RQG \\d+ - ).*Special\\b",
+            "Crossover",
+            "Raging Grannies",
+            "Into the Wilds",
+            "METACAST \\d",
+            "Making of RQG",
+            "Gaming and Giving",
+            "Mailbag"
+          ],
+          "section": "specials"
+        }
       ],
       "systems": {
         "Season 1": "Pathfinder 1e",
@@ -241,11 +1168,30 @@
         "Season 4": "Pathfinder 1e",
         "Season 5": "Pathfinder 1e",
         "RQG Bertie's Sidequest": "Pathfinder 1e"
-      }
+      },
+      "alsoPlays": [
+        "D&D 5e",
+        "Monster of the Week",
+        "Apocalypse World",
+        "Deadlands",
+        "Trail of Cthulhu",
+        "Fiasco",
+        "Honey Heist",
+        "Dread",
+        "The Quiet Year",
+        "Spire",
+        "Scene Thieves",
+        "Goblin Quest",
+        "Jason Statham's Big Vacation",
+        "Raging Grannies",
+        "CORPS"
+      ]
     },
     {
       "name": "Dragon Friends",
-      "feeds": ["https://feeds.acast.com/public/shows/bedc4097-c415-4d09-a9a9-967c0d551eb5"],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/bedc4097-c415-4d09-a9a9-967c0d551eb5"
+      ],
       "renames": {
         "OKC": "OK Computer",
         "DF2": "Dragon Friends 2"
@@ -257,9 +1203,17 @@
     },
     {
       "name": "Sneak Attack!",
-      "feeds": ["https://rss.libsyn.com/shows/68568/destinations/282736.xml"],
+      "feeds": [
+        "https://rss.libsyn.com/shows/68568/destinations/282736.xml"
+      ],
       "campaigns": [
-        {"name": "Mailbag", "titles": ["Mailbag"], "section": "specials"}
+        {
+          "name": "Mailbag",
+          "titles": [
+            "Mailbag"
+          ],
+          "section": "specials"
+        }
       ],
       "renames": {
         "Season 1": "Volume 1",
@@ -271,44 +1225,106 @@
     },
     {
       "name": "Acquisitions Incorporated",
-      "feeds": ["https://www.penny-arcade.com/feed/podcasts-ai"],
+      "feeds": [
+        "https://www.penny-arcade.com/feed/podcasts-ai"
+      ],
       "campaigns": [
-        {"name": "Cyberpunk RED", "titles": ["^Cyberpunk RED\\b"]}
+        {
+          "name": "Cyberpunk RED",
+          "titles": [
+            "^Cyberpunk RED\\b"
+          ]
+        }
       ],
       "system": "D&D 5e",
       "systems": {
         "Cyberpunk RED": "Cyberpunk RED"
-      }
+      },
+      "alsoPlays": [
+        "Call of Cthulhu"
+      ]
     },
     {
       "name": "Worlds Beyond Number",
-      "feeds": ["https://feeds.simplecast.com/IAPnSSRO"],
+      "feeds": [
+        "https://feeds.simplecast.com/IAPnSSRO"
+      ],
       "campaigns": [
-        {"name": "Fireside Chats", "titles": ["^Fireside Chat for\\b", "^From the Fireside:", "^Talkback for\\b"], "section": "specials"}
+        {
+          "name": "Fireside Chats",
+          "titles": [
+            "^Fireside Chat for\\b",
+            "^From the Fireside:",
+            "^Talkback for\\b"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Fiasco!",
+          "titles": [
+            "^Fiasco! \\(Part"
+          ]
+        }
       ],
       "renames": {
         "WWW": "The Wizard, the Witch, and the Wild One"
       },
       "systems": {
         "The Wizard, the Witch, and the Wild One": "D&D 5e",
-        "Solari": "Stillfleet"
-      }
+        "Solari": "Stillfleet",
+        "Fiasco!": "Fiasco"
+      },
+      "alsoPlays": [
+        "Roll for Shoes"
+      ]
     },
     {
       "name": "Natural Six",
-      "feeds": ["https://feeds.acast.com/public/shows/65de51ac5568ae001627fe39"],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/65de51ac5568ae001627fe39"
+      ],
       "campaigns": [
-        {"name": "Action Surge", "titles": ["^Action Surge Episode \\d+"], "section": "specials"}
+        {
+          "name": "Action Surge",
+          "titles": [
+            "^Action Surge Episode \\d+"
+          ],
+          "section": "specials"
+        }
       ],
       "systems": {
         "Season 1": "D&D 5e"
-      }
+      },
+      "alsoPlays": [
+        "D&D 5.5e"
+      ]
     },
     {
       "name": "The Glass Cannon Podcast",
-      "feeds": ["https://feeds.megaphone.fm/QCD8414694967"],
+      "feeds": [
+        "https://feeds.megaphone.fm/QCD8414694967"
+      ],
       "campaigns": [
-        {"name": "Glass Cannon Radio", "titles": ["^Glass Cannon Radio #\\d+"], "section": "specials"}
+        {
+          "name": "Glass Cannon Radio",
+          "titles": [
+            "^Glass Cannon Radio #\\d+"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Pendragon: Under an Iron Sky",
+          "titles": [
+            "\\| Pendragon: Under an Iron Sky \\|"
+          ]
+        },
+        {
+          "name": "Shadows of the Broken",
+          "titles": [
+            "Shadows of the Broken E\\d+"
+          ],
+          "section": "campaign"
+        }
       ],
       "systems": {
         "Giantslayer": "Pathfinder 1e",
@@ -322,15 +1338,40 @@
         "Blood of the Wild": "Pathfinder 2e",
         "Gen Con 2026 Gauntlet Prep": "Traveller",
         "Star Wars Age of Rebellion": "Star Wars: Age of Rebellion",
-        "We Shouldn't Be Alive": "Twilight: 2000"
-      }
+        "We Shouldn't Be Alive": "Twilight: 2000",
+        "Pendragon: Under an Iron Sky": "Pendragon",
+        "Shadows of the Broken": "Shadowdark"
+      },
+      "alsoPlays": [
+        "Delta Green",
+        "Mothership",
+        "Brindlewood Bay",
+        "Mythic Bastionland",
+        "Marvel Multiverse RPG",
+        "AD&D",
+        "7th Sea",
+        "Justice League Unlimited RPG",
+        "Time Without Tide"
+      ]
     },
     {
       "name": "The Adventure Zone",
-      "feeds": ["https://feeds.simplecast.com/cYQVc__c"],
+      "feeds": [
+        "https://feeds.simplecast.com/cYQVc__c"
+      ],
       "campaigns": [
-        {"name": "Commitment", "titles": ["^(Setup - )?The Adventure Zone: Commitment\\b"]},
-        {"name": "Providence", "titles": ["^The Adventure Zone:? Providence\\b"]}
+        {
+          "name": "Commitment",
+          "titles": [
+            "^(Setup - )?The Adventure Zone: Commitment\\b"
+          ]
+        },
+        {
+          "name": "Providence",
+          "titles": [
+            "^The Adventure Zone:? Providence\\b"
+          ]
+        }
       ],
       "renames": {
         "Season 1": "Balance"
@@ -347,37 +1388,61 @@
         "Versus Dracula": "D&D 5e",
         "Royale": "D&D 5.5e",
         "Providence": "Super Normal"
-      }
+      },
+      "alsoPlays": [
+        "Lasers and Feelings",
+        "The Quiet Year"
+      ]
     },
     {
       "name": "Not Another D&D Podcast",
-      "feeds": ["https://rss.art19.com/not-another-d-and-d-podcast"],
+      "feeds": [
+        "https://rss.art19.com/not-another-d-and-d-podcast"
+      ],
       "system": "D&D 5e",
       "systems": {
         "Skaldova": "D&D 5.5e"
-      }
+      },
+      "alsoPlays": [
+        "Pathfinder 2e"
+      ]
     },
     {
       "name": "Dungeons and Daddies",
-      "feeds": ["https://feeds.acast.com/public/shows/46e42ca7-4921-5f04-a297-1970e72fd86d"],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/46e42ca7-4921-5f04-a297-1970e72fd86d"
+      ],
       "system": "D&D 5e",
       "systems": {
         "Season 3": "Call of Cthulhu",
         "Season 4": "Dark Matter"
-      }
+      },
+      "alsoPlays": [
+        "Daggerheart",
+        "Shadowdark",
+        "Warhammer 40,000: Wrath & Glory"
+      ]
     },
     {
       "name": "Tales from the Stinky Dragon",
-      "feeds": ["https://feeds.megaphone.fm/stinkydragon"],
+      "feeds": [
+        "https://feeds.megaphone.fm/stinkydragon"
+      ],
       "systems": {
         "Campaign 1": "D&D 5e",
         "Campaign 2": "D&D 5e",
         "Campaign 3": "D&D 5e"
-      }
+      },
+      "alsoPlays": [
+        "Knave",
+        "Honey Heist"
+      ]
     },
     {
       "name": "Friends at the Table",
-      "feeds": ["https://rss.libsyn.com/shows/103371/destinations/550849.xml"],
+      "feeds": [
+        "https://rss.libsyn.com/shows/103371/destinations/550849.xml"
+      ],
       "systems": {
         "Autumn in Hieron": "Dungeon World",
         "COUNTER/Weight": "The Sprawl",
@@ -392,27 +1457,53 @@
         "Realis": "Realis",
         "Perpetua Prelude": "Cartograph",
         "Perpetua": "Fabula Ultima"
-      }
+      },
+      "alsoPlays": [
+        "Lancer",
+        "Microscope",
+        "For the Queen",
+        "Dialect",
+        "Wagon Wheel",
+        "Last Shooting",
+        "Standoff",
+        "Scene Thieves"
+      ]
     },
     {
       "name": "High Rollers DnD",
-      "feeds": ["https://feeds.megaphone.fm/NSR8625352094"],
+      "feeds": [
+        "https://feeds.megaphone.fm/NSR8625352094"
+      ],
       "campaigns": [
-        {"name": "A Rogue's Gambit", "titles": ["^High Rollers: (A )?Rogue's Gambit\\b"]}
+        {
+          "name": "A Rogue's Gambit",
+          "titles": [
+            "^High Rollers: (A )?Rogue's Gambit\\b"
+          ]
+        }
       ],
       "system": "D&D 5e",
       "systems": {
         "The Dragon Empire": "D&D 5.5e"
-      }
+      },
+      "alsoPlays": [
+        "Honey Heist",
+        "Dark Souls RPG",
+        "RuneScape Kingdoms"
+      ]
     },
     {
       "name": "Dimension 20",
-      "feeds": ["https://www.spreaker.com/show/4113133/episodes/feed"],
+      "feeds": [
+        "https://www.spreaker.com/show/4113133/episodes/feed"
+      ],
       "system": "D&D 5e"
     },
     {
       "name": "Dark Dice",
-      "feeds": ["https://feeds.megaphone.fm/SBP9028289759"],
+      "feeds": [
+        "https://feeds.megaphone.fm/SBP9028289759"
+      ],
       "system": "D&D 5e",
       "systems": {
         "Vigilance": "Liberty: A.F.T.E.R."
@@ -420,7 +1511,9 @@
     },
     {
       "name": "Candela Obscura",
-      "feeds": ["https://anchor.fm/s/e11a9514/podcast/rss"],
+      "feeds": [
+        "https://anchor.fm/s/e11a9514/podcast/rss"
+      ],
       "system": "Candela Obscura",
       "systems": {
         "Other": "Candela Obscura"
@@ -428,19 +1521,48 @@
     },
     {
       "name": "Hello From The Magic Tavern",
-      "feeds": ["https://rss.art19.com/hello-from-magic-tavern"],
+      "feeds": [
+        "https://rss.art19.com/hello-from-magic-tavern"
+      ],
       "campaigns": [
-        {"name": "Season 1", "titles": ["^\\d{1,3} - "]}
+        {
+          "name": "Season 1",
+          "titles": [
+            "^\\d{1,3} - "
+          ]
+        }
       ]
     },
     {
       "name": "Ain't Slayed Nobody",
-      "feeds": ["https://feeds.acast.com/public/shows/632da7cf6d7ffa0012565ffa"],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/632da7cf6d7ffa0012565ffa"
+      ],
       "campaigns": [
-        {"name": "Y'all of Cthulhu", "titles": ["^(Trailer for )?Y'all of Cthulhu\\b"]},
-        {"name": "Blade Runner", "titles": ["^Blade Runner RPG \\d"]},
-        {"name": "Miskatonic Shoreside Conservatory", "titles": ["^Miskatonic Shoreside Conservatory \\d"]},
-        {"name": "Cosmic Dark", "titles": ["^Cosmic Dark Campaign \\d"]}
+        {
+          "name": "Y'all of Cthulhu",
+          "titles": [
+            "^(Trailer for )?Y'all of Cthulhu\\b"
+          ]
+        },
+        {
+          "name": "Blade Runner",
+          "titles": [
+            "^Blade Runner RPG \\d"
+          ]
+        },
+        {
+          "name": "Miskatonic Shoreside Conservatory",
+          "titles": [
+            "^Miskatonic Shoreside Conservatory \\d"
+          ]
+        },
+        {
+          "name": "Cosmic Dark",
+          "titles": [
+            "^Cosmic Dark Campaign \\d"
+          ]
+        }
       ],
       "systems": {
         "Y'all of Cthulhu": "Call of Cthulhu",
@@ -451,19 +1573,54 @@
         "Blade Runner": "Blade Runner RPG",
         "Miskatonic Shoreside Conservatory": "Cthulhu Dark",
         "Cosmic Dark": "Cosmic Dark",
-        "The Between": "The Between"
+        "The Between": "The Between",
+        "Season 7": "Call of Cthulhu"
       }
     },
     {
       "name": "The Apocalypse Players",
-      "feeds": ["https://www.apocalypseplayers.com/feed.xml"],
+      "feeds": [
+        "https://www.apocalypseplayers.com/feed.xml"
+      ],
       "campaigns": [
-        {"name": "Trail of The Loathsome Slime", "titles": ["^Trail of The Loathsome Slime\\b"]},
-        {"name": "Dead Light", "titles": ["^Dead Light \\d"]},
-        {"name": "An Uncommon Burial", "titles": ["^An Uncommon Burial \\d"]},
-        {"name": "As The Waters Cover The Sea", "titles": ["^As The Waters Cover The Sea\\b"]},
-        {"name": "Live shows", "titles": ["^LIVE\\b"], "section": "specials"},
-        {"name": "Feed swaps", "titles": ["^FEED SWAP\\b"], "section": "specials"}
+        {
+          "name": "Trail of The Loathsome Slime",
+          "titles": [
+            "^Trail of The Loathsome Slime\\b"
+          ]
+        },
+        {
+          "name": "Dead Light",
+          "titles": [
+            "^Dead Light \\d"
+          ]
+        },
+        {
+          "name": "An Uncommon Burial",
+          "titles": [
+            "^An Uncommon Burial \\d"
+          ]
+        },
+        {
+          "name": "As The Waters Cover The Sea",
+          "titles": [
+            "^As The Waters Cover The Sea\\b"
+          ]
+        },
+        {
+          "name": "Live shows",
+          "titles": [
+            "^LIVE\\b"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Feed swaps",
+          "titles": [
+            "^FEED SWAP\\b"
+          ],
+          "section": "specials"
+        }
       ],
       "renames": {
         "The Company of the Light (Vaesen)": "The Company of the Light"
@@ -472,30 +1629,67 @@
       "systems": {
         "Allhallowstide": "The Dee Sanction",
         "The Company of the Light": "Vaesen"
-      }
+      },
+      "alsoPlays": [
+        "AD&D 2e"
+      ]
     },
     {
       "name": "Pretending to be People",
-      "feeds": ["https://rss.libsyn.com/shows/575895/destinations/4987575.xml"],
+      "feeds": [
+        "https://rss.libsyn.com/shows/575895/destinations/4987575.xml"
+      ],
       "systems": {
         "Season 1": "Delta Green"
-      }
+      },
+      "alsoPlays": [
+        "Call of Cthulhu",
+        "Pulp Cthulhu",
+        "The Quiet Year",
+        "Nice Marines"
+      ]
     },
     {
       "name": "D&D is For Nerds",
-      "feeds": ["https://feeds.acast.com/public/shows/2158de25-bc3d-4828-b81f-efac999110de"],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/2158de25-bc3d-4828-b81f-efac999110de"
+      ],
       "campaigns": [
-        {"name": "Vampire Infested Barovia III", "titles": ["^(Vampire Infested )?Barovia III #"]},
-        {"name": "Jarren's Outpost: EE", "titles": ["^Jarren['’]s Outpost: EE #"]},
-        {"name": "Jarren's Development Blog", "titles": ["^Jarren['’]s Development Blog\\b"], "section": "specials"}
+        {
+          "name": "Vampire Infested Barovia III",
+          "titles": [
+            "^(Vampire Infested )?Barovia III #"
+          ]
+        },
+        {
+          "name": "Jarren's Outpost: EE",
+          "titles": [
+            "^Jarren['’]s Outpost: EE #"
+          ]
+        },
+        {
+          "name": "Jarren's Development Blog",
+          "titles": [
+            "^Jarren['’]s Development Blog\\b"
+          ],
+          "section": "specials"
+        }
       ],
       "system": "D&D 5e"
     },
     {
       "name": "Rude Tales of Magic",
-      "feeds": ["https://rss.art19.com/rude-tales-of-magic"],
+      "feeds": [
+        "https://rss.art19.com/rude-tales-of-magic"
+      ],
       "campaigns": [
-        {"name": "Yuletide Kombat Family", "titles": ["Yuletide Kombat"], "section": "specials"}
+        {
+          "name": "Yuletide Kombat Family",
+          "titles": [
+            "Yuletide Kombat"
+          ],
+          "section": "specials"
+        }
       ],
       "renames": {
         "[Miniseries] Come At the King": "Come at the King",
@@ -503,11 +1697,20 @@
         "Season 4": "Bears! The Blessing of the Obelisk",
         "Season 5": "Nethermurk",
         "Season 8": "Blue Kindness High"
-      }
+      },
+      "systems": {
+        "Bears! The Blessing of the Obelisk": "Honey Heist"
+      },
+      "alsoPlays": [
+        "MÖRK BORG",
+        "Lasers and Feelings"
+      ]
     },
     {
       "name": "Mystery Quest",
-      "feeds": ["https://feeds.megaphone.fm/NSR3713660967"],
+      "feeds": [
+        "https://feeds.megaphone.fm/NSR3713660967"
+      ],
       "systems": {
         "The Disintegrator": "Call of Cthulhu",
         "The Goblin Grinder": "MÖRK BORG",
@@ -543,7 +1746,610 @@
         "Decagone": "Mothership",
         "13 Omens": "13 Omens",
         "Three Sisters of the Glass Mountain": "Fatherfog"
+      },
+      "alsoPlays": [
+        "Everyone Is John",
+        "Honey Heist",
+        "Thousand Year Old Vampire",
+        "Fiasco",
+        "Grotten: 1 Bit Deeper",
+        "Eat the Reich",
+        "Lasers and Feelings",
+        "Obscure: Found Footage RPG"
+      ]
+    },
+    {
+      "name": "Dungeons & Randomness",
+      "feeds": [
+        "https://feeds.megaphone.fm/NEUAU3635051858"
+      ],
+      "renames": {
+        "Season 1": "Arc 1"
+      },
+      "system": "D&D",
+      "systems": {
+        "Frostbourne": "Level Up Advanced 5E",
+        "Castles & Crusades": "Castles & Crusades"
       }
+    },
+    {
+      "name": "One Shot",
+      "feeds": [
+        "https://feeds.megaphone.fm/OSPN6518234516"
+      ],
+      "campaigns": [
+        {
+          "name": "One-shots",
+          "titles": [
+            "^\\d+\\.\\s"
+          ],
+          "section": "specials"
+        }
+      ],
+      "alsoPlays": [
+        "Blades in the Dark",
+        "Brindlewood Bay",
+        "Call of Cthulhu",
+        "Pulp Cthulhu",
+        "Cthulhu Dark",
+        "D&D",
+        "Dungeon World",
+        "Masks",
+        "Monsterhearts",
+        "Urban Shadows",
+        "Kids on Bikes",
+        "Honey Heist",
+        "Lasers and Feelings",
+        "Numenera",
+        "13th Age",
+        "Exalted",
+        "Warhammer 40,000: Rogue Trader",
+        "Star Wars: Edge of the Empire",
+        "Deadlands Noir",
+        "Feng Shui 2",
+        "Ryuutama",
+        "Tenra Bansho Zero",
+        "Sentinel Comics RPG",
+        "Wanderhome",
+        "Dragon Age RPG",
+        "Thousand Year Old Vampire",
+        "Triangle Agency",
+        "Slugblaster",
+        "Scene Thieves",
+        "For the Queen",
+        "Orbital Blues",
+        "Fall of Magic",
+        "Realis",
+        "Iron Edda Reforged",
+        "Everyone Is John",
+        "Bluebeard's Bride",
+        "Dialect",
+        "World Wide Wrestling",
+        "Good Society",
+        "Chuubo's Marvelous Wish-Granting Engine",
+        "Monsters and Other Childish Things"
+      ]
+    },
+    {
+      "name": "Girls Who Don't DnD",
+      "feeds": [
+        "https://feeds.megaphone.fm/GWD8899491190"
+      ],
+      "system": "D&D"
+    },
+    {
+      "name": "Spout Lore",
+      "feeds": [
+        "https://feeds.megaphone.fm/spoutlore"
+      ],
+      "systems": {
+        "Season 1": "Dungeon World",
+        "Season 2": "Dungeon World",
+        "Season 3": "Dungeon World",
+        "Season 4": "Dungeon World",
+        "Season 5": "Dungeon World",
+        "Season 6": "Dungeon World",
+        "Season 7": "Dungeon World",
+        "Season 8": "Dungeon World",
+        "Season 9": "Dungeon World",
+        "Season 10": "Dungeon World",
+        "Season 11": "Dungeon World",
+        "Season 12": "Dungeon World",
+        "Season 13": "Dungeon World",
+        "Season 14": "Dungeon World",
+        "Up All Night Playtest 2": "Bump in the Dark"
+      }
+    },
+    {
+      "name": "The Dungeon Run",
+      "feeds": [
+        "https://rss.libsyn.com/shows/181535/destinations/1239134.xml"
+      ],
+      "renames": {
+        "A Call of Cthulhu Mystery": "Forbidden"
+      },
+      "system": "D&D",
+      "systems": {
+        "Forbidden": "Call of Cthulhu"
+      },
+      "alsoPlays": [
+        "Fiasco"
+      ]
+    },
+    {
+      "name": "Dumb-Dumbs & Dragons",
+      "feeds": [
+        "https://feeds.megaphone.fm/GLSS5890042670"
+      ],
+      "system": "D&D"
+    },
+    {
+      "name": "Cosmic Crit",
+      "feeds": [
+        "https://cosmiccrit.com/feed/podcast/"
+      ],
+      "campaigns": [
+        {
+          "name": "Season 1",
+          "titles": [
+            "^\\d{3}[a-z]?: "
+          ]
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^S2 \\| "
+          ]
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^S3 \\| "
+          ]
+        },
+        {
+          "name": "Season 4",
+          "titles": [
+            "^S4 \\| "
+          ]
+        },
+        {
+          "name": "Season 5",
+          "titles": [
+            "^S5 \\| "
+          ]
+        },
+        {
+          "name": "Junker's Delight",
+          "titles": [
+            "^Junker['’]s Delight \\|"
+          ]
+        },
+        {
+          "name": "A Star Beyond the Stars",
+          "titles": [
+            "^Star Trek Adventures: A Star Beyond the Stars"
+          ]
+        },
+        {
+          "name": "Starfinder 2E Playtest",
+          "titles": [
+            "^Starfinder 2E Playtest"
+          ]
+        },
+        {
+          "name": "Alien TTRPG",
+          "titles": [
+            "^Alien TTRPG"
+          ]
+        },
+        {
+          "name": "A Cosmic Birthday",
+          "titles": [
+            "^Cosmic Birthday \\|"
+          ]
+        },
+        {
+          "name": "Guilt of the Grave World",
+          "titles": [
+            "^Guilt of the Grave World \\|"
+          ]
+        }
+      ],
+      "system": "Starfinder",
+      "systems": {
+        "A Star Beyond the Stars": "Star Trek Adventures",
+        "Starfinder 2E Playtest": "Starfinder 2e",
+        "Alien TTRPG": "Alien RPG",
+        "A Cosmic Birthday": "Starfinder 2e",
+        "Guilt of the Grave World": "Starfinder 2e"
+      }
+    },
+    {
+      "name": "RPPR Actual Play",
+      "feeds": [
+        "https://actualplay.roleplayingpublicradio.com/feed/podcast/"
+      ],
+      "systems": {
+        "The New World Campaign Game": "D&D 4e",
+        "The Heroes of New Arcadia": "Wild Talents",
+        "Judgment Day": "GURPS",
+        "Know Evil": "Eclipse Phase",
+        "Slender Man": "World of Darkness",
+        "Invictus part": "Call of Cthulhu",
+        "Fortunes of War": "Iron Heroes",
+        "Tribes of Tokyo": "Night's Black Agents",
+        "The Spared and the Spoiled": "Better Angels",
+        "A Very Thorough Murder part": "A Dirty World",
+        "The Sense of the Sleight of Hand Man": "Call of Cthulhu",
+        "Duality": "Eclipse Phase",
+        "New York": "Trail of Cthulhu",
+        "London": "Trail of Cthulhu",
+        "Kenya": "Trail of Cthulhu",
+        "Australia": "Trail of Cthulhu",
+        "Shanghai": "Trail of Cthulhu",
+        "The Fighting Scientists of Tesladyne": "Atomic Robo",
+        "The Brutalists": "Red Markets",
+        "Fallen Flag": "Red Markets",
+        "Feng Shui": "Feng Shui 2",
+        "Echoes of the Past": "Hc Svnt Dracones",
+        "Gate 9": "Base Raiders",
+        "Dagashi": "Magical Fury",
+        "Boulder City": "Tales from the Loop",
+        "Abundance": "Ashen Stars",
+        "Nagalisitu": "Reign",
+        "The Treasure Hunt": "Unknown Armies",
+        "The Oddballs": "Scum and Villainy",
+        "The Eighth Sea": "Eclipse Phase",
+        "The Blind Eyes": "Blades in the Dark",
+        "The Cooper County War": "Red Markets",
+        "Descending Derelictus": "Heart: The City Beneath",
+        "Cointract Island": "Fate Core",
+        "Symphony of the End": "Savage Worlds",
+        "The Endius Mandate": "Warhammer 40,000: Imperium Maledictum",
+        "The Escondido Mall": "Public Access",
+        "Drow and Dracoliches": "Fate Accelerated",
+        "The Night of Dissolution": "D&D 5e",
+        "The Labor of Dogs": "Delta Green",
+        "Mysteries of the Broken Wastes": "Fabula Ultima"
+      },
+      "alsoPlays": [
+        "Monster of the Week",
+        "Mothership",
+        "Dungeon Crawl Classics",
+        "Dungeon World",
+        "13th Age",
+        "Shadowrun",
+        "Lancer",
+        "Shadowdark",
+        "MÖRK BORG",
+        "Mausritter",
+        "Alien RPG"
+      ]
+    },
+    {
+      "name": "Dice Funk",
+      "feeds": [
+        "https://feed.podbean.com/austinyorski/feed.xml"
+      ],
+      "campaigns": [
+        {
+          "name": "Season 1",
+          "titles": [
+            "^Dice Funk: Part \\d+"
+          ]
+        },
+        {
+          "name": "Season 13.5",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S13\\.5: "
+          ]
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S2: "
+          ]
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S3: "
+          ]
+        },
+        {
+          "name": "Season 4",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S4: "
+          ]
+        },
+        {
+          "name": "Season 5",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S5: "
+          ]
+        },
+        {
+          "name": "Season 6",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S6: "
+          ]
+        },
+        {
+          "name": "Season 7",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S7: "
+          ]
+        },
+        {
+          "name": "Season 8",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S8: "
+          ]
+        },
+        {
+          "name": "Season 9",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S9: "
+          ]
+        },
+        {
+          "name": "Season 10",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S10: "
+          ]
+        },
+        {
+          "name": "Season 11",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S11: "
+          ]
+        },
+        {
+          "name": "Season 12",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S12: "
+          ]
+        },
+        {
+          "name": "Season 13",
+          "titles": [
+            "^(UNLOCKED - )?(Dice Funk|DF) S13: "
+          ]
+        }
+      ],
+      "system": "D&D"
+    },
+    {
+      "name": "Total Party Kill",
+      "feeds": [
+        "https://feeds.theincomparable.com/tpk"
+      ],
+      "system": "D&D",
+      "systems": {
+        "Season 12": "Dungeon Crawl Classics",
+        "Season 17": "D&D 4e"
+      }
+    },
+    {
+      "name": "Twenty Sides",
+      "feeds": [
+        "https://rss.buzzsprout.com/2016568.rss"
+      ],
+      "system": "D&D",
+      "systems": {
+        "Campaign 3": "D&D 5e"
+      }
+    },
+    {
+      "name": "EveryTenday D&D",
+      "feeds": [
+        "https://anchor.fm/s/9fce604/podcast/rss"
+      ],
+      "system": "D&D 5e"
+    },
+    {
+      "name": "Bards of New York",
+      "feeds": [
+        "https://anchor.fm/s/ebac13b8/podcast/rss"
+      ],
+      "campaigns": [
+        {
+          "name": "Dark Age: Voltaire's Aces",
+          "titles": [
+            "Dark Age: Voltaire['’]s Aces"
+          ]
+        }
+      ],
+      "systems": {
+        "Dark Age: Voltaire's Aces": "Daggerheart"
+      },
+      "alsoPlays": [
+        "D&D",
+        "Honey Heist"
+      ]
+    },
+    {
+      "name": "Inn at the End",
+      "feeds": [
+        "https://dndpodcast.net/podcast?format=rss"
+      ],
+      "systems": {
+        "Season 2": "D&D 5e",
+        "Season 3": "Daggerheart"
+      },
+      "alsoPlays": [
+        "The Quiet Year",
+        "Troika!"
+      ]
+    },
+    {
+      "name": "Rotating Heroes",
+      "feeds": [
+        "https://audioboom.com/channels/5167570.rss"
+      ],
+      "alsoPlays": [
+        "Force of Extinction"
+      ]
+    },
+    {
+      "name": "One Piece D&D: Marines",
+      "feeds": [
+        "https://www.spreaker.com/show/5894100/episodes/feed"
+      ],
+      "campaigns": [
+        {
+          "name": "Marines",
+          "titles": [
+            "^ONE PIECE D&D: MARINES"
+          ]
+        }
+      ],
+      "system": "D&D"
+    },
+    {
+      "name": "Dead Suns Company",
+      "feeds": [
+        "https://anchor.fm/s/ee45e6e4/podcast/rss"
+      ],
+      "campaigns": [
+        {
+          "name": "The Tainted Hive",
+          "titles": [
+            "\\|\\s*The Tainted Hive",
+            "^The Tainted Hive - Trailer"
+          ]
+        },
+        {
+          "name": "The Grimdark Chronicles: Enemy in Shadows",
+          "titles": [
+            "\\| The Grimdark Chronicles"
+          ]
+        },
+        {
+          "name": "Tales From The Old World",
+          "titles": [
+            "\\| Tales From The Old World \\|"
+          ]
+        },
+        {
+          "name": "System Shift",
+          "titles": [
+            "\\| System Shift\\b",
+            "\\| The Grimdark Episodic",
+            "Warhammer: The Old World Roleplaying Game Actual Play$"
+          ],
+          "section": "specials"
+        }
+      ],
+      "systems": {
+        "The Tainted Hive": "Warhammer 40,000: Imperium Maledictum",
+        "The Grimdark Chronicles: Enemy in Shadows": "Warhammer Fantasy Roleplay",
+        "Tales From The Old World": "Warhammer: The Old World"
+      },
+      "alsoPlays": [
+        "Shadowdark",
+        "D&D 5e"
+      ]
+    },
+    {
+      "name": "bomBARDed",
+      "feeds": [
+        "https://feed.podbean.com/bombarded/feed.xml"
+      ],
+      "campaigns": [
+        {
+          "name": "bomBARDed",
+          "titles": [
+            "^Ep\\. \\d+"
+          ]
+        }
+      ],
+      "system": "D&D"
+    },
+    {
+      "name": "One Piece D&D",
+      "feeds": [
+        "https://www.spreaker.com/show/4269462/episodes/feed"
+      ],
+      "campaigns": [
+        {
+          "name": "One Piece D&D",
+          "titles": [
+            "^ONE PIECE D&D"
+          ]
+        }
+      ],
+      "system": "D&D"
+    },
+    {
+      "name": "Lawful Stupid",
+      "feeds": [
+        "https://anchor.fm/s/35ef2de4/podcast/rss"
+      ],
+      "system": "D&D 5e"
+    },
+    {
+      "name": "Roll For Combat",
+      "feeds": [
+        "https://rollforcombat.com/index.php/feed/podcast/"
+      ],
+      "campaigns": [
+        {
+          "name": "Three Ring Adventure",
+          "titles": [
+            "^Three Ring Adventure"
+          ]
+        },
+        {
+          "name": "Agents of Edgewatch",
+          "titles": [
+            "^Agents of Edgewatch"
+          ]
+        }
+      ],
+      "system": "Pathfinder",
+      "systems": {
+        "Dead Suns": "Starfinder"
+      }
+    },
+    {
+      "name": "KOllOK 1991",
+      "feeds": [
+        "https://feeds.simplecast.com/X2Oy5QBB"
+      ],
+      "system": "Kids on Bikes"
+    },
+    {
+      "name": "Rivals of Waterdeep",
+      "feeds": [
+        "https://feeds.simplecast.com/uQZx55QO"
+      ],
+      "system": "D&D 5e",
+      "systems": {
+        "Rivals on Bikes": "Kids on Bikes"
+      }
+    },
+    {
+      "name": "Viva La Dirt League D&D",
+      "feeds": [
+        "https://anchor.fm/s/10f6226d0/podcast/rss"
+      ],
+      "campaigns": [
+        {
+          "name": "The Misfits",
+          "titles": [
+            "The Misfits\\s*$"
+          ]
+        },
+        {
+          "name": "Adventures of Azerim",
+          "titles": [
+            "Adventures of Az"
+          ]
+        }
+      ],
+      "system": "D&D"
     }
   ]
 }
