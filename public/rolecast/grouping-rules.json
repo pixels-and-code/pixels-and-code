@@ -1,27 +1,12 @@
 {
-  "version": 11,
-  "updated": "2026-10-27T20:00:00Z",
+  "version": 12,
+  "updated": "2026-10-27T21:00:00Z",
   "longCampaignEpisodes": 20,
   "discoverTags": [
     {
-      "title": "TTRPG",
-      "kind": "format",
-      "notSections": [
-        "improv",
-        "fiction"
-      ]
-    },
-    {
-      "title": "Fiction",
-      "kind": "format",
-      "sections": [
-        "improv",
-        "fiction"
-      ]
-    },
-    {
       "title": "D&D",
       "kind": "system",
+      "section": "actual-play",
       "systems": [
         "D&D",
         "AD&D"
@@ -30,6 +15,7 @@
     {
       "title": "Daggerheart",
       "kind": "system",
+      "section": "actual-play",
       "systems": [
         "Daggerheart"
       ]
@@ -37,6 +23,7 @@
     {
       "title": "Cthulhu",
       "kind": "system",
+      "section": "actual-play",
       "systems": [
         "Call of Cthulhu",
         "Pulp Cthulhu",
@@ -49,6 +36,7 @@
     {
       "title": "Pathfinder",
       "kind": "system",
+      "section": "actual-play",
       "systems": [
         "Pathfinder",
         "Starfinder"
@@ -57,22 +45,71 @@
     {
       "title": "Blades in the Dark",
       "kind": "system",
+      "section": "actual-play",
       "systems": [
         "Blades in the Dark"
       ]
     },
     {
+      "title": "Fantasy",
+      "kind": "genre",
+      "section": "fiction",
+      "genres": [
+        "Fantasy"
+      ]
+    },
+    {
+      "title": "Sci-fi",
+      "kind": "genre",
+      "section": "fiction",
+      "genres": [
+        "Sci-fi"
+      ]
+    },
+    {
+      "title": "Horror",
+      "kind": "genre",
+      "section": "fiction",
+      "genres": [
+        "Horror"
+      ]
+    },
+    {
+      "title": "Mystery",
+      "kind": "genre",
+      "section": "fiction",
+      "genres": [
+        "Mystery"
+      ]
+    },
+    {
+      "title": "Comedy",
+      "kind": "genre",
+      "section": "fiction",
+      "genres": [
+        "Comedy"
+      ]
+    },
+    {
+      "title": "Improv",
+      "kind": "genre",
+      "section": "fiction",
+      "genres": [
+        "Improv"
+      ]
+    },
+    {
       "title": "New",
       "kind": "status",
-      "sections": [
-        "newer"
+      "statuses": [
+        "new"
       ]
     },
     {
       "title": "Complete",
       "kind": "status",
-      "sections": [
-        "finished"
+      "statuses": [
+        "ended"
       ]
     }
   ],
@@ -81,7 +118,7 @@
       "name": "Critical Role",
       "author": "Critical Role",
       "appleID": 1453805439,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.simplecast.com/LXz4Q9rJ"
       ],
@@ -154,7 +191,7 @@
       "name": "The Adventure Zone",
       "author": "The McElroys",
       "appleID": 947899573,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.simplecast.com/cYQVc__c"
       ],
@@ -228,7 +265,7 @@
       "name": "Not Another D&D Podcast",
       "author": "Headgum",
       "appleID": 1344003690,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://rss.art19.com/not-another-d-and-d-podcast"
       ],
@@ -280,7 +317,7 @@
       "name": "Dungeons and Daddies",
       "author": "Dungeons and Daddies",
       "appleID": 1450241676,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.acast.com/public/shows/46e42ca7-4921-5f04-a297-1970e72fd86d"
       ],
@@ -304,7 +341,7 @@
       "name": "The Glass Cannon Podcast",
       "author": "The Glass Cannon Network",
       "appleID": 1007021910,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/QCD8414694967"
       ],
@@ -379,7 +416,7 @@
       "name": "Greetings Adventurers",
       "author": "GeeklyInc.com",
       "appleID": 581324591,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.acast.com/public/shows/6148f0896701c5001adfa2ca"
       ],
@@ -426,7 +463,7 @@
       "name": "Tales from the Stinky Dragon",
       "author": "Stinky Dragon",
       "appleID": 1563814788,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/stinkydragon"
       ],
@@ -449,7 +486,7 @@
       "name": "Worlds Beyond Number",
       "author": "Worlds Beyond Number",
       "appleID": 1670750937,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.simplecast.com/IAPnSSRO"
       ],
@@ -500,7 +537,7 @@
       "name": "Nerd Poker",
       "author": "Nerd Poker",
       "appleID": 582573564,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://rss.libsyn.com/shows/98150/destinations/510364.xml"
       ],
@@ -532,7 +569,7 @@
       "name": "Critical Hit",
       "author": "Major Spoilers",
       "appleID": 327725953,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.libsyn.com/603370/rss",
         "https://rss.pdrl.fm/f6238b/feeds.libsyn.com/603370/rss/?redirect=false"
@@ -777,7 +814,7 @@
       "name": "Friends at the Table",
       "author": "Friends at the Table",
       "appleID": 918732047,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://rss.libsyn.com/shows/103371/destinations/550849.xml"
       ],
@@ -854,7 +891,7 @@
       "name": "High Rollers DnD",
       "author": "Pickaxe",
       "appleID": 1401508198,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/NSR8625352094"
       ],
@@ -892,7 +929,7 @@
       "name": "D&D is For Nerds",
       "author": "Sanspants Radio",
       "appleID": 1018110695,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.acast.com/public/shows/2158de25-bc3d-4828-b81f-efac999110de"
       ],
@@ -965,7 +1002,7 @@
       "name": "Oxventure",
       "author": "Oxventure & Geek Media",
       "appleID": 1528568221,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/GNL2128031227"
       ],
@@ -1040,7 +1077,7 @@
       "name": "Campaign: Skyjacks",
       "author": "James D'Amato",
       "appleID": 927205926,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/OSPN2193291028"
       ],
@@ -1085,7 +1122,7 @@
       "name": "Rude Tales of Magic",
       "author": "Bucket of Milk",
       "appleID": 1480593911,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://rss.art19.com/rude-tales-of-magic"
       ],
@@ -1135,7 +1172,7 @@
       "name": "Legends of Avantris",
       "author": "Avantris Entertainment",
       "appleID": 1684174612,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feed.podbean.com/legendsofavantris/feed.xml"
       ],
@@ -1226,7 +1263,7 @@
       "name": "Dungeons & Randomness",
       "author": "Pickaxe",
       "appleID": 574192620,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/NEUAU3635051858"
       ],
@@ -1289,7 +1326,7 @@
       "name": "Dragon Friends",
       "author": "Dragon Friends Podcasting",
       "appleID": 1018714948,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.acast.com/public/shows/bedc4097-c415-4d09-a9a9-967c0d551eb5"
       ],
@@ -1325,7 +1362,7 @@
       "name": "One Shot",
       "author": "Dillin Apelyan",
       "appleID": 688242106,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/OSPN6518234516"
       ],
@@ -1424,7 +1461,7 @@
       "name": "Dark Dice",
       "author": "Fool and Scholar Productions",
       "appleID": 1437360249,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/SBP9028289759"
       ],
@@ -1452,7 +1489,7 @@
       "name": "Rusty Quill Gaming",
       "author": "Rusty Quill",
       "appleID": 1002611243,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.acast.com/public/shows/1d9e5af4-c938-42bb-bc57-289b59a4682b"
       ],
@@ -1523,7 +1560,7 @@
       "name": "Pretending to be People",
       "author": "Pretending to be People",
       "appleID": 1443447819,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://rss.libsyn.com/shows/575895/destinations/4987575.xml"
       ],
@@ -1545,7 +1582,7 @@
       "name": "Girls Who Don't DnD",
       "author": "Girls Who Don't DnD",
       "appleID": 1581313901,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/GWD8899491190"
       ],
@@ -1560,7 +1597,7 @@
       "name": "Spout Lore",
       "author": "Spout Lore Studios",
       "appleID": 1307373953,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/spoutlore"
       ],
@@ -1607,7 +1644,7 @@
       "name": "The Dungeon Run",
       "author": "The Dungeon Run",
       "appleID": 1462075800,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://rss.libsyn.com/shows/181535/destinations/1239134.xml"
       ],
@@ -1661,7 +1698,7 @@
       "name": "Dumb-Dumbs & Dragons",
       "author": "Dumb-Dumbs & Dice",
       "appleID": 1236581365,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.megaphone.fm/GLSS5890042670"
       ],
@@ -1688,7 +1725,7 @@
       "name": "Ain't Slayed Nobody",
       "author": "cuppycup & Scott Dorward",
       "appleID": 1494530079,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.acast.com/public/shows/632da7cf6d7ffa0012565ffa"
       ],
@@ -1744,7 +1781,7 @@
       "name": "Cosmic Crit",
       "author": "Cosmic Crit",
       "appleID": 1260099852,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://cosmiccrit.com/feed/podcast/"
       ],
@@ -1844,7 +1881,7 @@
       "name": "The Apocalypse Players",
       "author": "The Apocalypse Players",
       "appleID": 1582654902,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://www.apocalypseplayers.com/feed.xml"
       ],
@@ -1909,7 +1946,7 @@
       "name": "RPPR Actual Play",
       "author": "Ross Payton",
       "appleID": 339817701,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://actualplay.roleplayingpublicradio.com/feed/podcast/"
       ],
@@ -2089,7 +2126,7 @@
       "name": "Dice Funk",
       "author": "Austin Yorski",
       "appleID": 1050971057,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feed.podbean.com/austinyorski/feed.xml"
       ],
@@ -2199,7 +2236,7 @@
       "name": "Total Party Kill",
       "author": "The Incomparable",
       "appleID": 818817570,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://feeds.theincomparable.com/tpk"
       ],
@@ -2294,7 +2331,7 @@
       "name": "Twenty Sides",
       "author": "Twenty Sides",
       "appleID": 1633759050,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://rss.buzzsprout.com/2016568.rss"
       ],
@@ -2316,7 +2353,7 @@
       "name": "EveryTenday D&D",
       "author": "Every Tenday D&D",
       "appleID": 1459282319,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://anchor.fm/s/9fce604/podcast/rss"
       ],
@@ -2332,7 +2369,7 @@
       "name": "Bards of New York",
       "author": "Bards of New York",
       "appleID": 1549575586,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://anchor.fm/s/ebac13b8/podcast/rss"
       ],
@@ -2432,7 +2469,7 @@
       "name": "Inn at the End",
       "author": "Inn at the End",
       "appleID": 1223825664,
-      "discover": "popular",
+      "discover": "actual-play",
       "feeds": [
         "https://dndpodcast.net/podcast?format=rss"
       ],
@@ -2492,7 +2529,8 @@
       "name": "Mystery Quest",
       "author": "Pickaxe",
       "appleID": 1694756842,
-      "discover": "newer",
+      "discover": "actual-play",
+      "status": "new",
       "feeds": [
         "https://feeds.megaphone.fm/NSR3713660967"
       ],
@@ -2561,7 +2599,8 @@
       "name": "Rotating Heroes",
       "author": "Rotating Heroes",
       "appleID": 1709543811,
-      "discover": "newer",
+      "discover": "actual-play",
+      "status": "new",
       "feeds": [
         "https://audioboom.com/channels/5167570.rss"
       ],
@@ -2596,7 +2635,8 @@
       "name": "One Piece D&D: Marines",
       "author": "Daniel Rustage",
       "appleID": 1693651529,
-      "discover": "newer",
+      "discover": "actual-play",
+      "status": "new",
       "feeds": [
         "https://www.spreaker.com/show/5894100/episodes/feed"
       ],
@@ -2624,7 +2664,8 @@
       "name": "Mall Brats",
       "author": "Pickaxe",
       "appleID": 1762316572,
-      "discover": "newer",
+      "discover": "actual-play",
+      "status": "new",
       "feeds": [
         "https://feeds.megaphone.fm/mallbrats"
       ],
@@ -2638,7 +2679,8 @@
       "name": "Natural Six",
       "author": "Natural Six",
       "appleID": 1740530132,
-      "discover": "newer",
+      "discover": "actual-play",
+      "status": "new",
       "feeds": [
         "https://feeds.acast.com/public/shows/65de51ac5568ae001627fe39"
       ],
@@ -2675,7 +2717,8 @@
       "name": "Dead Suns Company",
       "author": "Dead Suns Company",
       "appleID": 1723887297,
-      "discover": "newer",
+      "discover": "actual-play",
+      "status": "new",
       "feeds": [
         "https://anchor.fm/s/ee45e6e4/podcast/rss"
       ],
@@ -2726,475 +2769,11 @@
       ]
     },
     {
-      "name": "Hello From The Magic Tavern",
-      "author": "Arnie Niekamp",
-      "appleID": 975078285,
-      "discover": "improv",
-      "feeds": [
-        "https://rss.art19.com/hello-from-magic-tavern"
-      ],
-      "links": {
-        "website": "https://hellofromthemagictavern.com",
-        "support": "https://www.patreon.com/magictavern",
-        "video": "https://www.youtube.com/@hellofromthemagictavern"
-      },
-      "campaigns": [
-        {
-          "name": "Season 1",
-          "titles": [
-            "^\\d{1,3} - "
-          ]
-        },
-        {
-          "name": "Offices and Bosses",
-          "titles": [
-            "^(Patreon Unlock: |Bonus: )?Offices (and|&) Bosses"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Mission to Zyxx",
-      "author": "Mission To Zyxx",
-      "appleID": 1276705357,
-      "discover": "improv",
-      "feeds": [
-        "https://feeds.simplecast.com/ZL7iUDiH"
-      ],
-      "links": {
-        "website": "https://missiontozyxx.space",
-        "support": "https://maximumfun.org/joinzyxx"
-      },
-      "campaigns": [
-        {
-          "name": "Mission to D-Syxx",
-          "titles": [
-            "^Mission to D-Syxx$",
-            "^The Legumies Get the Loot Gimmes",
-            "^The Mossborn Identity",
-            "^The Ballad of the Battle of the Band of the Bards",
-            "^Dew or Dew Not, There Are No Dice",
-            "^The Scoldy Peaches",
-            "^Hello From the Tragic Cavern",
-            "^A Legumiful Mine",
-            "^Ex and the Pity",
-            "^Mider-Span: Can You Slay",
-            "^Larry and Booket Die"
-          ],
-          "section": "miniseries"
-        },
-        {
-          "name": "Specials",
-          "titles": [
-            "Mailbag",
-            "^L\\d+:",
-            "^Mission to (Fyxx|Gygs|Convynnce|Transcryptss|Tryxx)",
-            "^The Paradox$",
-            "^Passion to Zyxx",
-            "^Guessin' Our Pickss",
-            "^Reminiscin' to Zyxx",
-            "^Casters on Casters",
-            "^Strutting the Stuff",
-            "^Shows and Cons"
-          ],
-          "section": "specials"
-        }
-      ],
-      "renames": {
-        "Season 6": "The Young Old Derf Chronicles"
-      },
-      "systems": {
-        "Mission to D-Syxx": "D&D"
-      }
-    },
-    {
-      "name": "Improvised Star Trek",
-      "author": "Improvised Star Trek",
-      "appleID": 430362452,
-      "discover": "improv",
-      "feeds": [
-        "https://rss.libsyn.com/shows/30607/destinations/399111.xml"
-      ],
-      "links": {
-        "website": "https://www.theimprovisedstartrek.com"
-      },
-      "campaigns": [
-        {
-          "name": "Main Series",
-          "titles": [
-            "^(Ep\\.?|Episode|IST|E) ?\\d+"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Off Book: The Improvised Musical",
-      "author": "Jessica McKenna and Zach Reino",
-      "appleID": 1260742439,
-      "discover": "improv",
-      "feeds": [
-        "https://rss.art19.com/off-book"
-      ],
-      "links": {
-        "website": "https://www.thezachandthejess.com/podcast-off-book.html",
-        "support": "https://offbookclubhouse.com"
-      }
-    },
-    {
-      "name": "Our Fair City",
-      "author": "Audacious Machine Creative",
-      "appleID": 514748675,
-      "discover": "fiction",
-      "feeds": [
-        "https://rss.art19.com/our-fair-city"
-      ],
-      "links": {
-        "website": "https://www.audaciousmachinecreative.com/our-fair-city",
-        "support": "https://audaciousmachinecreative.memberful.com/join"
-      }
-    },
-    {
-      "name": "The Two Princes",
-      "author": "Spotify Studios",
-      "appleID": 1464586861,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.megaphone.fm/tp-spot"
-      ],
-      "links": {},
-      "campaigns": [
-        {
-          "name": "Season 1",
-          "titles": [
-            "^S1 Ep\\d+"
-          ]
-        },
-        {
-          "name": "Season 2",
-          "titles": [
-            "^S2 Ep\\d+"
-          ]
-        },
-        {
-          "name": "Season 3",
-          "titles": [
-            "^S3 Ep\\d+"
-          ]
-        },
-        {
-          "name": "Trailer",
-          "titles": [
-            "^Introducing: The Two Princes"
-          ],
-          "section": "specials"
-        }
-      ]
-    },
-    {
-      "name": "Alba Salix, Royal Physician",
-      "author": "Fable and Folly",
-      "appleID": 938040414,
-      "discover": "fiction",
-      "feeds": [
-        "https://rss.art19.com/alba-salix--royal-physician"
-      ],
-      "links": {
-        "website": "https://albasalix.com",
-        "support": "https://www.patreon.com/albasalix"
-      },
-      "longCampaignEpisodes": 10
-    },
-    {
-      "name": "Wolf 359",
-      "author": "Kinda Evil Genius Productions, LLC",
-      "appleID": 909552816,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.megaphone.fm/wolf359radio"
-      ],
-      "links": {
-        "website": "https://wolf359.fm",
-        "support": "https://www.patreon.com/Wolf359Radio"
-      },
-      "renames": {
-        "Mini": "Mini Episodes"
-      }
-    },
-    {
-      "name": "The Thrilling Adventure Hour",
-      "author": "WorkJuice Corp",
-      "appleID": 408691897,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.acast.com/public/shows/6414da1f9a87fc0011e7a8ee"
-      ],
-      "links": {
-        "website": "https://thrillingadventure.live",
-        "support": "https://www.patreon.com/thrillingadventurehour"
-      },
-      "campaigns": [
-        {
-          "name": "Sparks Nevada, Marshal on Mars",
-          "titles": [
-            "Sparks Nevada"
-          ]
-        },
-        {
-          "name": "Beyond Belief",
-          "titles": [
-            "Beyond Belief"
-          ]
-        },
-        {
-          "name": "Amelia Earhart, Fearless Flyer",
-          "titles": [
-            "Amelia Earhart"
-          ]
-        },
-        {
-          "name": "Captain Laserbeam",
-          "titles": [
-            "Captain Laserbeam"
-          ]
-        },
-        {
-          "name": "Colonel Tick-Tock",
-          "titles": [
-            "Colonel Tick[- ]Tock"
-          ]
-        },
-        {
-          "name": "Down in Moonshine Holler",
-          "titles": [
-            "Moonshine Holler"
-          ]
-        },
-        {
-          "name": "Cactoid Jim",
-          "titles": [
-            "Cactoid Jim"
-          ]
-        },
-        {
-          "name": "Miss America",
-          "titles": [
-            "^Miss America"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Bubble",
-      "author": "MaximumFun.org",
-      "appleID": 1391441620,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.simplecast.com/XqNLT4El"
-      ],
-      "links": {
-        "website": "https://maximumfun.org/podcasts/bubble/",
-        "support": "https://maximumfun.org/join/"
-      },
-      "campaigns": [
-        {
-          "name": "Season 1",
-          "titles": [
-            "^Episode \\d+:"
-          ],
-          "section": "campaign"
-        }
-      ]
-    },
-    {
-      "name": "Wooden Overcoats",
-      "author": "Wooden Overcoats Ltd",
-      "appleID": 1039662268,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.megaphone.fm/woodenovercoats"
-      ],
-      "links": {
-        "website": "https://www.woodenovercoats.com"
-      },
-      "campaigns": [
-        {
-          "name": "Rudyard Ruins Everything",
-          "titles": [
-            "^Rudyard Ruins Everything"
-          ],
-          "section": "miniseries"
-        },
-        {
-          "name": "Piffling Lives",
-          "titles": [
-            "^Piffling Lives:"
-          ],
-          "section": "miniseries"
-        },
-        {
-          "name": "Funn Fragments",
-          "titles": [
-            "^Funn Fragments:"
-          ],
-          "section": "miniseries"
-        }
-      ]
-    },
-    {
-      "name": "EOS 10",
-      "author": "Justin McLachlan and PlanetM",
-      "appleID": 928069318,
-      "discover": "fiction",
-      "feeds": [
-        "https://feed.podbean.com/planetm/feed.xml"
-      ],
-      "links": {}
-    },
-    {
-      "name": "Welcome to Night Vale",
-      "author": "Night Vale Presents",
-      "appleID": 536258179,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.megaphone.fm/SBP4591212513"
-      ],
-      "links": {
-        "website": "https://www.welcometonightvale.com",
-        "support": "https://www.patreon.com/welcometonightvale"
-      },
-      "campaigns": [
-        {
-          "name": "Main Series",
-          "titles": [
-            "^\\d+[AB]? [-–] "
-          ]
-        },
-        {
-          "name": "Other Shows",
-          "titles": [
-            "^Alice Isn't Dead",
-            "^Within the Wires",
-            "^The Orbiting Human Circus",
-            "^The Summer of Night Vale Presents",
-            "^Unlicensed",
-            "^New Podcast Teaser",
-            "^Conversations with People Who Hate Me",
-            "^I Only Listen to the Mountain Goats",
-            "^It Makes A Sound",
-            "^Pounded in the Butt",
-            "^Good Morning Night Vale",
-            "^Adventures in New America",
-            "^Dreamboy",
-            "^The Best Worst",
-            "^From the creators of Welcome to Night Vale"
-          ],
-          "section": "specials"
-        }
-      ]
-    },
-    {
-      "name": "The Penumbra Podcast",
-      "author": "Harley Takagi Kaner and Kevin Vibert",
-      "appleID": 1090666976,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.acast.com/public/shows/6831c608381499796b234652"
-      ],
-      "links": {
-        "website": "https://www.thepenumbrapodcast.com",
-        "support": "https://www.patreon.com/thepenumbrapodcast"
-      }
-    },
-    {
-      "name": "The Magnus Archives",
-      "author": "Rusty Quill",
-      "appleID": 1095138637,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.acast.com/public/shows/b6085bcd-3542-4a43-b6a8-021e3fd251b8"
-      ],
-      "links": {
-        "website": "https://rustyquill.com/show/the-magnus-archives/",
-        "support": "https://www.patreon.com/rustyquill"
-      },
-      "campaigns": [
-        {
-          "name": "Season 1",
-          "titles": [
-            "^MAG (0\\.\\d|[1-9]|[1-3]\\d|40)\\b"
-          ]
-        },
-        {
-          "name": "Season 2",
-          "titles": [
-            "^MAG (4[1-9]|[5-7]\\d|80)\\b"
-          ]
-        },
-        {
-          "name": "Season 3",
-          "titles": [
-            "^MAG (8[1-9]|9\\d|1[01]\\d|120)\\b"
-          ]
-        },
-        {
-          "name": "Season 4",
-          "titles": [
-            "^MAG (12[1-9]|1[3-5]\\d|160)\\b"
-          ]
-        },
-        {
-          "name": "Season 5",
-          "titles": [
-            "^MAG (16[1-9]|1[7-9]\\d|200)\\b"
-          ]
-        },
-        {
-          "name": "Extras",
-          "titles": [
-            "^MAG (Fluff|Bloopers|Twilight Abyss|Retrospective|Mothership|Camp Flying Moose|Duskhollow|Roundtable|Commentary|Cast Q&A|Season 5 Q&A|Outtakes|2019 Liveshow)",
-            "^MAG - ",
-            "^Magnus Bloopers",
-            "^What The Ghost",
-            "^Rusty Quill Company Chat",
-            "^Rusty Fears Competition"
-          ],
-          "section": "specials"
-        }
-      ],
-      "renames": {
-        "The Lost Tapes, Tape": "The Lost Tapes"
-      }
-    },
-    {
-      "name": "Limetown",
-      "author": "Two-Up",
-      "appleID": 1024247322,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.megaphone.fm/PPY5621646923"
-      ],
-      "links": {
-        "website": "https://twoupproductions.com/limetown/tv-series"
-      }
-    },
-    {
-      "name": "Old Gods of Appalachia",
-      "author": "DeepNerd Media",
-      "appleID": 1485435369,
-      "discover": "fiction",
-      "feeds": [
-        "https://feeds.acast.com/public/shows/61ba0a431a8cbeb6ea3cf11a"
-      ],
-      "links": {
-        "website": "https://www.oldgodsofappalachia.com",
-        "support": "https://www.patreon.com/oldgodsofappalachia"
-      }
-    },
-    {
       "name": "Sneak Attack!",
       "author": "Sneak Attack! Podcast",
       "appleID": 1006030122,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://rss.libsyn.com/shows/68568/destinations/282736.xml"
       ],
@@ -3227,7 +2806,8 @@
       "name": "Dimension 20",
       "author": "Dropout",
       "appleID": 1485306667,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://www.spreaker.com/show/4113133/episodes/feed"
       ],
@@ -3242,7 +2822,8 @@
       "name": "Join the Party",
       "author": "Multitude",
       "appleID": 1238902672,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://rss.art19.com/join-the-party"
       ],
@@ -3282,7 +2863,8 @@
       "name": "bomBARDed",
       "author": "Lindby",
       "appleID": 1271236770,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://feed.podbean.com/bombarded/feed.xml"
       ],
@@ -3312,7 +2894,8 @@
       "name": "One Piece D&D",
       "author": "Daniel Rustage",
       "appleID": 1507699163,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://www.spreaker.com/show/4269462/episodes/feed"
       ],
@@ -3341,7 +2924,8 @@
       "name": "Dungeons of Drakkenheim",
       "author": "Dungeon Dudes",
       "appleID": 1476022900,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://rss.libsyn.com/shows/201575/destinations/1438583.xml"
       ],
@@ -3375,7 +2959,8 @@
       "name": "Acquisitions Incorporated",
       "author": "Penny Arcade",
       "appleID": 1137789035,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://www.penny-arcade.com/feed/podcasts-ai"
       ],
@@ -3403,7 +2988,8 @@
       "name": "Dungeon Delve",
       "author": "Dungeons & Dragons",
       "appleID": 1115818419,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://feeds.transistor.fm/dungeon-delve"
       ],
@@ -3470,7 +3056,8 @@
       "name": "Candela Obscura",
       "author": "Critical Role",
       "appleID": 1687127481,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://anchor.fm/s/e11a9514/podcast/rss"
       ],
@@ -3491,7 +3078,8 @@
       "name": "Lawful Stupid",
       "author": "Lawful Stupid DnD",
       "appleID": 1309888040,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://anchor.fm/s/35ef2de4/podcast/rss"
       ],
@@ -3521,7 +3109,8 @@
       "name": "Roll For Combat",
       "author": "Roll For Combat",
       "appleID": 1289105668,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://rollforcombat.com/index.php/feed/podcast/"
       ],
@@ -3580,7 +3169,8 @@
       "name": "The Re-Slayer's Take",
       "author": "Critical Role",
       "appleID": 1746366965,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://feeds.megaphone.fm/GLSS4504081211"
       ],
@@ -3595,7 +3185,8 @@
       "name": "KOllOK 1991",
       "author": "Hyper RPG",
       "appleID": 1456298208,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://feeds.simplecast.com/X2Oy5QBB"
       ],
@@ -3626,7 +3217,8 @@
       "name": "Rivals of Waterdeep",
       "author": "Rivals of Waterdeep",
       "appleID": 1434502128,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://feeds.simplecast.com/uQZx55QO"
       ],
@@ -3747,7 +3339,8 @@
       "name": "Viva La Dirt League D&D",
       "author": "Viva La Dirt League",
       "appleID": 1736203457,
-      "discover": "finished",
+      "discover": "actual-play",
+      "status": "ended",
       "feeds": [
         "https://anchor.fm/s/10f6226d0/podcast/rss"
       ],
@@ -3770,6 +3363,1339 @@
         }
       ],
       "system": "D&D 5e"
+    },
+    {
+      "name": "The Magnus Archives",
+      "author": "Rusty Quill",
+      "appleID": 1095138637,
+      "discover": "fiction",
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/b6085bcd-3542-4a43-b6a8-021e3fd251b8"
+      ],
+      "links": {
+        "website": "https://rustyquill.com/show/the-magnus-archives/",
+        "support": "https://www.patreon.com/rustyquill"
+      },
+      "campaigns": [
+        {
+          "name": "Season 1",
+          "titles": [
+            "^MAG (0\\.\\d|[1-9]|[1-3]\\d|40)\\b"
+          ]
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^MAG (4[1-9]|[5-7]\\d|80)\\b"
+          ]
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^MAG (8[1-9]|9\\d|1[01]\\d|120)\\b"
+          ]
+        },
+        {
+          "name": "Season 4",
+          "titles": [
+            "^MAG (12[1-9]|1[3-5]\\d|160)\\b"
+          ]
+        },
+        {
+          "name": "Season 5",
+          "titles": [
+            "^MAG (16[1-9]|1[7-9]\\d|200)\\b"
+          ]
+        },
+        {
+          "name": "Extras",
+          "titles": [
+            "^MAG (Fluff|Bloopers|Twilight Abyss|Retrospective|Mothership|Camp Flying Moose|Duskhollow|Roundtable|Commentary|Cast Q&A|Season 5 Q&A|Outtakes|2019 Liveshow)",
+            "^MAG - ",
+            "^Magnus Bloopers",
+            "^What The Ghost",
+            "^Rusty Quill Company Chat",
+            "^Rusty Fears Competition"
+          ],
+          "section": "specials"
+        }
+      ],
+      "renames": {
+        "The Lost Tapes, Tape": "The Lost Tapes"
+      }
+    },
+    {
+      "name": "Welcome to Night Vale",
+      "author": "Night Vale Presents",
+      "appleID": 536258179,
+      "discover": "fiction",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Comedy"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/SBP4591212513"
+      ],
+      "links": {
+        "website": "https://www.welcometonightvale.com",
+        "support": "https://www.patreon.com/welcometonightvale"
+      },
+      "campaigns": [
+        {
+          "name": "Main Series",
+          "titles": [
+            "^\\d+[AB]? [-–] "
+          ]
+        },
+        {
+          "name": "Other Shows",
+          "titles": [
+            "^Alice Isn't Dead",
+            "^Within the Wires",
+            "^The Orbiting Human Circus",
+            "^The Summer of Night Vale Presents",
+            "^Unlicensed",
+            "^New Podcast Teaser",
+            "^Conversations with People Who Hate Me",
+            "^I Only Listen to the Mountain Goats",
+            "^It Makes A Sound",
+            "^Pounded in the Butt",
+            "^Good Morning Night Vale",
+            "^Adventures in New America",
+            "^Dreamboy",
+            "^The Best Worst",
+            "^From the creators of Welcome to Night Vale"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Limetown",
+      "author": "Two-Up",
+      "appleID": 1024247322,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Mystery",
+        "Drama"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/PPY5621646923"
+      ],
+      "links": {
+        "website": "https://twoupproductions.com/limetown/tv-series"
+      }
+    },
+    {
+      "name": "The Bright Sessions",
+      "author": "Atypical Artists",
+      "appleID": 1053268058,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Sci-fi",
+        "Drama"
+      ],
+      "feeds": [
+        "https://rss.art19.com/the-bright-sessions"
+      ],
+      "links": {
+        "website": "https://www.atypicalartists.co/thebrightsessions",
+        "support": "https://www.patreon.com/atypicalartists"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^The Intrusion$"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Season 1",
+          "titles": [
+            "^1\\d\\d ?- "
+          ]
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^2\\d\\d ?- ",
+            "^Seasons 1-2 Blooper"
+          ]
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^3\\d\\d ?- ",
+            "^Season 3 Blooper"
+          ]
+        },
+        {
+          "name": "Season 4",
+          "titles": [
+            "^4\\d\\d ?- ",
+            "^Season 4 Blooper"
+          ]
+        },
+        {
+          "name": "Season 5",
+          "titles": [
+            "^5\\d\\d ?- "
+          ]
+        },
+        {
+          "name": "The AM Archives",
+          "titles": [
+            "^6\\d\\d ?- ",
+            "^Season 6 \\(The AM Archives\\)"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "The College Tapes",
+          "titles": [
+            "^7\\d\\d ?- ",
+            "^Season 7 \\(The College Tapes\\)",
+            "^Epilogue - Reaching Back"
+          ],
+          "section": "campaign"
+        }
+      ]
+    },
+    {
+      "name": "LifeAfter/The Message",
+      "author": "GE Podcast Theater / Panoply / The Message",
+      "appleID": 1045990056,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Sci-fi",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/MEGDEMO3576588821"
+      ],
+      "campaigns": [
+        {
+          "name": "Trailers & extras",
+          "titles": [
+            "^Introducing (The Message|LifeAfter)$",
+            "^Neil deGrasse Tyson Promos",
+            "^After LifeAfter$"
+          ],
+          "section": "specials"
+        }
+      ],
+      "renames": {
+        "Lif-e.af/ter": "LifeAfter"
+      }
+    },
+    {
+      "name": "Alice Isn't Dead",
+      "author": "Night Vale Presents",
+      "appleID": 1088978354,
+      "discover": "fiction",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Drama"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/SBP8990444845"
+      ],
+      "links": {
+        "website": "https://www.nightvalepresents.com/aliceisntdead",
+        "support": "https://www.patreon.com/aliceisntdead"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "New Podcast Teaser",
+            "^Within the Wires",
+            "NIGHT VALE PRESENTS",
+            "^I Only Listen to the Mountain Goats",
+            "Excerpt",
+            "^Dear Reader$",
+            "brand new podcast",
+            "^Start With This",
+            "^From the creator",
+            "^Don't$",
+            "^Tell$",
+            "^Alice$",
+            "coming April",
+            "^Listen to the first episode",
+            "Teaser",
+            "^Dear Alice",
+            "^Announcing",
+            "^Out today",
+            "The Nudge"
+          ],
+          "section": "specials"
+        }
+      ],
+      "renames": {
+        "Season 1": "Part 1",
+        "Season 2": "Part 2",
+        "Season 3": "Part 3",
+        "Season 4": "Don't Tell Alice"
+      }
+    },
+    {
+      "name": "The Black Tapes",
+      "author": "Pacific Northwest Stories",
+      "appleID": 997522893,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://rss.libsyn.com/shows/67700/destinations/276638.xml"
+      ],
+      "links": {
+        "website": "http://theblacktapespodcast.com"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^Teaser for",
+            "interviews Aaron Mahnke",
+            "Listener Mail",
+            "ANNOUNCEMENT",
+            "^RABBITS is coming",
+            "HALLOWEEN 2016 BONUS"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Season 1",
+          "titles": [
+            "^Episode 1\\d\\d\\b",
+            "^INTERMISSION",
+            "Strand Institute Letter"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^Episode 2\\d\\d\\b",
+            "^ALEX SLEEP NOTE"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^Episode 3\\d\\d\\b"
+          ],
+          "section": "campaign"
+        }
+      ]
+    },
+    {
+      "name": "Wolf 359",
+      "author": "Kinda Evil Genius Productions, LLC",
+      "appleID": 909552816,
+      "discover": "fiction",
+      "genres": [
+        "Sci-fi",
+        "Comedy",
+        "Drama"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/wolf359radio"
+      ],
+      "links": {
+        "website": "https://wolf359.fm",
+        "support": "https://www.patreon.com/Wolf359Radio"
+      },
+      "renames": {
+        "Mini": "Mini Episodes"
+      }
+    },
+    {
+      "name": "Unwell, a Midwestern Gothic Mystery",
+      "author": "Audacious Machine Creative",
+      "appleID": 1449441502,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Drama"
+      ],
+      "feeds": [
+        "https://rss.art19.com/unwell-midwestern-gothic-mystery"
+      ],
+      "links": {
+        "website": "https://www.unwellpodcast.com",
+        "support": "https://audaciousmachinecreative.memberful.com/join"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "Trailer",
+            "^The Voicemail$",
+            "^Welcome to Mt\\. Absalom$",
+            "^Notes on the Fenwood House$",
+            "World Gone Wrong",
+            "HARBINGERS",
+            "^Feed Drop",
+            "^The Music of Unwell",
+            "^Welcomed by Design"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Malevolent",
+      "author": "Harlan Guthrie",
+      "appleID": 1525652021,
+      "discover": "fiction",
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/62691b95c9c07f0012550c9c"
+      ],
+      "links": {
+        "website": "https://www.malevolent.ca",
+        "support": "https://www.patreon.com/TheINVICTUSStream"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^A Message For You$",
+            "^Malevolent Recommends",
+            "Discussion",
+            "^The Obligatory Evil$",
+            "Trailer"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Passenger List",
+      "author": "Passenger List and Radiotopia",
+      "appleID": 1472392291,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Mystery",
+        "Drama"
+      ],
+      "feeds": [
+        "https://feed.passengerlist.org/"
+      ],
+      "links": {
+        "website": "https://www.passengerlist.org",
+        "support": "https://www.radiotopia.fm/donate"
+      },
+      "campaigns": [
+        {
+          "name": "Trailers & other shows",
+          "titles": [
+            "^Pre-Flight Announcement$",
+            "^Fasten your seatbelt$",
+            "^Breaking News$",
+            " from (Radiotopia|QCODE|Lauren Shippen|the creators of|sound designer)"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Within the Wires",
+      "author": "Night Vale Presents",
+      "appleID": 1121391184,
+      "discover": "fiction",
+      "genres": [
+        "Sci-fi",
+        "Drama"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/SBP8915264938",
+        "http://feeds.nightvalepresents.com/withinthewires"
+      ],
+      "links": {
+        "website": "https://www.nightvalepresents.com/withinthewires",
+        "support": "https://www.patreon.com/withinthewires"
+      },
+      "campaigns": [
+        {
+          "name": "Trailers & announcements",
+          "titles": [
+            "^Within the Wires - Teaser$",
+            "^Season \\d+ Announcement",
+            "^Season \\d+, Trailer\\b",
+            "^Season \\d+ Sneak Peak"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Wooden Overcoats",
+      "author": "Wooden Overcoats Ltd",
+      "appleID": 1039662268,
+      "discover": "fiction",
+      "genres": [
+        "Comedy"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/woodenovercoats"
+      ],
+      "links": {
+        "website": "https://www.woodenovercoats.com"
+      },
+      "campaigns": [
+        {
+          "name": "Rudyard Ruins Everything",
+          "titles": [
+            "^Rudyard Ruins Everything"
+          ],
+          "section": "miniseries"
+        },
+        {
+          "name": "Piffling Lives",
+          "titles": [
+            "^Piffling Lives:"
+          ],
+          "section": "miniseries"
+        },
+        {
+          "name": "Funn Fragments",
+          "titles": [
+            "^Funn Fragments:"
+          ],
+          "section": "miniseries"
+        }
+      ]
+    },
+    {
+      "name": "We're Alive",
+      "author": "Wayland Productions Inc",
+      "appleID": 313300476,
+      "discover": "fiction",
+      "genres": [
+        "Horror",
+        "Drama"
+      ],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/d1b39068-c10f-5817-8324-88ba173183cd"
+      ],
+      "links": {
+        "website": "https://www.werealive.com",
+        "support": "https://www.patreon.com/waylandproductions"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "Trailer",
+            "Promo\\b",
+            "Preview",
+            "Featurette",
+            "Behind the Mic",
+            "^Announcing",
+            "Update$",
+            "on its New Feed",
+            "^Presenting We",
+            "Series Recap"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Lockdown",
+          "titles": [
+            "^We.re Alive: Lockdown"
+          ],
+          "section": "miniseries"
+        }
+      ]
+    },
+    {
+      "name": "ars PARADOXICA",
+      "author": "ars PARADOXICA",
+      "appleID": 1006173000,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Sci-fi",
+        "Drama"
+      ],
+      "feeds": [
+        "https://rss.libsyn.com/shows/108705/destinations/591779.xml"
+      ],
+      "links": {
+        "website": "https://arsparadoxica.com"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^The Intrusion$",
+            "^Marvel & Stitcher Present"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Hello From The Magic Tavern",
+      "author": "Arnie Niekamp",
+      "appleID": 975078285,
+      "discover": "fiction",
+      "genres": [
+        "Fantasy",
+        "Comedy",
+        "Improv"
+      ],
+      "feeds": [
+        "https://rss.art19.com/hello-from-magic-tavern"
+      ],
+      "links": {
+        "website": "https://hellofromthemagictavern.com",
+        "support": "https://www.patreon.com/magictavern",
+        "video": "https://www.youtube.com/@hellofromthemagictavern"
+      },
+      "campaigns": [
+        {
+          "name": "Season 1",
+          "titles": [
+            "^\\d{1,3} - "
+          ]
+        },
+        {
+          "name": "Offices and Bosses",
+          "titles": [
+            "^(Patreon Unlock: |Bonus: )?Offices (and|&) Bosses"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The White Vault",
+      "author": "Fool and Scholar Productions",
+      "appleID": 1267043823,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/SBP7754210900"
+      ],
+      "links": {
+        "website": "https://www.foolandscholar.com/the-white-vault-1",
+        "support": "https://www.patreon.com/foolandscholar"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "Teaser",
+            "Trailer",
+            "^Announcements",
+            "\\bUpdates?\\b",
+            "Q ?& ?A|\\bQA\\b",
+            "^Interview",
+            "^Introducing",
+            "^Meet our Friends",
+            "\\(Preview\\)",
+            "^Tea with",
+            "Celebrating",
+            "Behind the Screens",
+            "^Real Adventures in Svalbard",
+            "^A Peek Behind",
+            "Your Very Own Artifact",
+            "^Thanksgiving Thanks",
+            "^Krampusnacht",
+            "^The White Vault: Artifact"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Red Valley",
+      "author": "Kontinue Productions",
+      "appleID": 1502771083,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Sci-fi",
+        "Drama"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/redvalley"
+      ],
+      "links": {
+        "website": "https://www.redvalleypod.com/",
+        "support": "https://ko-fi.com/redvalleypod"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^Introducing:",
+            "Crowdfunding campaign"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^While You Were Hypersleeping 2$"
+          ]
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^While You Were Hypersleeping 3:"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Old Gods of Appalachia",
+      "author": "DeepNerd Media",
+      "appleID": 1485435369,
+      "discover": "fiction",
+      "genres": [
+        "Horror",
+        "Fantasy"
+      ],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/61ba0a431a8cbeb6ea3cf11a"
+      ],
+      "links": {
+        "website": "https://www.oldgodsofappalachia.com",
+        "support": "https://www.patreon.com/oldgodsofappalachia"
+      }
+    },
+    {
+      "name": "Mission to Zyxx",
+      "author": "Mission To Zyxx",
+      "appleID": 1276705357,
+      "discover": "fiction",
+      "genres": [
+        "Sci-fi",
+        "Comedy",
+        "Improv"
+      ],
+      "feeds": [
+        "https://feeds.simplecast.com/ZL7iUDiH"
+      ],
+      "links": {
+        "website": "https://missiontozyxx.space",
+        "support": "https://maximumfun.org/joinzyxx"
+      },
+      "campaigns": [
+        {
+          "name": "Mission to D-Syxx",
+          "titles": [
+            "^Mission to D-Syxx$",
+            "^The Legumies Get the Loot Gimmes",
+            "^The Mossborn Identity",
+            "^The Ballad of the Battle of the Band of the Bards",
+            "^Dew or Dew Not, There Are No Dice",
+            "^The Scoldy Peaches",
+            "^Hello From the Tragic Cavern",
+            "^A Legumiful Mine",
+            "^Ex and the Pity",
+            "^Mider-Span: Can You Slay",
+            "^Larry and Booket Die"
+          ],
+          "section": "miniseries"
+        },
+        {
+          "name": "Specials",
+          "titles": [
+            "Mailbag",
+            "^L\\d+:",
+            "^Mission to (Fyxx|Gygs|Convynnce|Transcryptss|Tryxx)",
+            "^The Paradox$",
+            "^Passion to Zyxx",
+            "^Guessin' Our Pickss",
+            "^Reminiscin' to Zyxx",
+            "^Casters on Casters",
+            "^Strutting the Stuff",
+            "^Shows and Cons"
+          ],
+          "section": "specials"
+        }
+      ],
+      "renames": {
+        "Season 6": "The Young Old Derf Chronicles"
+      },
+      "systems": {
+        "Mission to D-Syxx": "D&D"
+      }
+    },
+    {
+      "name": "Darkest Night",
+      "author": "The Paragon Collective",
+      "appleID": 1163871694,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://rss.libsyn.com/shows/88380/destinations/433718.xml"
+      ],
+      "campaigns": [
+        {
+          "name": "Trailers",
+          "titles": [
+            "^Season \\d+ Teaser$"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Midnight Burger",
+      "author": "Business Goose Media",
+      "appleID": 1537653218,
+      "discover": "fiction",
+      "genres": [
+        "Sci-fi",
+        "Comedy"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/GLSS8724189069"
+      ],
+      "links": {
+        "website": "https://www.weopenatsix.com",
+        "support": "https://www.patreon.com/midnightburger"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^FEED (SWAP|DROP)\\b",
+            "^Patreon (Drop|Announcement)\\b",
+            "^FREE PREVIEW:",
+            "^Our New Talk Show"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Omega Station",
+          "titles": [
+            "^Omega Station Part"
+          ],
+          "section": "miniseries"
+        }
+      ]
+    },
+    {
+      "name": "Midst",
+      "author": "Critical Role",
+      "appleID": 1681168186,
+      "discover": "fiction",
+      "genres": [
+        "Fantasy",
+        "Sci-fi",
+        "Drama"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/midst"
+      ],
+      "links": {
+        "website": "https://midst.co",
+        "support": "https://midst.co/join/",
+        "video": "https://www.youtube.com/playlist?list=PL1tiwbzkOjQwwW3kZyIVPWF_Cp7qtllvv"
+      },
+      "longCampaignEpisodes": 10,
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^FEED (SWAP|DROP)\\b"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Unend Season 1",
+          "titles": [
+            "^UNEND \\| S1\\b",
+            "^UNEND \\| Official Series Trailer"
+          ]
+        },
+        {
+          "name": "Unend Season 2",
+          "titles": [
+            "^S2 E\\d+: UNEND\\b",
+            "^UNEND \\| S2\\b",
+            "^UNEND Season 2\\b"
+          ]
+        },
+        {
+          "name": "Unend Season 3",
+          "titles": [
+            "^S3( E\\d+)?:\\s+UNEND\\b",
+            "^UNEND Season 3\\b",
+            "^UNEND \\| Season 3\\b"
+          ]
+        },
+        {
+          "name": "Season 1",
+          "titles": [
+            "^MIDST \\| S1 ",
+            "Meet the Creators of Midst"
+          ]
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^MIDST \\| S2 ",
+            "^Midst Season 2 Roundtable"
+          ]
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^MIDST \\| S3 ",
+            "^Midst Season 3 Roundtable"
+          ]
+        },
+        {
+          "name": "Moonward",
+          "titles": [
+            "^Moonward \\|"
+          ],
+          "section": "miniseries"
+        }
+      ]
+    },
+    {
+      "name": "Rabbits",
+      "author": "Public Radio Alliance",
+      "appleID": 1209601557,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Mystery",
+        "Sci-fi"
+      ],
+      "feeds": [
+        "https://rss.libsyn.com/shows/94480/destinations/479849.xml"
+      ],
+      "links": {
+        "website": "https://www.rabbitspodcast.com"
+      },
+      "campaigns": [
+        {
+          "name": "Other shows",
+          "titles": [
+            "^The Last Movie Episode \\d+"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Janus Descending",
+      "author": "No Such Thing Productions",
+      "appleID": 1440409010,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Sci-fi",
+        "Horror"
+      ],
+      "feeds": [
+        "https://rss.libsyn.com/shows/131305/destinations/799640.xml"
+      ],
+      "links": {
+        "website": "https://www.nosuchthingradio.com/janus-descending",
+        "support": "https://www.patreon.com/nosuchthingproductions"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^Introducing:"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "The Two Princes",
+      "author": "Spotify Studios",
+      "appleID": 1464586861,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Fantasy",
+        "Comedy"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/tp-spot"
+      ],
+      "links": {},
+      "campaigns": [
+        {
+          "name": "Season 1",
+          "titles": [
+            "^S1 Ep\\d+"
+          ]
+        },
+        {
+          "name": "Season 2",
+          "titles": [
+            "^S2 Ep\\d+"
+          ]
+        },
+        {
+          "name": "Season 3",
+          "titles": [
+            "^S3 Ep\\d+"
+          ]
+        },
+        {
+          "name": "Trailer",
+          "titles": [
+            "^Introducing: The Two Princes"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Kalila Stormfire's Economical Magick Services",
+      "author": "Lisette Alvarez",
+      "appleID": 1324727092,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Fantasy",
+        "Comedy"
+      ],
+      "feeds": [
+        "https://feeds.libsyn.com/111196/rss"
+      ],
+      "links": {
+        "website": "https://www.kalilastormfire.com",
+        "support": "https://www.patreon.com/kalilastormfire"
+      }
+    },
+    {
+      "name": "The Silt Verses",
+      "author": "Eskew Productions Ltd",
+      "appleID": 1547222295,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Horror",
+        "Fantasy"
+      ],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/5fec690f8211cf453a1b89e2"
+      ],
+      "links": {
+        "website": "https://www.thesiltverses.com",
+        "support": "https://www.patreon.com/thesiltverses"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "Q ?& ?A|QnA",
+            "Teaser",
+            "^Announcement",
+            "is out now"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Archive 81",
+      "author": "Dead Signals",
+      "appleID": 1098194172,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://rss.libsyn.com/shows/124004/destinations/733937.xml"
+      ],
+      "links": {
+        "website": "http://www.archive81.com",
+        "support": "https://www.patreon.com/archive81"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^Trailer",
+            "^OUT OF UNIVERSE",
+            "^Our Next Project",
+            "Is Out NOW",
+            "^We Made a New Podcast",
+            "Presents\\.\\.\\."
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "The Amelia Project",
+      "author": "Imploding Fictions",
+      "appleID": 1314667752,
+      "discover": "fiction",
+      "genres": [
+        "Comedy",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/amelia"
+      ],
+      "links": {
+        "website": "https://ameliapodcast.com/",
+        "support": "https://www.patreon.com/ameliapodcast"
+      },
+      "campaigns": [
+        {
+          "name": "Amelia's Appraisals",
+          "titles": [
+            "^Amelia's Appraisals"
+          ],
+          "section": "miniseries"
+        },
+        {
+          "name": "Forgive Amelia",
+          "titles": [
+            "^Forgive Amelia - Part \\d"
+          ],
+          "section": "miniseries"
+        }
+      ]
+    },
+    {
+      "name": "King Falls AM",
+      "author": "King Falls AM",
+      "appleID": 1016760065,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Comedy",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://rss.libsyn.com/shows/474897/destinations/4028520.xml"
+      ],
+      "campaigns": [
+        {
+          "name": "Phase Two",
+          "titles": [
+            "^Episode (Seventy-(Six|Seven|Eight|Nine)|Eighty|Ninety|One Hundred)\\b",
+            "^Doyle's Conspiracy Cavern",
+            "^The King Falls' Sheriff Brawl"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Phase One",
+          "titles": [
+            "^(King Falls AM - )?Episode ",
+            "^Zero Tolerance Policy$",
+            "^Election Special:"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "The King Falls Chronicles",
+          "titles": [
+            "^The King Falls Chronicles: Part"
+          ],
+          "section": "miniseries"
+        }
+      ]
+    },
+    {
+      "name": "Hello From The Hallowoods",
+      "author": "William A. Wellman",
+      "appleID": 1538248051,
+      "discover": "fiction",
+      "genres": [
+        "Horror",
+        "Fantasy"
+      ],
+      "feeds": [
+        "https://rss.buzzsprout.com/2022026.rss"
+      ],
+      "links": {
+        "website": "https://www.hellofromthehallowoods.com/",
+        "support": "https://www.patreon.com/hallowoods",
+        "video": "https://www.youtube.com/channel/UCh9ZfCa4uilETXwaEMjXWZw"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^Q&A with ",
+            "^The Skull Sessions:"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Victoriocity",
+      "author": "Victoriocity",
+      "appleID": 1293184351,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Mystery",
+        "Comedy"
+      ],
+      "feeds": [
+        "https://rss.libsyn.com/shows/107749/destinations/584552.xml"
+      ],
+      "links": {
+        "website": "https://www.victoriocity.com/",
+        "support": "https://www.victoriocity.com/support"
+      },
+      "campaigns": [
+        {
+          "name": "Other",
+          "titles": [
+            "^Trailer:",
+            "^High Vaultage",
+            "Livestream"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "The Strange Case of Starship Iris",
+      "author": "Jessica Best (Procyon Podcast Network)",
+      "appleID": 1193720457,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Sci-fi",
+        "Drama"
+      ],
+      "feeds": [
+        "https://feeds.megaphone.fm/FAFO3490609621"
+      ],
+      "links": {
+        "website": "https://www.procyonpodcastnetwork.com/starship-iris",
+        "support": "https://www.patreon.com/starshipiris"
+      }
+    },
+    {
+      "name": "EOS 10",
+      "author": "Justin McLachlan and PlanetM",
+      "appleID": 928069318,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Sci-fi",
+        "Comedy"
+      ],
+      "feeds": [
+        "https://feed.podbean.com/planetm/feed.xml"
+      ],
+      "links": {}
+    },
+    {
+      "name": "The Penumbra Podcast",
+      "author": "Harley Takagi Kaner and Kevin Vibert",
+      "appleID": 1090666976,
+      "discover": "fiction",
+      "genres": [
+        "Sci-fi",
+        "Fantasy",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://feeds.acast.com/public/shows/6831c608381499796b234652"
+      ],
+      "links": {
+        "website": "https://www.thepenumbrapodcast.com",
+        "support": "https://www.patreon.com/thepenumbrapodcast"
+      }
+    },
+    {
+      "name": "Forest 404",
+      "author": "BBC Radio 4",
+      "appleID": 1458519430,
+      "discover": "fiction",
+      "status": "ended",
+      "genres": [
+        "Sci-fi",
+        "Mystery"
+      ],
+      "feeds": [
+        "https://podcasts.files.bbci.co.uk/p06tqsg3.rss"
+      ],
+      "links": {
+        "website": "https://www.bbc.co.uk/programmes/p06tqsg3"
+      },
+      "campaigns": [
+        {
+          "name": "Series 1",
+          "titles": [
+            "^Ep\\d+:"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "Other",
+          "titles": [
+            "^T\\d+:",
+            "^S\\d+:"
+          ],
+          "section": "specials"
+        }
+      ]
+    },
+    {
+      "name": "Our Fair City",
+      "author": "Audacious Machine Creative",
+      "appleID": 514748675,
+      "discover": "fiction",
+      "genres": [
+        "Sci-fi",
+        "Comedy"
+      ],
+      "feeds": [
+        "https://rss.art19.com/our-fair-city"
+      ],
+      "links": {
+        "website": "https://www.audaciousmachinecreative.com/our-fair-city",
+        "support": "https://audaciousmachinecreative.memberful.com/join"
+      }
     }
   ]
 }
