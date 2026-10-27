@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "updated": "2026-10-27",
   "longCampaignEpisodes": 20,
   "shows": [
@@ -34,7 +34,7 @@
         "Thresher": "Candela Obscura",
         "Age of Umbra": "Daggerheart",
         "Sallowlands": "Daggerheart",
-        "Aramán": "D&D 2024"
+        "Aramán": "D&D 5.5e"
       }
     },
     {
@@ -345,7 +345,7 @@
         "Steeplechase": "Blades in the Dark",
         "Outre Space": "Marvel Multiverse RPG",
         "Versus Dracula": "D&D 5e",
-        "Royale": "D&D 2024",
+        "Royale": "D&D 5.5e",
         "Providence": "Super Normal"
       }
     },
@@ -354,7 +354,7 @@
       "feeds": ["https://rss.art19.com/not-another-d-and-d-podcast"],
       "system": "D&D 5e",
       "systems": {
-        "Skaldova": "D&D 2024"
+        "Skaldova": "D&D 5.5e"
       }
     },
     {
@@ -402,7 +402,7 @@
       ],
       "system": "D&D 5e",
       "systems": {
-        "The Dragon Empire": "D&D 2024"
+        "The Dragon Empire": "D&D 5.5e"
       }
     },
     {
