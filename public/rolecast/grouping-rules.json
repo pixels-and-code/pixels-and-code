@@ -1,6 +1,6 @@
 {
-  "version": 17,
-  "updated": "2026-10-30T18:00:00Z",
+  "version": 18,
+  "updated": "2026-10-30T20:00:00Z",
   "longCampaignEpisodes": 20,
   "discoverTags": [
     {
@@ -1294,6 +1294,12 @@
           "name": "Big Trouble In Little Mineuse",
           "titles": [
             "^Big Trouble In Little Mine?use\\b"
+          ]
+        },
+        {
+          "name": "Running the Gauntlet",
+          "titles": [
+            "\\bRunning the Gauntlet Lvl\\.? ?\\d"
           ]
         },
         {
