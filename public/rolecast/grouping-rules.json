@@ -1,6 +1,6 @@
 {
-  "version": 14,
-  "updated": "2026-10-30T12:00:00Z",
+  "version": 15,
+  "updated": "2026-10-30T14:00:00Z",
   "longCampaignEpisodes": 20,
   "discoverTags": [
     {
@@ -1271,13 +1271,32 @@
         "support": "https://www.patreon.com/3BlackHalflings",
         "video": "https://www.youtube.com/@3BlackHalflings"
       },
+      "system": "D&D 5e",
+      "longCampaignEpisodes": 10,
       "campaigns": [
+        {
+          "name": "The Cub & The Caterpillar",
+          "titles": [
+            "^The Cub (?:&|and) The Caterpillar\\b"
+          ]
+        },
+        {
+          "name": "Outlaws & Obelisks",
+          "titles": [
+            "^(?:3BH Presents )?Outlaws (?:&|and) Obelisks\\b"
+          ]
+        },
+        {
+          "name": "Big Trouble In Little Mineuse",
+          "titles": [
+            "^Big Trouble In Little Mine?use\\b"
+          ]
+        },
         {
           "name": "Herald of Shadows",
           "titles": [
             "^City of the Black Rose: Herald of Shadows\\b"
-          ],
-          "section": "campaign"
+          ]
         },
         {
           "name": "City of the Black Rose (2022 cut)",
@@ -1300,8 +1319,7 @@
           ],
           "section": "campaign"
         }
-      ],
-      "system": "D&D 5e"
+      ]
     },
     {
       "name": "Dungeons & Randomness",
