@@ -1,6 +1,6 @@
 {
-  "version": 13,
-  "updated": "2026-10-29T23:00:00Z",
+  "version": 14,
+  "updated": "2026-10-30T12:00:00Z",
   "longCampaignEpisodes": 20,
   "discoverTags": [
     {
@@ -1258,6 +1258,50 @@
       "alsoPlays": [
         "Warhammer Fantasy Roleplay"
       ]
+    },
+    {
+      "name": "Three Black Halflings",
+      "author": "Three Black Halflings",
+      "appleID": 1520368162,
+      "discover": "actual-play",
+      "feeds": [
+        "https://feeds.megaphone.fm/GLSS3172013789"
+      ],
+      "links": {
+        "support": "https://www.patreon.com/3BlackHalflings",
+        "video": "https://www.youtube.com/@3BlackHalflings"
+      },
+      "campaigns": [
+        {
+          "name": "Herald of Shadows",
+          "titles": [
+            "^City of the Black Rose: Herald of Shadows\\b"
+          ],
+          "section": "campaign"
+        },
+        {
+          "name": "City of the Black Rose (2022 cut)",
+          "titles": [
+            "^City of the Black Rose: Ep(?:is|si)ode (?:One|\\d+)(?!,? Part)"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "Dice, Danger, and Daggerheart",
+          "titles": [
+            "^City of the Black Rose: Dice, Danger"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "City of the Black Rose",
+          "titles": [
+            "^City of the Black Rose\\b"
+          ],
+          "section": "campaign"
+        }
+      ],
+      "system": "D&D 5e"
     },
     {
       "name": "Dungeons & Randomness",
@@ -3359,34 +3403,6 @@
           "name": "Adventures of Azerim",
           "titles": [
             "Ad?venturer?s of Az"
-          ]
-        }
-      ],
-      "system": "D&D 5e"
-    },
-    {
-      "name": "Three Black Halflings",
-      "author": "Three Black Halflings",
-      "appleID": 1520368162,
-      "discover": "actual-play",
-      "feeds": [
-        "https://feeds.megaphone.fm/GLSS3172013789"
-      ],
-      "links": {
-        "support": "https://www.patreon.com/3BlackHalflings",
-        "video": "https://www.youtube.com/@3BlackHalflings"
-      },
-      "campaigns": [
-        {
-          "name": "Herald of Shadows",
-          "titles": [
-            "^City of the Black Rose: Herald of Shadows\\b"
-          ]
-        },
-        {
-          "name": "City of the Black Rose",
-          "titles": [
-            "^City of the Black Rose\\b"
           ]
         }
       ],
