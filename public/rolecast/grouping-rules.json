@@ -1,6 +1,6 @@
 {
-  "version": 16,
-  "updated": "2026-10-30T16:00:00Z",
+  "version": 17,
+  "updated": "2026-10-30T18:00:00Z",
   "longCampaignEpisodes": 20,
   "discoverTags": [
     {
@@ -1274,6 +1274,9 @@
       "system": "D&D 5e",
       "longCampaignEpisodes": 10,
       "talkShow": true,
+      "exclude": [
+        "^City of the Black Rose: Ep(?:is|si)ode (?:One|\\d+)(?!,? Part)"
+      ],
       "campaigns": [
         {
           "name": "The Cub & The Caterpillar",
@@ -1298,13 +1301,6 @@
           "titles": [
             "^City of the Black Rose: Herald of Shadows\\b"
           ]
-        },
-        {
-          "name": "City of the Black Rose (2022 cut)",
-          "titles": [
-            "^City of the Black Rose: Ep(?:is|si)ode (?:One|\\d+)(?!,? Part)"
-          ],
-          "section": "specials"
         },
         {
           "name": "Dice, Danger, and Daggerheart",
