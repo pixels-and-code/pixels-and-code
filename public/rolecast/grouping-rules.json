@@ -1,6 +1,6 @@
 {
-  "version": 15,
-  "updated": "2026-10-30T14:00:00Z",
+  "version": 16,
+  "updated": "2026-10-30T16:00:00Z",
   "longCampaignEpisodes": 20,
   "discoverTags": [
     {
@@ -1273,6 +1273,7 @@
       },
       "system": "D&D 5e",
       "longCampaignEpisodes": 10,
+      "talkShow": true,
       "campaigns": [
         {
           "name": "The Cub & The Caterpillar",
@@ -1309,6 +1310,25 @@
           "name": "Dice, Danger, and Daggerheart",
           "titles": [
             "^City of the Black Rose: Dice, Danger"
+          ],
+          "section": "specials"
+        },
+        {
+          "name": "One-shots",
+          "titles": [
+            "^3BH Presents:",
+            "^Three Black Halflings Present:",
+            "^A Halfling Halloween Special\\b",
+            "^NADDPod Plays\\b",
+            "^MONSTERHEARTS\\b",
+            "^BEASTS One Shot\\b",
+            "Nandi (?:&|and) the Scat ?man\\b",
+            "^Welcome to Wakandell\\b",
+            "\\bMy Friend Eric\\b",
+            "\\bSpooky Ooky World Build\\b",
+            "\\bCall of Cthulhu Adventure\\b",
+            "^\"Danger in the Lone Pine Desert\"",
+            "^\"WE ARE LIVE!\""
           ],
           "section": "specials"
         },
