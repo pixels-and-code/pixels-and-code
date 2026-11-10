@@ -112,8 +112,8 @@ export default function RolecastPrivacyPage() {
         <P>
           If this policy changes, the new version will be published here with
           a new date. Questions go to{" "}
-          <A href="mailto:dan@pixels-and-code.co.uk">
-            dan@pixels-and-code.co.uk
+          <A href="mailto:hi@pixels-and-code.co.uk">
+            hi@pixels-and-code.co.uk
           </A>
           .
         </P>

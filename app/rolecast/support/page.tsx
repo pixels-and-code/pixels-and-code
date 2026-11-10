@@ -32,10 +32,10 @@ export default function RolecastSupportPage() {
       <div className="mt-10">
         <Button
           as="a"
-          href="mailto:dan@pixels-and-code.co.uk?subject=Rolecast"
+          href="mailto:hi@pixels-and-code.co.uk?subject=Rolecast"
           variant="primary"
         >
-          dan@pixels-and-code.co.uk
+          hi@pixels-and-code.co.uk
         </Button>
       </div>
 
