@@ -40,6 +40,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/rolecast/support`,
+      lastModified: new Date(),
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/rolecast/privacy`,
+      lastModified: new Date(),
+      priority: 0.3,
+    },
     ...workUrls,
     ...blogUrls,
   ];
