@@ -1,0 +1,167 @@
+---
+name: "Rolecast"
+tagline: "The podcast player for actual plays"
+date: "2026-11-10"
+excerpt: "An iPhone, iPad and CarPlay app that sorts actual-play podcasts into their campaigns and plays them in story order. I researched, designed and built it, and had it in App Review, in under four weeks."
+icon: "/apps/rolecast/icon.png"
+cover: "/apps/rolecast/library.avif"
+hero: ["/apps/rolecast/library.avif", "/apps/rolecast/player.avif"]
+platforms: ["iPhone", "iPad", "CarPlay"]
+tags: ["Swift", "SwiftUI", "CloudKit", "App design"]
+status: "Coming soon to the App Store"
+supportUrl: "/rolecast/support"
+privacyUrl: "/rolecast/privacy"
+published: true
+---
+
+<Stats>
+  <Stat value="24" label="Days from first research to App Review" />
+  <Stat value="22" label="Podcast feeds analysed to design it" />
+  <Stat value="97" label="Shows with grouping rules" />
+  <Stat value="1" label="JSON file instead of a backend" />
+</Stats>
+
+<Kicker>The problem</Kicker>
+
+## Hundreds of hours, in the wrong order
+
+Actual plays are podcasts of people playing tabletop roleplaying games: Critical Role, Dimension 20, Worlds Beyond Number. One story runs for years, and a single episode often lasts three or four hours.
+
+Podcast apps treat them like news. Every campaign, one-shot and bonus episode lands in one list, newest first. Starting a campaign at episode one means scrolling back through hundreds of episodes and keeping track of where you are yourself.
+
+Rolecast fixes that. It splits each show into its campaigns, plays them in order, and remembers where you are in each one.
+
+<Split>
+  <Copy>
+
+<Kicker>Research</Kicker>
+
+## Reading the feeds first
+
+I started by downloading 22 actual-play feeds and measuring what they actually contain.
+
+Apple's season tag looks like the answer, but only 12 shows use it consistently. Some stopped partway through a campaign, and in five shows a season is not a campaign at all. Not one show gives its seasons a name.
+
+The only signal every show uses is the episode title.
+
+  </Copy>
+  <Signals title="What 22 actual-play feeds use">
+    <Signal label="A campaign named in episode titles" count="22" total="22" />
+    <Signal label="A season tag somewhere" count="17" total="22" />
+    <Signal label="A season tag on 85% or more of episodes" count="12" total="22" />
+    <Signal label="Marked as a serial, to play oldest first" count="6" total="22" />
+    <Signal label="Named seasons" count="0" total="22" />
+  </Signals>
+</Split>
+
+<Split flip>
+  <Copy>
+
+<Kicker>Grouping</Kicker>
+
+## The title names the campaign
+
+Every show has its own title convention, but one rule held across them: split the title on its separators, find the part that carries the episode number, and that part names the campaign.
+
+I prototyped the grouper in Python against the real feeds, then rebuilt it in Swift, in a package with no interface code and 60 tests. It combines titles with season tags where a show uses them reliably, and keeps bonus and talk episodes apart from the story.
+
+  </Copy>
+  <FeedTitles title="Episode titles, as the feeds publish them">
+    <FeedTitle show="Critical Role" mark="C2">C2E20 Labenda Awaits</FeedTitle>
+    <FeedTitle show="Critical Role" mark="Campaign 4">A Heavy Crown | Critical Role | Campaign 4, Episode 38 Part 1</FeedTitle>
+    <FeedTitle show="Dimension 20" mark="Fantasy High">Fantasy High | Ep. 1 | The Beginning Begins</FeedTitle>
+    <FeedTitle show="High Rollers DnD" mark="Aerois">High Rollers: Aerois #70 | The Last Feather (Part 2)</FeedTitle>
+    <FeedTitle show="Friends at the Table" mark="PARTIZAN">PARTIZAN 13: A Captive Audience</FeedTitle>
+    <FeedTitle show="The Glass Cannon Podcast" mark="Time For Chaos">I Bless the Rains | Time For Chaos S4 E13 | Call of Cthulhu</FeedTitle>
+  </FeedTitles>
+</Split>
+
+<Phones>
+  <Phone src="/apps/rolecast/show-campaigns.avif" alt="Critical Role's page in Rolecast, listing its campaigns: Vox Machina, The Mighty Nein, Bells Hells and Aramán, then miniseries" caption="A show, split into campaigns" />
+  <Phone src="/apps/rolecast/campaign.avif" alt="A campaign page in Rolecast with numbered episodes in story order, a Resume button and 11 of 55 played" caption="A campaign, in story order" />
+  <Phone src="/apps/rolecast/show-in-progress.avif" alt="Worlds Beyond Number's page in Rolecast showing progress through its campaign" caption="Progress kept for each one" />
+</Phones>
+
+<Kicker>Fixes without a release</Kicker>
+
+## Rules that update themselves
+
+Some shows need help the grouper cannot guess: older campaigns that live on a separate feed, or a series whose titles name it badly. Those fixes live in one JSON file, served from this website.
+
+The app checks the file every time it opens. When nothing has changed, the server answers "not modified" and that is the end of it. When something has, any show you have open regroups straight away. A fix reaches everyone the next time they open the app, without waiting for App Review.
+
+A command-line tool runs every change against the live feeds, using the app's own grouping code, before I publish it.
+
+```json
+{
+  "name": "Critical Role",
+  "feeds": ["https://feeds.simplecast.com/LXz4Q9rJ"],
+  "longCampaignEpisodes": 30,
+  "extraFeeds": [
+    {
+      "url": "https://feeds.megaphone.fm/DYEAN7027366551",
+      "include": ["^Vox Machina Ep\\. \\d+", "^C2E\\d+\\b"],
+      "comesFirst": true
+    }
+  ]
+}
+```
+
+<Split>
+  <Copy>
+
+<Kicker>Listening</Kicker>
+
+## Built for four-hour episodes
+
+Episodes can run to 400 MB, and many hosts insert adverts as the file downloads. That breaks streaming and resumed downloads, so Rolecast downloads whole episodes in the background before it plays them.
+
+Downloads wait for Wi-Fi unless you allow mobile data, and the app asks before it uses any. The next episodes of each campaign you have started stay downloaded, and played ones clear themselves.
+
+The player takes its background from the show's artwork, and has a sleep timer, playback speed, and buttons to skip back 15 seconds or forward 30.
+
+  </Copy>
+  <Pair>
+    <Phone src="/apps/rolecast/player.avif" alt="Rolecast's player for Prisoner's Dilemma, an episode of Worlds Beyond Number, with large artwork, a progress bar and playback controls" />
+    <Phone src="/apps/rolecast/downloads.avif" alt="Rolecast's Downloads screen: 9 episodes, 1.19 GB, grouped by show" />
+  </Pair>
+</Split>
+
+<Kicker>Everywhere</Kicker>
+
+## iPhone, iPad, CarPlay and iCloud
+
+On iPad, the player stays open beside whatever you are browsing: the library, a show or a campaign. In the car, CarPlay has its own tabs for shows and downloads, and you can browse a show by campaign.
+
+Shows you follow, your progress and what is playing sync through iCloud, using Apple's CloudKit sync engine and your own private database. There is no account to create, and nothing passes through a server of mine.
+
+<Tablet src="/apps/rolecast/ipad-library.avif" alt="Rolecast on iPad in landscape: the library, with continue listening and a grid of shows, beside the player" caption="Rolecast on iPad" />
+
+<Kicker>Discover</Kicker>
+
+## Find shows by the game they play
+
+Discover lists actual plays and fiction podcasts, tagged by the game being played. The tags come from the same rules file, so new shows and systems appear without an update.
+
+<Phones>
+  <Phone src="/apps/rolecast/discover-pathfinder.avif" alt="Rolecast's Discover screen filtered to Pathfinder shows" caption="Pathfinder" />
+  <Phone src="/apps/rolecast/discover-daggerheart.avif" alt="Rolecast's Discover screen filtered to Daggerheart shows" caption="Daggerheart" />
+  <Phone src="/apps/rolecast/discover-cthulhu.avif" alt="Rolecast's Discover screen filtered to Call of Cthulhu shows" caption="Call of Cthulhu" />
+</Phones>
+
+<Kicker>Shipping</Kicker>
+
+## From simulator to App Store
+
+The App Store screenshots come from one command. UI tests load a demo library, drive the app on iPhone and iPad simulators, and a script composes the finished images.
+
+Rolecast collects no data. There is no analytics, advertising or tracking, and its App Store privacy label says "Data Not Collected".
+
+<StoreShots>
+  <StoreShot src="/apps/rolecast/store-1.avif" alt="App Store image: The podcast player for actual plays, over the library" />
+  <StoreShot src="/apps/rolecast/store-2.avif" alt="App Store image: Every show sorted into its campaigns" />
+  <StoreShot src="/apps/rolecast/store-3.avif" alt="App Store image: Every episode in story order" />
+  <StoreShot src="/apps/rolecast/store-4.avif" alt="App Store image: Made for four-hour sessions, over the player" />
+  <StoreShot src="/apps/rolecast/store-5.avif" alt="App Store image: The next episodes, already downloaded" />
+  <StoreShot src="/apps/rolecast/store-6.avif" alt="App Store image: Find your next campaign, over Discover" />
+</StoreShots>

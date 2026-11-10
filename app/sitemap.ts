@@ -1,11 +1,12 @@
 import { MetadataRoute } from "next";
-import { getAllPosts, getAllCaseStudies } from "@/lib/content";
+import { getAllPosts, getAllCaseStudies, getAllApps } from "@/lib/content";
 
 const baseUrl = "https://pixels-and-code.co.uk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
   const caseStudies = getAllCaseStudies();
+  const apps = getAllApps();
 
   const blogUrls = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
@@ -16,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const workUrls = caseStudies.map((study) => ({
     url: `${baseUrl}/work/${study.slug}`,
     lastModified: new Date(study.frontmatter.date),
+    priority: 0.7 as const,
+  }));
+
+  const appUrls = apps.map((app) => ({
+    url: `${baseUrl}/apps/${app.slug}`,
+    lastModified: new Date(app.frontmatter.date),
     priority: 0.7 as const,
   }));
 
@@ -30,7 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.8,
     },
-{
+    {
+      url: `${baseUrl}/apps`,
+      lastModified: new Date(),
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       priority: 0.8,
@@ -51,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     ...workUrls,
+    ...appUrls,
     ...blogUrls,
   ];
 }

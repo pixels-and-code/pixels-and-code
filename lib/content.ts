@@ -27,6 +27,33 @@ export interface CaseStudyFrontmatter {
   heroImage?: string;
 }
 
+export interface AppFrontmatter {
+  name: string;
+  tagline: string;
+  date: string;
+  excerpt: string;
+  icon: string;
+  /** A phone screenshot for the list of apps */
+  cover: string;
+  /** Two phone screenshots for the top of the case study */
+  hero: string[];
+  platforms: string[];
+  tags: string[];
+  /** Shown until the App Store link exists, e.g. "In App Review" */
+  status?: string;
+  appStoreUrl?: string;
+  supportUrl?: string;
+  privacyUrl?: string;
+  published?: boolean;
+}
+
+export interface App {
+  slug: string;
+  frontmatter: AppFrontmatter;
+  content: string;
+  readingTime: string;
+}
+
 export interface Post {
   slug: string;
   frontmatter: PostFrontmatter;
@@ -117,10 +144,22 @@ export function getCaseStudyBySlug(slug: string): CaseStudy | null {
   return getContentBySlug<CaseStudyFrontmatter>("work", slug);
 }
 
-export async function compileMDXContent(source: string) {
+export function getAllApps(): App[] {
+  return getContentFromDirectory<AppFrontmatter>("apps");
+}
+
+export function getAppBySlug(slug: string): App | null {
+  return getContentBySlug<AppFrontmatter>("apps", slug);
+}
+
+export async function compileMDXContent(
+  source: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  components: Record<string, React.ComponentType<any>> = mdxComponents
+) {
   const { content } = await compileMDX({
     source,
-    components: mdxComponents,
+    components,
     options: {
       parseFrontmatter: false,
     },
