@@ -2,13 +2,14 @@
 name: "Rolecast"
 tagline: "The podcast player for actual plays"
 date: "2026-11-10"
-excerpt: "An iPhone, iPad and CarPlay app that sorts actual-play podcasts into their campaigns and plays them in story order. I researched, designed and built it, and had it in App Review, in under four weeks."
+excerpt: "A podcast app for iPhone, iPad, CarPlay and Android that sorts actual-play podcasts into their campaigns and plays them in story order. I researched, designed and built it, and had it in App Review in under four weeks, then built it again natively for Android."
 icon: "/apps/rolecast/icon.png"
 cover: "/apps/rolecast/library.avif"
 hero: ["/apps/rolecast/library.avif", "/apps/rolecast/player.avif"]
-platforms: ["iPhone", "iPad", "CarPlay"]
-tags: ["Swift", "SwiftUI", "CloudKit", "App design"]
-status: "Coming soon to the App Store"
+label: "iOS and Android app"
+platforms: ["iPhone", "iPad", "CarPlay", "Android", "Android Auto"]
+tags: ["Swift", "SwiftUI", "CloudKit", "Kotlin", "Jetpack Compose", "App design"]
+status: "Coming soon to the App Store and Google Play"
 supportUrl: "/rolecast/support"
 privacyUrl: "/rolecast/privacy"
 published: true
@@ -137,6 +138,22 @@ Shows you follow, your progress and what is playing sync through iCloud, using A
 
 <Tablet src="/apps/rolecast/ipad-library.avif" alt="Rolecast on iPad in landscape: the library, with continue listening and a grid of shows, beside the player" caption="Rolecast on iPad" />
 
+<Kicker>Android</Kicker>
+
+## Built again, natively
+
+The Android app is written in Kotlin with Jetpack Compose, not shared with iOS through a cross-platform layer. I ported the grouping package line by line, with all 60 of its tests. A second set of tests checks that the Kotlin stand-ins for Apple's date and URL parsing give the same answers as the originals, using inputs I ran through Apple's code on a Mac. Both apps read the same rules file, so one fix reaches both.
+
+The interface follows Android's own patterns rather than copying the iPhone's. Titles collapse into the top bar as you scroll, menus open as sheets from the bottom, and marking or removing something offers Undo instead of asking first. Settings has its own tab, and the app icon choice changes the icon on the home screen.
+
+Android Auto takes CarPlay's place. Instead of iCloud sync, Android's own backup can carry your shows and progress to a new phone.
+
+<Phones>
+  <Phone android src="/apps/rolecast/android-library.avif" alt="Rolecast on Android: the library, with continue listening above a grid of shows and a navigation bar of Library, Downloads, Discover and Settings" caption="The library" />
+  <Phone android src="/apps/rolecast/android-campaign.avif" alt="A campaign page in Rolecast on Android with numbered episodes in story order and a Resume button" caption="A campaign" />
+  <Phone android src="/apps/rolecast/android-player.avif" alt="Rolecast's player on Android, playing Prisoner's Dilemma from Worlds Beyond Number" caption="The player" />
+</Phones>
+
 <Kicker>Discover</Kicker>
 
 ## Find shows by the game they play
@@ -151,11 +168,11 @@ Discover lists actual plays and fiction podcasts, tagged by the game being playe
 
 <Kicker>Shipping</Kicker>
 
-## From simulator to App Store
+## From simulator to the stores
 
-The App Store screenshots come from one command. UI tests load a demo library, drive the app on iPhone and iPad simulators, and a script composes the finished images.
+The App Store screenshots come from one command. UI tests load a demo library, drive the app on iPhone and iPad simulators, and a script composes the finished images. The same script makes the Google Play images from the Android emulator, and builds, store text and images reach Google Play through its publishing API.
 
-Rolecast collects no data. There is no analytics, advertising or tracking, and its App Store privacy label says "Data Not Collected".
+Rolecast collects no data. There is no analytics, advertising or tracking. Its App Store privacy label says "Data Not Collected", and its Google Play data safety section says no data is collected or shared.
 
 <StoreShots>
   <StoreShot src="/apps/rolecast/store-1.avif" alt="App Store image: The podcast player for actual plays, over the library" />

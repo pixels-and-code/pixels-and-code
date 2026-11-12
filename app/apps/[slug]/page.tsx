@@ -61,7 +61,7 @@ export default async function AppPage({ params }: Props) {
                 priority
                 className="rounded-[22.5%] ring-1 ring-line"
               />
-              <Label className="mt-8">iOS app</Label>
+              <Label className="mt-8">{frontmatter.label ?? "iOS app"}</Label>
               <h1 className="mt-4 font-display text-[clamp(3rem,9vw,7.5rem)] uppercase leading-[0.92] tracking-hero text-ink">
                 {frontmatter.name}
               </h1>
@@ -81,16 +81,20 @@ export default async function AppPage({ params }: Props) {
               </div>
 
               <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
-                {frontmatter.appStoreUrl ? (
+                {frontmatter.appStoreUrl && (
                   <Button as="a" href={frontmatter.appStoreUrl} target="_blank" rel="noopener noreferrer">
                     Download on the App Store
                   </Button>
-                ) : (
-                  frontmatter.status && (
-                    <span className="rounded-full border border-chip px-5 py-2.5 font-mono text-[13px] uppercase tracking-mono text-muted">
-                      {frontmatter.status}
-                    </span>
-                  )
+                )}
+                {frontmatter.playStoreUrl && (
+                  <Button as="a" href={frontmatter.playStoreUrl} target="_blank" rel="noopener noreferrer">
+                    Get it on Google Play
+                  </Button>
+                )}
+                {frontmatter.status && (
+                  <span className="rounded-full border border-chip px-5 py-2.5 font-mono text-[13px] uppercase tracking-mono text-muted">
+                    {frontmatter.status}
+                  </span>
                 )}
                 {frontmatter.supportUrl && (
                   <Link href={frontmatter.supportUrl} className={smallLinkClasses}>

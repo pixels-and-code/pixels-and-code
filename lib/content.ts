@@ -37,11 +37,14 @@ export interface AppFrontmatter {
   cover: string;
   /** Two phone screenshots for the top of the case study */
   hero: string[];
+  /** Above the name on the case study, e.g. "iOS app" (the default) */
+  label?: string;
   platforms: string[];
   tags: string[];
-  /** Shown until the App Store link exists, e.g. "In App Review" */
+  /** Shown beside any store links until every store has one, e.g. "In App Review" */
   status?: string;
   appStoreUrl?: string;
+  playStoreUrl?: string;
   supportUrl?: string;
   privacyUrl?: string;
   published?: boolean;

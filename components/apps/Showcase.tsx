@@ -14,8 +14,8 @@ interface ShotProps {
   className?: string;
 }
 
-/** An iPhone screenshot (460 × 1000) in a plain black frame. */
-export function Phone({ src, alt, caption, priority, className = "" }: ShotProps) {
+/** A phone screenshot in a plain black frame: iPhone (460 × 1000), or Android (460 × 1026). */
+export function Phone({ src, alt, caption, priority, className = "", android = false }: ShotProps & { android?: boolean }) {
   return (
     <figure className={`mx-auto w-full max-w-[300px] ${className}`.trim()}>
       <div className="rounded-[14.5%/6.7%] bg-[#0b0b0b] p-[2.6%] ring-1 ring-line">
@@ -23,7 +23,7 @@ export function Phone({ src, alt, caption, priority, className = "" }: ShotProps
           src={src}
           alt={alt}
           width={460}
-          height={1000}
+          height={android ? 1026 : 1000}
           priority={priority}
           sizes="(min-width: 768px) 300px, 45vw"
           className="h-auto w-full rounded-[12%/5.5%]"

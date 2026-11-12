@@ -5,7 +5,7 @@ import { Button } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Rolecast support | Pixels and Code",
   description:
-    "Help with Rolecast, the podcast player for actual plays: campaigns in the wrong order, iCloud sync, downloads, and how to get in touch.",
+    "Help with Rolecast, the podcast player for actual plays on iPhone, iPad and Android: campaigns in the wrong order, sync and backup, downloads, and how to get in touch.",
   alternates: {
     canonical: "/rolecast/support",
   },
@@ -44,7 +44,7 @@ export default function RolecastSupportPage() {
         <UL>
           <LI>The show, and the campaign or episode if it is about one.</LI>
           <LI>What you expected, and what happened instead.</LI>
-          <LI>Your device and its version of iOS or iPadOS.</LI>
+          <LI>Your device and its version of iOS, iPadOS or Android.</LI>
         </UL>
 
         <H2>A show&apos;s campaigns or episodes are in the wrong order</H2>
@@ -63,6 +63,11 @@ export default function RolecastSupportPage() {
           show when it last synced, and Sync now tries again. Downloads are not
           synced: each device keeps its own.
         </P>
+        <P>
+          The Android app does not sync, and does not share your library with
+          an iPhone or iPad. If backup is turned on for your phone, Android
+          can restore your shows, progress and settings on a new phone.
+        </P>
 
         <H2>An episode is waiting to download</H2>
         <P>
@@ -74,6 +79,7 @@ export default function RolecastSupportPage() {
         <H2>Which devices it works on</H2>
         <P>
           iPhone and iPad with iOS or iPadOS 26.1 or later, and CarPlay.
+          Android phones with Android 10 or later, and Android Auto.
         </P>
 
         <H2>Privacy</H2>

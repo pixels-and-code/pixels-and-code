@@ -8,7 +8,7 @@ import { Label, Badge } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Apps | Pixels and Code",
   description:
-    "Apps I design, build and publish myself, from first research to the App Store. Case studies, screenshots and download links.",
+    "Apps I design, build and publish myself, from first research to the App Store and Google Play. Case studies, screenshots and download links.",
   alternates: {
     canonical: "/apps",
   },
@@ -31,7 +31,7 @@ export default function AppsPage() {
             <span className="text-outline">apps</span>
           </h1>
           <p className="mt-8 max-w-[540px] text-lg leading-[1.6] text-muted">
-            Apps I design, build and publish myself, from the first research to the App Store.
+            Apps I design, build and publish myself, from the first research to the App Store and Google Play.
           </p>
         </ScrollFadeIn>
       </section>
@@ -76,7 +76,7 @@ export default function AppsPage() {
                   <Link href={`/apps/${app.slug}`} className={linkClasses}>
                     Read case study ↗
                   </Link>
-                  {app.frontmatter.appStoreUrl ? (
+                  {app.frontmatter.appStoreUrl && (
                     <a
                       href={app.frontmatter.appStoreUrl}
                       target="_blank"
@@ -85,12 +85,21 @@ export default function AppsPage() {
                     >
                       App Store ↗
                     </a>
-                  ) : (
-                    app.frontmatter.status && (
-                      <span className="font-mono text-[13px] uppercase tracking-mono text-muted">
-                        {app.frontmatter.status}
-                      </span>
-                    )
+                  )}
+                  {app.frontmatter.playStoreUrl && (
+                    <a
+                      href={app.frontmatter.playStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={linkClasses}
+                    >
+                      Google Play ↗
+                    </a>
+                  )}
+                  {app.frontmatter.status && (
+                    <span className="font-mono text-[13px] uppercase tracking-mono text-muted">
+                      {app.frontmatter.status}
+                    </span>
                   )}
                 </div>
               </div>
