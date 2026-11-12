@@ -4,7 +4,7 @@ import { mdxComponents } from "@/components/mdx-components";
 export const metadata: Metadata = {
   title: "Rolecast privacy policy | Pixels and Code",
   description:
-    "Rolecast, the podcast player for actual plays, collects no data about you. What stays on your device, what goes to iCloud and what the app requests.",
+    "Rolecast, the podcast player for actual plays, collects no data about you. What stays on your device, what is synced or backed up, and what the app requests.",
   alternates: {
     canonical: "/rolecast/privacy",
   },
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const { h2: H2, p: P, ul: UL, li: LI, a: A, strong: Strong } = mdxComponents;
 
-const updated = "2026-11-10";
+const updated = "2026-11-11";
 
 export default function RolecastPrivacyPage() {
   return (
@@ -38,8 +38,8 @@ export default function RolecastPrivacyPage() {
 
       <div className="mt-12">
         <P>
-          Rolecast is a podcast player for actual plays, made by Pixels &amp;
-          Code Ltd. <Strong>It collects no data about you.</Strong> There is no
+          Rolecast is a podcast player for actual plays, for iPhone, iPad and
+          Android, made by Pixels &amp; Code Ltd. <Strong>It collects no data about you.</Strong> There is no
           account to create, and the app contains no analytics, advertising or
           tracking.
         </P>
@@ -51,7 +51,7 @@ export default function RolecastPrivacyPage() {
           Deleting the app deletes them.
         </P>
 
-        <H2>iCloud sync</H2>
+        <H2>iCloud sync on iPhone and iPad</H2>
         <P>
           If your device is signed in to iCloud, Rolecast keeps the shows you
           follow, your listening progress and what is playing the same across
@@ -62,6 +62,16 @@ export default function RolecastPrivacyPage() {
         <P>
           You can turn iCloud off for Rolecast, or delete what it has stored
           there, in the iCloud section of the Settings app.
+        </P>
+
+        <H2>Backup on Android</H2>
+        <P>
+          The Android app does not sync. If backup is turned on for your
+          device, Android can include the shows you follow, your listening
+          progress and your settings in your device&apos;s backup to your
+          Google account, so they come back on a new phone. Google holds that
+          backup for you, and I cannot read it. Downloaded episodes are never
+          backed up.
         </P>
 
         <H2>What the app requests over the internet</H2>
@@ -101,11 +111,13 @@ export default function RolecastPrivacyPage() {
           their own policies.
         </P>
 
-        <H2>Crash reports from Apple</H2>
+        <H2>Crash reports from Apple and Google</H2>
         <P>
           If you have chosen to share analytics with app developers in your
           device&apos;s settings, Apple passes me crash reports and usage
-          figures for Rolecast. They do not identify you.
+          figures for Rolecast. On Android, if you share usage and
+          diagnostics with Google, Google Play passes me crash reports and
+          figures on how the app runs. Neither identifies you.
         </P>
 
         <H2>Changes and questions</H2>
