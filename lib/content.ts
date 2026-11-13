@@ -121,6 +121,9 @@ function getContentBySlug<T>(
 
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
+  if ((data as { published?: boolean }).published === false) {
+    return null;
+  }
   const stats = readingTime(content);
 
   return {

@@ -1,0 +1,79 @@
+---
+title: "Three Things I Got Wrong About Design Systems"
+date: "2026-08-21"
+excerpt: "The components always get rewritten. The names, the API and the working agreements around them are the parts you have to live with."
+tags: ["Design Systems", "Process", "Leadership", "Architecture"]
+published: false
+---
+
+Most writing about design systems opens with the same list of benefits. Consistency, velocity, a single source of truth, less duplicated effort across teams.
+
+All true. I have made that exact pitch myself, and it has never been the thing that got a system funded. Nobody needs convincing that one button is better than forty. People nod, and then nothing changes.
+
+These three lessons are the ones that actually changed how I work. I got each of them wrong first.
+
+## 1. A component library is the smallest part of a design system
+
+The component library is the visible part. For a long time I took it for the whole thing.
+
+A design system is the interconnection between the moving parts: components, accessibility standards, tokens, patterns, the language and content rules that live inside those components, the documentation, and the decisions that produced all of it. It spans design and engineering, and it does not stop there. Content, research, QA, brand, support: they all touch it, whether or not anyone invited them.
+
+Which is why the word "design" in the name has always sat slightly wrong with me. What you are building is closer to a product system, a shared way of making product cohesively. The visual layer is one output of it.
+
+There is a rough test I use now. If the only artefact is an npm package, it is a UI library. That is a genuinely useful thing to own, but it will drift, because nothing else is holding it in place. Two teams import the same `Button` and ship two different flows around it, with two different error messages and two different empty states. Visually consistent, experientially incoherent.
+
+On the last large system I worked on, the codebase turned out to be about a third of the work. The rest was Figma library parity, migration guides for teams on legacy stacks, working out what "accessible" meant in practice for products that had never had to answer that question, and sitting with teams while they adopted it. I had not planned for most of that. None of it shows up in a Storybook link, and all of it decided whether the thing worked.
+
+## 2. The hard problems are people, not technology
+
+Anyone reading this could build a decent button in a day and a passable set of tokens in a week. The assets are the easy part, and they are the part I used to spend my time on.
+
+What is hard is getting a designer and an engineer to agree on what a component is called and who is allowed to change it. Getting a product team to accept the system's version over the one they shipped last sprint. Getting a roadmap owner to fund work with no feature attached to it, competing against things that demo well.
+
+Every design system I have worked on has stalled at some point. Each time I have gone looking in the repo first, and each time the problem has been somewhere else: communication lines, and process barriers nobody put there deliberately.
+
+I have watched the same handful of things happen. Design makes a decision in Figma and it arrives in engineering as a fait accompli. Engineering forks a component rather than raising the awkward conversation. A team needs something that does not exist, cannot work out who to ask, and builds their own in an afternoon. There is a contribution model, and it lives on a page nobody has opened since it was written.
+
+None of that is a failure of care. It is what people do when the path of least resistance runs around the system instead of through it. I have done it myself, on other people's systems.
+
+What has helped is unglamorous. Designers and engineers reviewing the same work at the same time rather than in sequence. A visible, low-friction route to ask for a change, with a response time people can predict. A named person who is allowed to say no and has the backing to make it stick. Telling teams what is changing before it changes, so nothing lands as a surprise.
+
+I still find the balance hard. Too little process and people work around the system. Too much and you have built a committee they work around for different reasons. I do not think there is a general answer to that, only a read on the particular organisation.
+
+That work is slower than writing components, and it is the work that decides whether the components get used. The first time I was brought in to build a design system, I spent the first month in the repo. I had misread the job.
+
+## 3. Get the interfaces right early, because the implementation is disposable
+
+This one took longest to land, and it ties the first two together.
+
+The instinct at the start is to perfect the assets. Every state of the button, every size, the token scale worked out to three decimal places. It feels like progress because it is visible. It was, for me, the wrong priority.
+
+What matters more early is the interface, and there are two of them.
+
+The technical interface is the API: component names, prop names, variant vocabulary, token naming. The human interface is the second lesson made concrete. How a team requests something, how a change gets proposed and reviewed, how it gets announced, and who decides.
+
+Both are contracts. Once a contract is in use across several teams, changing it is a migration, and migrations are where systems lose credibility. What sits behind the contract is disposable. You can refactor it as often as you need and nobody outside has to care.
+
+On that same system, the implementation was web components with React wrappers, chosen so that legacy products and greenfield ones could consume the same thing. That was an implementation decision, and a reversible one. Had we needed to rip it out and rebuild it, consuming code would have been largely unaffected, because the API was the part teams were coupled to.
+
+Two places this bites:
+
+**Naming.** If designers say "chip" and engineering ships `Tag`, the interface is broken before anyone has written a line of CSS. Ten minutes of conversation in week one, or a cross-team migration in month nine.
+
+**Tokens.** `colour.brand.blue.500` couples every consumer to a value. `colour.action.primary` couples them to an intent. The second lets you change the blue. The first makes changing the blue a project.
+
+So: treat the API as public and the implementation as private. Version one of the components should be good enough to use and nowhere near finished. Ship it, get real consumers on it, then refactor underneath. Shipping something I know is unfinished still feels wrong every time, and it has been the right call every time.
+
+## What I try to do on day one
+
+**Map every discipline that will touch the system**, not just design and engineering. Content and QA shaped the last one more than I expected.
+
+**Agree the vocabulary before the visuals.** Shared language is cheap to establish early and expensive to retrofit.
+
+**Design the API in the open**, with the people who are going to consume it, before it is built.
+
+**Set up the request and contribution path early**, ideally before there is anything to contribute to. Retrofitting process onto a system people are already working around is much harder.
+
+**Ship something rough that real teams use.** Perfect components nobody has adopted taught me nothing.
+
+The components will get rewritten. They always do. The names, the API and the working agreements around them are the parts you have to live with.
