@@ -53,6 +53,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/cassette/support`,
+      lastModified: new Date(),
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/cassette/privacy`,
+      lastModified: new Date(),
+      priority: 0.3,
+    },
+    {
       url: `${baseUrl}/rolecast/support`,
       lastModified: new Date(),
       priority: 0.3,
